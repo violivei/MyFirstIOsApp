@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC045E721D8899A000E2EBF6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E711D8899A000E2EBF6 /* ContactViewController.swift */; };
+		DC045E741D88A76E00E2EBF6 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */; };
 		DC38CFD31D886EBC00425E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38CFD21D886EBC00425E31 /* AppDelegate.swift */; };
 		DC38CFD81D886EBC00425E31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD61D886EBC00425E31 /* Main.storyboard */; };
 		DC38CFDA1D886EBC00425E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD91D886EBC00425E31 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC045E711D8899A000E2EBF6 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		DC38CFCF1D886EBC00425E31 /* MyFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC38CFD21D886EBC00425E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC38CFD71D886EBC00425E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				DC38CFDB1D886EBC00425E31 /* LaunchScreen.storyboard */,
 				DC38CFDE1D886EBC00425E31 /* Info.plist */,
 				DC38CFE41D88806400425E31 /* ProductViewController.swift */,
+				DC045E711D8899A000E2EBF6 /* ContactViewController.swift */,
+				DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */,
 			);
 			path = MyFirstApp;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC38CFE51D88806400425E31 /* ProductViewController.swift in Sources */,
+				DC045E741D88A76E00E2EBF6 /* ProductsTableViewController.swift in Sources */,
 				DC38CFD31D886EBC00425E31 /* AppDelegate.swift in Sources */,
+				DC045E721D8899A000E2EBF6 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 				DC38CFE31D886EBC00425E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

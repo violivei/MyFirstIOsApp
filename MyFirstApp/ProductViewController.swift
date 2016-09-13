@@ -17,5 +17,9 @@ class ProductViewController: UIViewController {
         productNameLabel.text = "1937 Desk Phone"
         productImageView.image = UIImage(named: "phone-fullscreen3")
     }
+ 
+    @IBAction func addToCartPressed(sender: AnyObject) {
+        print("Button Pressed")
+    }
 
 }
