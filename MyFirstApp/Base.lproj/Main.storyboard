@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U4U-F4-ZZ2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Product View Controller-->
+        <scene sceneID="5MQ-vY-iYg">
+            <objects>
+                <viewController id="U4U-F4-ZZ2" customClass="ProductViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lwy-xV-fhj"/>
+                        <viewControllerLayoutGuide type="bottom" id="WyT-FK-pOy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ebe-qg-adN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone-fullscreen3" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-1D-zKP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1937 Desk Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrb-le-rlt">
+                                <rect key="frame" x="60" y="78" width="255" height="43"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-9c-ODH">
+                                <rect key="frame" x="81" y="195" width="212" height="41"/>
+                                <state key="normal" image="button-addtocart"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBr-mu-Ca9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97.5" y="168.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-addtocart" width="158" height="41"/>
+        <image name="phone-fullscreen3" width="375" height="667"/>
+    </resources>
+</document>
