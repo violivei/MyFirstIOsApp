@@ -33,6 +33,16 @@
                                     <action selector="addToCartPressed:" destination="U4U-F4-ZZ2" eventType="touchUpInside" id="wMl-wx-4zu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zU-tN-Sk8">
+                                <rect key="frame" x="81" y="618" width="212" height="41"/>
+                                <color key="backgroundColor" red="0.54117647059999996" green="0.43921568630000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="18"/>
+                                <state key="normal" title="About Us"/>
+                                <connections>
+                                    <action selector="addToCartPressed:" destination="U4U-F4-ZZ2" eventType="touchUpInside" id="77e-72-CBi"/>
+                                    <segue destination="Y06-Yw-Puf" kind="push" identifier="ShowAboutUs" id="p4T-Pb-6Dh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -60,6 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ahi-A2-d3k"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="scrollView" destination="Yid-Pz-zr4" id="PzC-fk-Px4"/>
@@ -135,7 +146,7 @@
                     </subviews>
                 </scrollView>
             </objects>
-            <point key="canvasLocation" x="497.5" y="-587.5"/>
+            <point key="canvasLocation" x="1969.5" y="155.5"/>
         </scene>
         <!--Products Table View Controller-->
         <scene sceneID="ID5-ch-0QA">
