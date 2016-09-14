@@ -162,6 +162,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="U4U-F4-ZZ2" kind="push" identifier="ShowProduct" id="f8P-uH-HBF"/>
                                 </connections>
