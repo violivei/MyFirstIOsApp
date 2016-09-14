@@ -14,27 +14,27 @@
                         <viewControllerLayoutGuide type="bottom" id="WyT-FK-pOy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ebe-qg-adN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-1D-zKP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrb-le-rlt">
-                                <rect key="frame" x="60" y="78" width="255" height="43"/>
+                                <rect key="frame" x="33" y="78" width="255" height="43"/>
                                 <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-9c-ODH">
-                                <rect key="frame" x="81" y="195" width="212" height="41"/>
+                                <rect key="frame" x="54" y="196" width="212" height="41"/>
                                 <state key="normal" image="button-addtocart"/>
                                 <connections>
                                     <action selector="addToCartPressed:" destination="U4U-F4-ZZ2" eventType="touchUpInside" id="wMl-wx-4zu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zU-tN-Sk8">
-                                <rect key="frame" x="81" y="618" width="212" height="41"/>
+                                <rect key="frame" x="54" y="530" width="212" height="30"/>
                                 <color key="backgroundColor" red="0.54117647059999996" green="0.43921568630000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="18"/>
                                 <state key="normal" title="About Us"/>
@@ -47,7 +47,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="nc4-Gs-WKk"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="productImageView" destination="ab5-1D-zKP" id="5Nz-M5-3Nc"/>
                         <outlet property="productNameLabel" destination="vrb-le-rlt" id="LtP-ZU-kpu"/>
@@ -55,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBr-mu-Ca9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1493.5" y="156.5"/>
+            <point key="canvasLocation" x="1493" y="156"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="1LV-Cu-Fk4">
@@ -66,102 +65,101 @@
                         <viewControllerLayoutGuide type="bottom" id="RYF-kE-ujt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="l6u-RE-5ib">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ahi-A2-d3k"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="scrollView" destination="Yid-Pz-zr4" id="PzC-fk-Px4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFx-VI-Ti9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Yid-Pz-zr4">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header-contact" translatesAutoresizingMaskIntoConstraints="NO" id="Rd6-Jj-6fc">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ABOUT US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWk-fe-vWt">
-                            <rect key="frame" x="8" y="149" width="359" height="47"/>
+                            <rect key="frame" x="34" y="95" width="250" height="48"/>
                             <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONTACT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="721-Ay-Fip">
-                            <rect key="frame" x="8" y="484" width="359" height="47"/>
+                            <rect key="frame" x="29" y="476" width="250" height="35"/>
                             <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjY-2n-ZCj">
-                            <rect key="frame" x="33" y="201" width="309" height="120"/>
+                            <rect key="frame" x="34" y="151" width="250" height="120"/>
                             <string key="text">Good as Old Phones returns the phones of yesteryear back to their original glory and then gets them into the hands* of those who appreciate them most.</string>
                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej9-zd-eoR">
-                            <rect key="frame" x="33" y="301" width="309" height="120"/>
+                            <rect key="frame" x="34" y="279" width="250" height="120"/>
                             <string key="text">Whether you're looking for a turn-of-the-century wall set or a Zack Morris special, we've got you covered. Give us a ring, and we'll get you connected.</string>
                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*Hands-free phones available" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFO-fK-5rO">
-                            <rect key="frame" x="33" y="429" width="309" height="32"/>
+                            <rect key="frame" x="29" y="407" width="250" height="32"/>
                             <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-about-email" translatesAutoresizingMaskIntoConstraints="NO" id="u0O-Yd-hp0">
-                            <rect key="frame" x="67" y="539" width="34" height="34"/>
+                            <rect key="frame" x="32" y="519" width="34" height="34"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-about-phone" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-P7-XW9">
-                            <rect key="frame" x="67" y="581" width="34" height="34"/>
+                            <rect key="frame" x="32" y="561" width="34" height="34"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-about-website" translatesAutoresizingMaskIntoConstraints="NO" id="lb2-O6-mfo">
-                            <rect key="frame" x="67" y="623" width="34" height="34"/>
+                            <rect key="frame" x="32" y="603" width="34" height="34"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="good-as-old@example.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-M9-WOc">
-                            <rect key="frame" x="120" y="545" width="201" height="21"/>
+                            <rect key="frame" x="85" y="525" width="202" height="22"/>
                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="407-555-1212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmb-bG-utM">
-                            <rect key="frame" x="120" y="587" width="201" height="21"/>
+                            <rect key="frame" x="85" y="567" width="202" height="22"/>
                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="http://example.com/good-as-old" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV5-9s-c0X">
-                            <rect key="frame" x="120" y="629" width="201" height="21"/>
+                            <rect key="frame" x="85" y="609" width="202" height="22"/>
                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header-contact" translatesAutoresizingMaskIntoConstraints="NO" id="Rd6-Jj-6fc">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                        </imageView>
                     </subviews>
                 </scrollView>
             </objects>
-            <point key="canvasLocation" x="1969.5" y="155.5"/>
+            <point key="canvasLocation" x="1969" y="155"/>
         </scene>
         <!--Products Table View Controller-->
         <scene sceneID="ID5-ch-0QA">
             <objects>
                 <tableViewController id="GPS-Tq-K1p" customClass="ProductsTableViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" id="g3b-bw-eoY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="100" id="tD4-yh-OPy">
-                                <rect key="frame" x="0.0" y="114" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="114" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tD4-yh-OPy" id="71O-Iy-h2C">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -175,7 +173,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="UWd-YW-l9J"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJX-6L-FUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +183,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbN-4K-5e1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYB-Gk-Z3i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
