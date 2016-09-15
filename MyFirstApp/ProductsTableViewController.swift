@@ -93,6 +93,7 @@ class ProductsTableViewController: UITableViewController {
         if let p = product{
             cell.textLabel?.text = p.name
             cell.textLabel?.textColor = UIColor.whiteColor()
+            cell.textLabel?.font = UIFont(name: "Heineken", size: 20)
             if let i = p.cellImage{
                 cell.imageView?.image = UIImage(named: i)
                 cell.selectedBackgroundView = backgroundView

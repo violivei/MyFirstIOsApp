@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HEINEKEN.TTF">
+            <string>Heineken</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Product View Controller-->
         <scene sceneID="5MQ-vY-iYg">
@@ -29,7 +34,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrb-le-rlt">
                                 <rect key="frame" x="33" y="103" width="255" height="43"/>
-                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Heineken" family="Heineken" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
