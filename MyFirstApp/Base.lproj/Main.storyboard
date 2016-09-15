@@ -20,29 +20,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-1D-zKP">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrb-le-rlt">
-                                <rect key="frame" x="33" y="78" width="255" height="43"/>
-                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-9c-ODH">
-                                <rect key="frame" x="54" y="196" width="212" height="41"/>
-                                <state key="normal" image="button-addtocart"/>
+                                <rect key="frame" x="130" y="497" width="60" height="60"/>
+                                <state key="normal" image="heineken-plus2"/>
                                 <connections>
                                     <action selector="addToCartPressed:" destination="U4U-F4-ZZ2" eventType="touchUpInside" id="wMl-wx-4zu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zU-tN-Sk8">
-                                <rect key="frame" x="54" y="530" width="212" height="30"/>
-                                <color key="backgroundColor" red="0.54117647059999996" green="0.43921568630000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="18"/>
-                                <state key="normal" title="About Us"/>
-                                <connections>
-                                    <action selector="addToCartPressed:" destination="U4U-F4-ZZ2" eventType="touchUpInside" id="77e-72-CBi"/>
-                                    <segue destination="Y06-Yw-Puf" kind="push" identifier="ShowAboutUs" id="p4T-Pb-6Dh"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrb-le-rlt">
+                                <rect key="frame" x="33" y="103" width="255" height="43"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -199,8 +189,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="button-addtocart" width="158" height="41"/>
         <image name="header-contact" width="375" height="125"/>
+        <image name="heineken-plus2" width="60" height="60"/>
         <image name="icon-about-email" width="34" height="34"/>
         <image name="icon-about-phone" width="34" height="34"/>
         <image name="icon-about-website" width="34" height="34"/>
