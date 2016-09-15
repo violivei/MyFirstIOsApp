@@ -24,32 +24,32 @@ class ProductsTableViewController: UITableViewController {
         let product6 = Product()
         let product7 = Product()
         
-        product1.name = "1907 Wall Set"
-        product1.productImage = "phone-fullscreen1"
+        product1.name = "DRAUGHT"
+        product1.productImage = "fullscreen2"
         product1.cellImage = "draught"
         
-        product2.name = "1921 Dial Phone"
-        product2.productImage = "phone-fullscreen2"
+        product2.name = "THE ICON"
+        product2.productImage = "fullscreen1"
         product2.cellImage = "the-icon"
         
-        product3.name = "1937 Desk Set"
-        product3.productImage = "phone-fullscreen3"
+        product3.name = "THE CAN"
+        product3.productImage = "fullscreen3"
         product3.cellImage = "the-can"
         
-        product4.name = "1984 Motorola"
-        product4.productImage = "phone-fullscreen4"
+        product4.name = "EXTRA COLD"
+        product4.productImage = "fullscreen4"
         product4.cellImage = "extra-cold"
         
-        product5.name = "1984 Motorola"
-        product5.productImage = "phone-fullscreen4"
+        product5.name = "CLUB BOTTLE"
+        product5.productImage = "fullscreen5"
         product5.cellImage = "club-bottle"
         
-        product6.name = "1984 Motorola"
-        product6.productImage = "phone-fullscreen4"
+        product6.name = "THE SUB"
+        product6.productImage = "fullscreen6"
         product6.cellImage = "the-sub"
         
-        product7.name = "1984 Motorola"
-        product7.productImage = "phone-fullscreen4"
+        product7.name = "DRAUGTHKEG"
+        product7.productImage = "fullscreen7"
         product7.cellImage = "draughtkeg"
         
         products = [product1, product2, product3, product4, product5, product6, product7]
