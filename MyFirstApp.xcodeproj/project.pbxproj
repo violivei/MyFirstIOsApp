@@ -16,6 +16,7 @@
 		DC38CFDD1D886EBC00425E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFDB1D886EBC00425E31 /* LaunchScreen.storyboard */; };
 		DC38CFE51D88806400425E31 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38CFE41D88806400425E31 /* ProductViewController.swift */; };
 		DC7C473F1D8B387A00CDCC5F /* HEINEKEN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */; };
+		DC7C47411D8C7F1C00CDCC5F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DC38CFDE1D886EBC00425E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC38CFE41D88806400425E31 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = HEINEKEN.TTF; path = ../../../Downloads/Heineken/HEINEKEN.TTF; sourceTree = "<group>"; };
+		DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */,
 				DC045E751D89C1EC00E2EBF6 /* Product.swift */,
 				DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */,
+				DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */,
 			);
 			path = MyFirstApp;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				DC38CFE51D88806400425E31 /* ProductViewController.swift in Sources */,
 				DC045E741D88A76E00E2EBF6 /* ProductsTableViewController.swift in Sources */,
 				DC045E761D89C1EC00E2EBF6 /* Product.swift in Sources */,
+				DC7C47411D8C7F1C00CDCC5F /* SplashViewController.swift in Sources */,
 				DC38CFD31D886EBC00425E31 /* AppDelegate.swift in Sources */,
 				DC045E721D8899A000E2EBF6 /* ContactViewController.swift in Sources */,
 			);
