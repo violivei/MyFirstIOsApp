@@ -174,28 +174,6 @@
             </objects>
             <point key="canvasLocation" x="1029.5" y="156.5"/>
         </scene>
-        <!--Splash View Controller-->
-        <scene sceneID="RuE-C8-QZk">
-            <objects>
-                <viewController id="I2f-gk-ZWB" customClass="SplashViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CYs-sb-9FG"/>
-                        <viewControllerLayoutGuide type="bottom" id="fRe-ad-UTG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Q4D-A4-yN0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="HN0-Aa-VWV"/>
-                    <connections>
-                        <segue destination="GPS-Tq-K1p" kind="push" identifier="showApp" id="lU5-c9-LYe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sv6-n9-ANm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="585" y="155"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="cbo-gA-MV6">
             <objects>
@@ -206,13 +184,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="99x-aK-7fQ">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="I2f-gk-ZWB" kind="relationship" relationship="rootViewController" id="5rB-cd-TCJ"/>
+                        <segue destination="GPS-Tq-K1p" kind="relationship" relationship="rootViewController" id="PrS-YZ-caf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmY-IW-iNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="155"/>
+            <point key="canvasLocation" x="560" y="156"/>
         </scene>
     </scenes>
     <resources>

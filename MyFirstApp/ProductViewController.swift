@@ -23,13 +23,6 @@ class ProductViewController: UIViewController {
             }
         }
     }
-    
-    /*
-     * Gets rid of the status bar
-     */
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
  
     @IBAction func addToCartPressed(sender: AnyObject) {
         print("Button Pressed")

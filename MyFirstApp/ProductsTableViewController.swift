@@ -15,6 +15,7 @@ class ProductsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColorFromRGB(0x002E10)
+        self.navigationController?.navigationBarHidden = false
         
         let product1 = Product()
         let product2 = Product()
