@@ -26,13 +26,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-1D-zKP">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-9c-ODH">
-                                <rect key="frame" x="130" y="497" width="60" height="60"/>
-                                <state key="normal" image="heineken-plus2"/>
-                                <connections>
-                                    <action selector="addToCartPressed:" destination="U4U-F4-ZZ2" eventType="touchUpInside" id="wMl-wx-4zu"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrb-le-rlt">
                                 <rect key="frame" x="33" y="103" width="255" height="43"/>
                                 <fontDescription key="fontDescription" name="Heineken" family="Heineken" pointSize="32"/>
@@ -142,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="1969" y="155"/>
         </scene>
-        <!--Item-->
+        <!--Catalog-->
         <scene sceneID="ID5-ch-0QA">
             <objects>
                 <tableViewController id="GPS-Tq-K1p" customClass="ProductsTableViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,14 +162,14 @@
                             <outlet property="delegate" destination="GPS-Tq-K1p" id="FZS-1j-Urh"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="catalog-icon" selectedImage="catalog-icon-selected" id="fef-TO-22c"/>
+                    <tabBarItem key="tabBarItem" title="Catalog" image="catalog-icon" selectedImage="catalog-icon-selected" id="fef-TO-22c"/>
                     <navigationItem key="navigationItem" id="UWd-YW-l9J"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJX-6L-FUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.5" y="156.5"/>
         </scene>
-        <!--Item 2-->
+        <!--BuyWithPhoto-->
         <scene sceneID="1NF-Jf-Evf">
             <objects>
                 <viewController id="P0c-hL-PDx" sceneMemberID="viewController">
@@ -189,13 +182,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="photo-icon" selectedImage="photo-icon-selected" id="U3c-Ur-D3y"/>
+                    <tabBarItem key="tabBarItem" title="BuyWithPhoto" image="photo-icon" selectedImage="photo-icon-selected" id="U3c-Ur-D3y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8C-Pd-arJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="1522"/>
+            <point key="canvasLocation" x="127" y="1638"/>
         </scene>
-        <!--Item-->
+        <!--BuyWithVoice-->
         <scene sceneID="5IU-0C-oOW">
             <objects>
                 <viewController id="goc-bw-N9l" sceneMemberID="viewController">
@@ -208,13 +201,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="voice-icon" selectedImage="voice-icon-selected" id="Vcv-Rb-vEc"/>
+                    <tabBarItem key="tabBarItem" title="BuyWithVoice" image="voice-icon" selectedImage="voice-icon-selected" id="Vcv-Rb-vEc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tUN-KA-Vjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="1594"/>
+            <point key="canvasLocation" x="737" y="1638"/>
         </scene>
-        <!--Item 1-->
+        <!--BuyWithNoClick-->
         <scene sceneID="sXR-k2-TgQ">
             <objects>
                 <viewController id="aoZ-Nl-oXB" sceneMemberID="viewController">
@@ -238,7 +231,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="shop-icon" selectedImage="shop-icon-selected" id="kgJ-W0-6J4"/>
+                    <tabBarItem key="tabBarItem" title="BuyWithNoClick" image="shop-icon" selectedImage="shop-icon-selected" id="kgJ-W0-6J4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psY-OK-RjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,21 +249,21 @@
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="P0c-hL-PDx" kind="relationship" relationship="viewControllers" id="jXx-GY-Xwi"/>
-                        <segue destination="gbN-4K-5e1" kind="relationship" relationship="viewControllers" id="igN-mD-UP9"/>
                         <segue destination="aoZ-Nl-oXB" kind="relationship" relationship="viewControllers" id="Hdo-KZ-MTS"/>
                         <segue destination="goc-bw-N9l" kind="relationship" relationship="viewControllers" id="3bV-9O-czj"/>
+                        <segue destination="P0c-hL-PDx" kind="relationship" relationship="viewControllers" id="aez-fK-wzQ"/>
+                        <segue destination="gbN-4K-5e1" kind="relationship" relationship="viewControllers" id="d4z-o3-LqE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zb-na-COL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="765"/>
+            <point key="canvasLocation" x="127" y="736"/>
         </scene>
-        <!--Item-->
+        <!--CatalogNavigation-->
         <scene sceneID="cbo-gA-MV6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbN-4K-5e1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YOT-6M-zpm"/>
+                    <tabBarItem key="tabBarItem" title="CatalogNavigation" id="YOT-6M-zpm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYB-Gk-Z3i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -295,7 +288,6 @@
         <image name="catalog-icon-selected" width="50" height="50"/>
         <image name="fullscreen1" width="657" height="900"/>
         <image name="header-contact" width="375" height="125"/>
-        <image name="heineken-plus2" width="60" height="60"/>
         <image name="icon-about-email" width="34" height="34"/>
         <image name="icon-about-phone" width="34" height="34"/>
         <image name="icon-about-website" width="34" height="34"/>
