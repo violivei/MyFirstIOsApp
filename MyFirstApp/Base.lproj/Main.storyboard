@@ -194,6 +194,25 @@
             </objects>
             <point key="canvasLocation" x="127" y="1522"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="5IU-0C-oOW">
+            <objects>
+                <viewController id="goc-bw-N9l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ve5-qA-H1g"/>
+                        <viewControllerLayoutGuide type="bottom" id="mi8-sU-4gs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nol-Ts-C8I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="voice-icon" selectedImage="voice-icon-selected" id="Vcv-Rb-vEc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUN-KA-Vjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705" y="1594"/>
+        </scene>
         <!--Item 1-->
         <scene sceneID="sXR-k2-TgQ">
             <objects>
@@ -207,7 +226,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="kgJ-W0-6J4"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="shop-icon" selectedImage="shop-icon-selected" id="kgJ-W0-6J4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psY-OK-RjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,11 +247,12 @@
                         <segue destination="P0c-hL-PDx" kind="relationship" relationship="viewControllers" id="jXx-GY-Xwi"/>
                         <segue destination="gbN-4K-5e1" kind="relationship" relationship="viewControllers" id="igN-mD-UP9"/>
                         <segue destination="aoZ-Nl-oXB" kind="relationship" relationship="viewControllers" id="Hdo-KZ-MTS"/>
+                        <segue destination="goc-bw-N9l" kind="relationship" relationship="viewControllers" id="3bV-9O-czj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zb-na-COL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="705"/>
+            <point key="canvasLocation" x="127" y="765"/>
         </scene>
         <!--Item-->
         <scene sceneID="cbo-gA-MV6">
@@ -268,5 +288,9 @@
         <image name="icon-about-website" width="34" height="34"/>
         <image name="photo-icon" width="50" height="50"/>
         <image name="photo-icon-selected" width="50" height="50"/>
+        <image name="shop-icon" width="50" height="50"/>
+        <image name="shop-icon-selected" width="50" height="50"/>
+        <image name="voice-icon" width="50" height="50"/>
+        <image name="voice-icon-selected" width="50" height="50"/>
     </resources>
 </document>
