@@ -1,0 +1,6 @@
+framework module SnapTimer {
+  umbrella header "SnapTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}

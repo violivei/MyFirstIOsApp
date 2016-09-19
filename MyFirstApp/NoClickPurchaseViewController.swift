@@ -7,43 +7,34 @@
 //
 
 import UIKit
-import CLTimer
+import SnapTimer
 
-class NoClickPurchaseViewController: UIViewController,cltimerDelegate {
-    
-    
-    @IBOutlet weak var timer: CLTimer!
-    
-    
+class NoClickPurchaseViewController: UIViewController{
+ 
+    @IBOutlet weak var snapTimer: SnapTimerView!
+    var timer = NSTimer()
+    var total: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        timer.cltimer_delegate=self
-        timer.startTimer(withSeconds: 3, format:.Minutes , mode: .Reverse)
-        // timer.showDefaultCountDown=false
+        scheduledTimerWithTimeInterval()
+
     }
     
-    @IBAction func stopTimer(sender: AnyObject) {
-        timer.stopTimer()
-    }
-    
-    @IBAction func resetTimer(sender: AnyObject) {
-        timer.resetTimer()
-        
-    }
-    
-    @IBAction func startTimer(sender: AnyObject) {
-        timer.startTimer(withSeconds: 3, format:.Minutes , mode: .Reverse)
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NoClickPurchaseViewController.updateCounting), userInfo: nil, repeats: true)
+
     }
     
     
-    func timerDidStop(time:Int){
-        print("Stopped time : ",time)
+    func updateCounting(){
+        NSLog("counting..")
+        total = total + 10
+        snapTimer.animateOuterValue(total)
+        if(total > 90){
+            timer.invalidate()
+        }
     }
-    
-    func timerDidUpdate(time:Int){
-        print("updated Time : ",time)
-    }
+
 }

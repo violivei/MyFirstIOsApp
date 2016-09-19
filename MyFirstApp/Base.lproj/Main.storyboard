@@ -228,12 +228,18 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-yz-8St" customClass="CLTimer" customModule="CLTimer">
-                                <rect key="frame" x="40" y="202" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-yz-8St" customClass="SnapTimerView" customModule="SnapTimer">
+                                <rect key="frame" x="20" y="87" width="100" height="100"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="countDownColor">
+                                        <color key="value" red="0.96862745100000003" green="0.90588235289999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="timerBackgroundColor">
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="outerValue">
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -242,7 +248,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="BuyWithNoClick" image="shop-icon" selectedImage="shop-icon-selected" id="kgJ-W0-6J4"/>
                     <connections>
-                        <outlet property="timer" destination="rb1-yz-8St" id="34t-D3-OVX"/>
+                        <outlet property="snapTimer" destination="rb1-yz-8St" id="gle-dL-dcq"/>
+                        <outlet property="timer" destination="rb1-yz-8St" id="SvD-iU-RIz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psY-OK-RjK" userLabel="First Responder" sceneMemberID="firstResponder"/>

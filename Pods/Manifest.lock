@@ -1,15 +1,15 @@
 PODS:
-  - CLTimer (0.1.4)
   - KYWheelTabController (1.0.0)
+  - SnapTimer (0.0.1)
 
 DEPENDENCIES:
-  - CLTimer
   - KYWheelTabController
+  - SnapTimer
 
 SPEC CHECKSUMS:
-  CLTimer: fdb92f944aa8ee7e1edd0fed6032d836c65ebdef
   KYWheelTabController: 1aab3d3b1e0db6f8dc97c458f694678cb696eacd
+  SnapTimer: e860473dc4b8b86831b23804fec520dc48644df4
 
-PODFILE CHECKSUM: b78bc4b580f0aebafe5564ab8f4d0ab006893cb1
+PODFILE CHECKSUM: 8fa1fe90c19cbd117250ccb74f4f987ddc9b87b7
 
 COCOAPODS: 1.0.1

@@ -84,10 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CLTimer/CLTimer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KYWheelTabController/KYWheelTabController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SnapTimer/SnapTimer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CLTimer/CLTimer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KYWheelTabController/KYWheelTabController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SnapTimer/SnapTimer.framework"
 fi
