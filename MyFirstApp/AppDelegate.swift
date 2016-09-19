@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYWheelTabController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let vc0 = UIViewController()
+        vc0.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(named: "catalog-icon"),
+            selectedImage: UIImage(named: "catalog-icon-selected"))
+        
+        let vc1 = UIViewController()
+        vc1.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(named: "voice-icon"),
+            selectedImage: UIImage(named: "voice-icon-selected"))
+        
+        let vc2 = UIViewController()
+        vc2.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(named: "shop-icon"),
+            selectedImage: UIImage(named: "shop-icon-selected"))
+        
+        let vc3 = UIViewController()
+        vc3.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(named: "photo-icon"),
+            selectedImage: UIImage(named: "photo-icon-selected"))
+        
+        let wheelTabController = KYWheelTabController()
+        wheelTabController.viewControllers = [vc0, vc1, vc2, vc3]
+
+         wheelTabController.tintColor = UIColor.whiteColor()
+ 
+        
+        window?.rootViewController = wheelTabController
+
         return true
     }
 

@@ -1,0 +1,12 @@
+PODS:
+  - KYWheelTabController (1.0.0)
+
+DEPENDENCIES:
+  - KYWheelTabController
+
+SPEC CHECKSUMS:
+  KYWheelTabController: 1aab3d3b1e0db6f8dc97c458f694678cb696eacd
+
+PODFILE CHECKSUM: c983687fc0bef03ffa41f43da108c0e1ab197e88
+
+COCOAPODS: 1.0.1
