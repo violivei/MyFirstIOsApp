@@ -210,7 +210,7 @@
         <!--BuyWithNoClick-->
         <scene sceneID="sXR-k2-TgQ">
             <objects>
-                <viewController id="aoZ-Nl-oXB" sceneMemberID="viewController">
+                <viewController id="aoZ-Nl-oXB" customClass="NoClickPurchaseViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zcg-e1-8hp"/>
                         <viewControllerLayoutGuide type="bottom" id="x0Y-4t-6H8"/>
@@ -219,19 +219,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fullscreen1" translatesAutoresizingMaskIntoConstraints="NO" id="ImY-ql-g3f">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THE ICON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSk-TG-PPW">
                                 <rect key="frame" x="33" y="36" width="255" height="43"/>
                                 <fontDescription key="fontDescription" name="Heineken" family="Heineken" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fullscreen1" translatesAutoresizingMaskIntoConstraints="NO" id="ImY-ql-g3f">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-yz-8St" customClass="CLTimer" customModule="CLTimer">
+                                <rect key="frame" x="40" y="202" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="countDownColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="BuyWithNoClick" image="shop-icon" selectedImage="shop-icon-selected" id="kgJ-W0-6J4"/>
+                    <connections>
+                        <outlet property="timer" destination="rb1-yz-8St" id="34t-D3-OVX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psY-OK-RjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
