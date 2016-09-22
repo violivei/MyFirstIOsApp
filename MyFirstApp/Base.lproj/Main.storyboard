@@ -8,6 +8,7 @@
         <mutableArray key="HEINEKEN.TTF">
             <string>Heineken</string>
             <string>Heineken</string>
+            <string>Heineken</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -271,10 +272,23 @@
         <scene sceneID="gY7-3i-wTu">
             <objects>
                 <viewController restorationIdentifier="OrderPlaced" storyboardIdentifier="OrderPlaced" id="4El-cc-vcz" customClass="PlaceOrderViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6iM-De-PWi">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zRR-66-hxZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yzt-dS-Wcx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="daR-Uo-Uq8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THE ICON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypk-zC-Mz6">
+                                <rect key="frame" x="32" y="263" width="255" height="43"/>
+                                <fontDescription key="fontDescription" name="Heineken" family="Heineken" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <navigationItem key="navigationItem" id="gfl-CQ-af7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCS-gm-VTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
