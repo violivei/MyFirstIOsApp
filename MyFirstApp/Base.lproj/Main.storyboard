@@ -267,19 +267,14 @@
             </objects>
             <point key="canvasLocation" x="730" y="893"/>
         </scene>
-        <!--View Controller-->
+        <!--Place Order View Controller-->
         <scene sceneID="gY7-3i-wTu">
             <objects>
-                <viewController restorationIdentifier="OrderPlaced" storyboardIdentifier="OrderPlaced" id="4El-cc-vcz" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="V32-Xz-ehn"/>
-                        <viewControllerLayoutGuide type="bottom" id="tc5-EY-QbU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ATK-pN-ebM">
+                <viewController restorationIdentifier="OrderPlaced" storyboardIdentifier="OrderPlaced" id="4El-cc-vcz" customClass="PlaceOrderViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6iM-De-PWi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                     <navigationItem key="navigationItem" id="gfl-CQ-af7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCS-gm-VTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
