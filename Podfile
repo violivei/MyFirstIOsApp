@@ -1,6 +1,7 @@
 platform :ios, '8.0'
 target 'MyFirstApp' do
 	use_frameworks!
-	pod 'KYWheelTabController'
+	pod "KYWheelTabController"
 	pod "SnapTimer"
+	pod “Firebase"
 end

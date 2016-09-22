@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>366521944699-fombq10is8343526ijool1skcadvbenu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.366521944699-fombq10is8343526ijool1skcadvbenu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBMTbofzgPASq1AC5h0ylB0QFIg5qM1vEE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>366521944699</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.accenture.MyFirstApp</string>
+	<key>PROJECT_ID</key>
+	<string>heinekenpoc-9dc8f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>heinekenpoc-9dc8f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:366521944699:ios:62f91b1604413ff7</string>
+	<key>DATABASE_URL</key>
+	<string>https://heinekenpoc-9dc8f.firebaseio.com</string>
+</dict>
+</plist>

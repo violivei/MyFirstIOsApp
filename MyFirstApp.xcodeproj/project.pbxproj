@@ -19,6 +19,7 @@
 		DC7C473F1D8B387A00CDCC5F /* HEINEKEN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */; };
 		DC7C47411D8C7F1C00CDCC5F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */; };
 		DCA35DB61D907EE8009F10C5 /* NoClickPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */; };
+		DCD7C09E1D9448EA005C9B15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCD7C09D1D9448EA005C9B15 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = HEINEKEN.TTF; path = ../../../Downloads/Heineken/HEINEKEN.TTF; sourceTree = "<group>"; };
 		DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoClickPurchaseViewController.swift; sourceTree = "<group>"; };
+		DCD7C09D1D9448EA005C9B15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		DC38CFD11D886EBC00425E31 /* MyFirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				DCD7C09D1D9448EA005C9B15 /* GoogleService-Info.plist */,
 				DC38CFD21D886EBC00425E31 /* AppDelegate.swift */,
 				DC38CFD61D886EBC00425E31 /* Main.storyboard */,
 				DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */,
@@ -141,6 +144,7 @@
 				TargetAttributes = {
 					DC38CFCE1D886EBC00425E31 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = A736V34HJN;
 					};
 				};
 			};
@@ -169,6 +173,7 @@
 			files = (
 				DC38CFDD1D886EBC00425E31 /* LaunchScreen.storyboard in Resources */,
 				DC38CFDA1D886EBC00425E31 /* Assets.xcassets in Resources */,
+				DCD7C09E1D9448EA005C9B15 /* GoogleService-Info.plist in Resources */,
 				DC38CFD81D886EBC00425E31 /* Main.storyboard in Resources */,
 				DC7C473F1D8B387A00CDCC5F /* HEINEKEN.TTF in Resources */,
 			);
@@ -349,10 +354,14 @@
 			baseConfigurationReference = AD2307F197D5053BAF03DE5A /* Pods-MyFirstApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.MyFirstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -361,10 +370,14 @@
 			baseConfigurationReference = 41598FC88F7F5D25E890CE78 /* Pods-MyFirstApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.MyFirstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
