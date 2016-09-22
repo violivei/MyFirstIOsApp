@@ -53,6 +53,9 @@ class NoClickPurchaseViewController: UIViewController{
                 let post = db.childByAutoId()
                 post.setValue(["orderId": "orderId", "name": "name", "product": "product"])
                 timer.invalidate()
+                if let next = self.storyboard?.instantiateViewControllerWithIdentifier("OrderPlaced"){
+                    self.presentViewController(next, animated: true, completion: nil)
+                }
             }
         }
     }
