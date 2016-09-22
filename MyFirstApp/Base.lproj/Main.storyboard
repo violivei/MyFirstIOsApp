@@ -174,7 +174,7 @@
         <!--BuyWithPhoto-->
         <scene sceneID="1NF-Jf-Evf">
             <objects>
-                <viewController id="P0c-hL-PDx" sceneMemberID="viewController">
+                <viewController id="P0c-hL-PDx" customClass="OrderWithPhotoViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hEp-cf-MyG"/>
                         <viewControllerLayoutGuide type="bottom" id="NVF-U0-lox"/>
@@ -182,9 +182,25 @@
                     <view key="view" contentMode="scaleToFill" id="Hbj-Ck-wKT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bo4-br-upp" userLabel="ImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgU-3o-8P7">
+                                <rect key="frame" x="122" y="474" width="77" height="30"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="useCamera:" destination="P0c-hL-PDx" eventType="touchUpInside" id="vFa-od-0FL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="BuyWithPhoto" image="photo-icon" selectedImage="photo-icon-selected" id="U3c-Ur-D3y"/>
+                    <connections>
+                        <outlet property="imageVIew" destination="Bo4-br-upp" id="MXt-kV-FRV"/>
+                        <outlet property="imageView" destination="Bo4-br-upp" id="Evh-7z-hMW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8C-Pd-arJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
