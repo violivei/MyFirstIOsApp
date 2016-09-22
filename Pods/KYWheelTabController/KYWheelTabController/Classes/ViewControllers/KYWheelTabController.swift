@@ -89,6 +89,7 @@ public class KYWheelTabController: UITabBarController {
                 constant: 44
             )
         ])
+        wheelMenuView.closeMenuView()
     }
 
 }

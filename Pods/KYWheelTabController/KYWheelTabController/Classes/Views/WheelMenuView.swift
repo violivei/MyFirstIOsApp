@@ -305,7 +305,7 @@ public protocol WheelMenuViewDelegate: NSObjectProtocol {
         )
     }
     
-    private func closeMenuView() {
+    public func closeMenuView() {
         openMenu = false
         UIView.animateWithDuration(NSTimeInterval(animationDuration),
             delay: 0,
