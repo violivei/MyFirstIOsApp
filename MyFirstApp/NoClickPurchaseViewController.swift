@@ -13,14 +13,22 @@ import FirebaseDatabase
 class NoClickPurchaseViewController: UIViewController{
  
     @IBOutlet weak var snapTimer: SnapTimerView!
+    @IBOutlet weak var pauseButton: UIButton!
     var timer = NSTimer()
     var total: CGFloat = 0
+    var timerPaused: Bool = false
     var db: FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         scheduledTimerWithTimeInterval()
 
+    }
+    
+    @IBAction func pauseOrder(sender: AnyObject) {
+        timerPaused = !timerPaused
+        print(timerPaused)
+        timerPaused ? pauseButton.setImage(UIImage(named: "pause-icon-selected"), forState: UIControlState.Normal) : pauseButton.setImage(UIImage(named: "pause-icon"), forState: UIControlState.Normal)
     }
     
     func scheduledTimerWithTimeInterval(){
@@ -31,12 +39,15 @@ class NoClickPurchaseViewController: UIViewController{
     
     func updateCounting(){
         NSLog("counting..")
-        total = total + 10
-        snapTimer.animateOuterValue(total)
-        if(total > 90){
-            let post = db.childByAutoId()
-            post.setValue(["orderId": "orderId", "name": "name", "product": "product"])
-            timer.invalidate()
+         if(!timerPaused){
+            total = total + 10
+            snapTimer.animateOuterValue(total)
+            if(total > 90){
+                total = 0
+                let post = db.childByAutoId()
+                post.setValue(["orderId": "orderId", "name": "name", "product": "product"])
+                timer.invalidate()
+            }
         }
     }
 
