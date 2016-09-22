@@ -22,13 +22,19 @@ class NoClickPurchaseViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         scheduledTimerWithTimeInterval()
-
+        snapTimer.addSubview(pauseButton)
     }
     
     @IBAction func pauseOrder(sender: AnyObject) {
+        
         timerPaused = !timerPaused
         print(timerPaused)
-        timerPaused ? pauseButton.setImage(UIImage(named: "pause-icon-selected"), forState: UIControlState.Normal) : pauseButton.setImage(UIImage(named: "pause-icon"), forState: UIControlState.Normal)
+        if(timerPaused){
+            pauseButton.setImage(UIImage(named: "pause-icon-selected"), forState: UIControlState.Normal)
+        }else{
+            pauseButton.setImage(UIImage(named: "pause-icon"), forState: UIControlState.Normal)
+        }
+        
     }
     
     func scheduledTimerWithTimeInterval(){
