@@ -3,5 +3,5 @@ target 'MyFirstApp' do
 	use_frameworks!
 	pod "KYWheelTabController"
 	pod "SnapTimer"
-	pod “Firebase"
+	pod “Firebase/Database“
 end

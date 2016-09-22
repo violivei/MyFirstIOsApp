@@ -8,6 +8,7 @@
 
 import UIKit
 import KYWheelTabController
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             image: UIImage(named: "voice-icon"),
             selectedImage: UIImage(named: "voice-icon-selected"))
 
+        FIRApp.configure()
         
         //let wheelTabController = KYWheelTabController()
        // wheelTabController.viewControllers = [vc0, vc1]
