@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CEEC0B39-E7EC-4962-A7D6-3B7710916E41",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "709C1E9D87E36564343935DBB27DC3F076453642" : "ios-sdk\/",
+    "709C1E9D87E36564343935DBB27DC3F076453642" : "MyFirstApp\/ios-sdk\/",
     "397AD6B38B5560C3C745C5BC7471B990538630A0" : "MyFirstApp\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "MyFirstApp",

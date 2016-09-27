@@ -16,12 +16,21 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     var imagePicker: UIImagePickerController!
     let apiKey = "54a2ea093fbed06393dab35593dc51f785b493c5"
     let version = "2016-09-23"
-    let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
-    
+    var photoURL : String = ""
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func sendPicture(_ sender: AnyObject) {
+        //let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
+        //let url = "your-image-url"
+        //let failure = { (error: NSError) in print(error) }
+        //visualRecognition.classify(url: photoURL, failure: failure) { classifiedImages in
+            //print(classifiedImages)
+        //}
+    }
+
     @IBAction func useCamera(_ sender: AnyObject) {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
@@ -33,6 +42,12 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        let imageUrl = info[UIImagePickerControllerReferenceURL] as! NSURL
+        let imageName = imageUrl.lastPathComponent
+        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first as String!
+        let photoURL = NSURL(fileURLWithPath: documentDirectory!)
+        let localPath = photoURL.appendingPathComponent(imageName!)
+        print(photoURL)
     }
     
 }
