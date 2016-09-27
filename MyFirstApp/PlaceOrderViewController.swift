@@ -17,21 +17,21 @@ class PlaceOrderViewController: UIViewController {
         super.viewDidLoad()
         
         // Load the video from the app bundle.
-        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("video", withExtension: "mp4")!
+        let videoURL: URL = Bundle.main.url(forResource: "video", withExtension: "mp4")!
         
         // Create and configure the movie player.
         self.moviePlayer = MPMoviePlayerController(contentURL: videoURL)
         
-        self.moviePlayer.controlStyle = MPMovieControlStyle.None
-        self.moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
+        self.moviePlayer.controlStyle = MPMovieControlStyle.none
+        self.moviePlayer.scalingMode = MPMovieScalingMode.aspectFill
         
         self.moviePlayer.view.frame = self.view.frame
-        self.view .insertSubview(self.moviePlayer.view, atIndex: 0)
+        self.view .insertSubview(self.moviePlayer.view, at: 0)
         
         self.moviePlayer.play()
         
         // Loop video.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PlaceOrderViewController.loopVideo), name: MPMoviePlayerPlaybackDidFinishNotification, object: self.moviePlayer)
+        NotificationCenter.default.addObserver(self, selector: #selector(PlaceOrderViewController.loopVideo), name: NSNotification.Name.MPMoviePlayerPlaybackDidFinish, object: self.moviePlayer)
     }
     
     func loopVideo() {

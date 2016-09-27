@@ -18,16 +18,16 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
         super.viewDidLoad()
     }
     
-    @IBAction func useCamera(sender: AnyObject) {
+    @IBAction func useCamera(_ sender: AnyObject) {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
+        imagePicker.sourceType = .camera
         
-        presentViewController(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
     }
     

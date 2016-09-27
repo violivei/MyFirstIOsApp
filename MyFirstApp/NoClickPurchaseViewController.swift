@@ -14,7 +14,7 @@ class NoClickPurchaseViewController: UIViewController{
  
     @IBOutlet weak var snapTimer: SnapTimerView!
     @IBOutlet weak var pauseButton: UIButton!
-    var timer = NSTimer()
+    var timer = Timer()
     var total: CGFloat = 0
     var timerPaused: Bool = false
     var db: FIRDatabaseReference!
@@ -25,21 +25,21 @@ class NoClickPurchaseViewController: UIViewController{
         snapTimer.addSubview(pauseButton)
     }
     
-    @IBAction func pauseOrder(sender: AnyObject) {
+    @IBAction func pauseOrder(_ sender: AnyObject) {
         
         timerPaused = !timerPaused
         print(timerPaused)
         if(timerPaused){
-            pauseButton.setImage(UIImage(named: "pause-icon-selected"), forState: UIControlState.Normal)
+            pauseButton.setImage(UIImage(named: "pause-icon-selected"), for: UIControlState())
         }else{
-            pauseButton.setImage(UIImage(named: "pause-icon"), forState: UIControlState.Normal)
+            pauseButton.setImage(UIImage(named: "pause-icon"), for: UIControlState())
         }
         
     }
     
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NoClickPurchaseViewController.updateCounting), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(NoClickPurchaseViewController.updateCounting), userInfo: nil, repeats: true)
         db = FIRDatabase.database().reference()
     }
     
@@ -53,8 +53,8 @@ class NoClickPurchaseViewController: UIViewController{
                 let post = db.childByAutoId()
                 post.setValue(["orderId": "orderId", "name": "name", "product": "product"])
                 timer.invalidate()
-                if let next = self.storyboard?.instantiateViewControllerWithIdentifier("OrderPlaced"){
-                    self.presentViewController(next, animated: true, completion: nil)
+                if let next = self.storyboard?.instantiateViewController(withIdentifier: "OrderPlaced"){
+                    self.present(next, animated: true, completion: nil)
                 }
             }
         }

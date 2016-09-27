@@ -14,14 +14,14 @@ class SnapTimerBorderLayer: CALayer {
 	@NSManaged var radius: CGFloat
 	@NSManaged var width: CGFloat
 
-	override init(layer: AnyObject) {
+	override init(layer: Any) {
 		super.init(layer: layer)
 		if let layer = layer as? SnapTimerBorderLayer {
 			startAngle = layer.startAngle
 			circleColor = layer.circleColor
 		} else {
 			startAngle = 0
-			circleColor = UIColor.whiteColor().CGColor
+			circleColor = UIColor.white.cgColor
 		}
 	}
 
@@ -33,11 +33,11 @@ class SnapTimerBorderLayer: CALayer {
 		super.init()
 	}
 
-	func animation(key: String) -> CAAnimation {
+	func animation(_ key: String) -> CAAnimation {
 		let animation = CABasicAnimation(keyPath: key)
 
-		if let pLayer = self.presentationLayer() as? SnapTimerBorderLayer,
-			value = pLayer.valueForKey(key) {
+        if let pLayer : SnapTimerBorderLayer? = self.presentation(),
+			let value = pLayer?.value(forKey: key) {
 			animation.fromValue = value
 		}
 
@@ -48,28 +48,28 @@ class SnapTimerBorderLayer: CALayer {
 		return animation
 	}
 
-	override func actionForKey(key: String) -> CAAction? {
+	override func action(forKey key: String) -> CAAction? {
 		if key == "startAngle" {
 			return self.animation(key)
 		}
-		return super.actionForKey(key)
+		return super.action(forKey: key)
 	}
 
-	override class func needsDisplayForKey(key: String) -> Bool {
+	override class func needsDisplay(forKey key: String) -> Bool {
 		if key == "startAngle" || key == "circleColor" || key == "radius" ||
 			key == "borderWidth" {
 			return true
 		}
-		return super.needsDisplayForKey(key)
+		return super.needsDisplay(forKey: key)
 	}
 
-	override func drawInContext(ctx: CGContext) {
+	override func draw(in ctx: CGContext) {
 		let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
 
-		CGContextBeginPath(ctx)
-		CGContextSetStrokeColorWithColor(ctx, self.circleColor)
-		CGContextSetLineWidth(ctx, self.width)
-		CGContextAddArc(ctx, center.x, center.y, self.radius, self.startAngle, SnapTimerView.endAngle, 0)
-		CGContextDrawPath(ctx, .Stroke)
+		ctx.beginPath()
+		ctx.setStrokeColor(self.circleColor)
+		ctx.setLineWidth(self.width)
+        ctx.addArc(center: center, radius: self.radius, startAngle: self.startAngle, endAngle: SnapTimerView.endAngle, clockwise: true)
+		ctx.drawPath(using: .stroke)
 	}
 }
