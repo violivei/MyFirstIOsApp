@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import VisualRecognitionV3
 
 class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
