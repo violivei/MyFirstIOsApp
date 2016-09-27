@@ -11,12 +11,15 @@
 		DC045E721D8899A000E2EBF6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E711D8899A000E2EBF6 /* ContactViewController.swift */; };
 		DC045E741D88A76E00E2EBF6 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */; };
 		DC045E761D89C1EC00E2EBF6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E751D89C1EC00E2EBF6 /* Product.swift */; };
+		DC0B0C4E1D9AF19B0042B490 /* VisualRecognitionV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B0C4D1D9AF19B0042B490 /* VisualRecognitionV3.framework */; };
+		DC0B0C4F1D9AF19B0042B490 /* VisualRecognitionV3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B0C4D1D9AF19B0042B490 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC0B0C511D9AF4190042B490 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B0C501D9AF4190042B490 /* RestKit.framework */; };
+		DC0B0C521D9AF4190042B490 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B0C501D9AF4190042B490 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC38CFD31D886EBC00425E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38CFD21D886EBC00425E31 /* AppDelegate.swift */; };
 		DC38CFD81D886EBC00425E31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD61D886EBC00425E31 /* Main.storyboard */; };
 		DC38CFDA1D886EBC00425E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD91D886EBC00425E31 /* Assets.xcassets */; };
 		DC38CFDD1D886EBC00425E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFDB1D886EBC00425E31 /* LaunchScreen.storyboard */; };
 		DC38CFE51D88806400425E31 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38CFE41D88806400425E31 /* ProductViewController.swift */; };
-		DC5370FE1D9AD730003C217E /* VisualRecognitionV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5370FD1D9AD730003C217E /* VisualRecognitionV3.framework */; };
 		DC5371021D9ADDFF003C217E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371011D9ADDFF003C217E /* Alamofire.framework */; };
 		DC5371031D9ADDFF003C217E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371011D9ADDFF003C217E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC5371061D9ADFBD003C217E /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371051D9ADFBD003C217E /* Freddy.framework */; };
@@ -38,7 +41,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DC5371071D9ADFBD003C217E /* Freddy.framework in Embed Frameworks */,
+				DC0B0C4F1D9AF19B0042B490 /* VisualRecognitionV3.framework in Embed Frameworks */,
 				DC5371031D9ADDFF003C217E /* Alamofire.framework in Embed Frameworks */,
+				DC0B0C521D9AF4190042B490 /* RestKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +57,8 @@
 		DC045E711D8899A000E2EBF6 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		DC045E751D89C1EC00E2EBF6 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DC0B0C4D1D9AF19B0042B490 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VisualRecognitionV3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC0B0C501D9AF4190042B490 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC38CFCF1D886EBC00425E31 /* MyFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC38CFD21D886EBC00425E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC38CFD71D886EBC00425E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,10 +84,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC5370FE1D9AD730003C217E /* VisualRecognitionV3.framework in Frameworks */,
 				DC5371021D9ADDFF003C217E /* Alamofire.framework in Frameworks */,
+				DC0B0C511D9AF4190042B490 /* RestKit.framework in Frameworks */,
 				DC5371061D9ADFBD003C217E /* Freddy.framework in Frameworks */,
 				A3473A59DE733E60E432704B /* Pods_MyFirstApp.framework in Frameworks */,
+				DC0B0C4E1D9AF19B0042B490 /* VisualRecognitionV3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +107,8 @@
 		DC38CFC61D886EBC00425E31 = {
 			isa = PBXGroup;
 			children = (
+				DC0B0C501D9AF4190042B490 /* RestKit.framework */,
+				DC0B0C4D1D9AF19B0042B490 /* VisualRecognitionV3.framework */,
 				DC5371051D9ADFBD003C217E /* Freddy.framework */,
 				DC5371011D9ADDFF003C217E /* Alamofire.framework */,
 				DC38CFD11D886EBC00425E31 /* MyFirstApp */,

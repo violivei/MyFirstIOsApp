@@ -220,7 +220,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="BuyWithPhoto" image="photo-icon" selectedImage="photo-icon-selected" id="U3c-Ur-D3y"/>
                     <connections>
-                        <outlet property="imageVIew" destination="Bo4-br-upp" id="MXt-kV-FRV"/>
                         <outlet property="imageView" destination="Bo4-br-upp" id="Evh-7z-hMW"/>
                     </connections>
                 </viewController>
@@ -379,7 +378,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbN-4K-5e1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CatalogNavigation" id="YOT-6M-zpm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYB-Gk-Z3i">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WYB-Gk-Z3i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
