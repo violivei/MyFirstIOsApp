@@ -16,7 +16,7 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     var imagePicker: UIImagePickerController!
     let apiKey = "54a2ea093fbed06393dab35593dc51f785b493c5"
     let version = "2016-09-23"
-    var photoURL : String = ""
+    var photoURL : URL?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +40,20 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
         imagePicker.dismiss(animated: true, completion: nil)
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        let imageUrl = info[UIImagePickerControllerReferenceURL] as! NSURL
-        let imageName = imageUrl.lastPathComponent
-        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first as String!
-        let photoURL = NSURL(fileURLWithPath: documentDirectory!)
-        let localPath = photoURL.appendingPathComponent(imageName!)
-        print(photoURL)
+        if let data = UIImagePNGRepresentation(imageView.image!) {
+            let filename = getDocumentsDirectory().appendingPathComponent("temp.png")
+            try? data.write(to: filename)
+            NSLog("%@", "Loading page with URL: \(filename)")
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
     }
     
 }

@@ -44,7 +44,7 @@ class NoClickPurchaseViewController: UIViewController{
     }
     
     func updateCounting(){
-        NSLog("counting..")
+        //NSLog("counting..")
          if(!timerPaused){
             total = total + 10
             snapTimer.animateOuterValue(total)
