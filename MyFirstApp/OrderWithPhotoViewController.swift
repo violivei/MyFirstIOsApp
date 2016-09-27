@@ -14,6 +14,9 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
 
     @IBOutlet var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
+    let apiKey = "54a2ea093fbed06393dab35593dc51f785b493c5"
+    let version = "2016-09-23"
+    let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
     
     override func viewDidLoad() {
         super.viewDidLoad()

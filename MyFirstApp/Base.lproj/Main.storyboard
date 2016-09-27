@@ -186,7 +186,7 @@
         <!--BuyWithPhoto-->
         <scene sceneID="1NF-Jf-Evf">
             <objects>
-                <viewController id="P0c-hL-PDx" customClass="OrderWithPhotoViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P0c-hL-PDx" customClass="OrderWithPhotoViewController" customModule="MyFirstApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hEp-cf-MyG"/>
                         <viewControllerLayoutGuide type="bottom" id="NVF-U0-lox"/>
@@ -200,11 +200,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgU-3o-8P7">
-                                <frame key="frameInset" minX="122" minY="474" width="77" height="30"/>
+                                <frame key="frameInset" minX="16" minY="474" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="useCamera:" destination="P0c-hL-PDx" eventType="touchUpInside" id="vFa-od-0FL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbk-MQ-SW8">
+                                <frame key="frameInset" minX="216" minY="474" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send Photo"/>
+                                <connections>
+                                    <action selector="useCamera:" destination="P0c-hL-PDx" eventType="touchUpInside" id="gMj-8s-wza"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -218,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8C-Pd-arJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="1638"/>
+            <point key="canvasLocation" x="126.5" y="1637.5"/>
         </scene>
         <!--BuyWithVoice-->
         <scene sceneID="5IU-0C-oOW">
@@ -371,7 +379,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbN-4K-5e1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CatalogNavigation" id="YOT-6M-zpm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WYB-Gk-Z3i">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYB-Gk-Z3i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
