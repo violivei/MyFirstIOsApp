@@ -8,10 +8,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioRecorderChildViewController" customModule="MyFirstApp" customModuleProvider="target">
             <connections>
-                <outlet property="playButton" destination="FPS-8C-jV2" id="IT0-aY-edU"/>
-                <outlet property="recordButton" destination="O7T-HS-1S2" id="OaP-Ol-WRl"/>
+                <outlet property="playButton" destination="FPS-8C-jV2" id="UEr-HP-xJz"/>
+                <outlet property="recordButton" destination="O7T-HS-1S2" id="IK4-Ar-HVg"/>
                 <outlet property="recordButtonContainer" destination="6Fa-qD-sC0" id="0fb-Dq-deX"/>
-                <outlet property="timeLabel" destination="WzD-2S-s64" id="fLe-2j-Ecn"/>
+                <outlet property="timeLabel" destination="WzD-2S-s64" id="0l0-Pj-5fS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,7 +33,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7T-HS-1S2">
                                     <color key="backgroundColor" red="1" green="0.0" blue="0.10159769240993022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
-                                        <action selector="toggleRecord:" destination="-1" eventType="touchUpInside" id="0k4-Vg-XoY"/>
+                                        <action selector="toggleRecord:" destination="-1" eventType="touchUpInside" id="N9d-eF-Zrw"/>
                                     </connections>
                                 </button>
                             </subviews>

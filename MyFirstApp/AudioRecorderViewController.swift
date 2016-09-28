@@ -54,9 +54,12 @@ class AudioRecorderViewController: UINavigationController {
     internal class AudioRecorderChildViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         
         var saveButton: UIBarButtonItem!
+        
         @IBOutlet weak var timeLabel: UILabel!
         @IBOutlet weak var recordButton: UIButton!
+        
         @IBOutlet weak var recordButtonContainer: UIView!
+        
         @IBOutlet weak var playButton: UIButton!
         weak var audioRecorderDelegate: AudioRecorderViewControllerDelegate?
 
@@ -127,8 +130,8 @@ class AudioRecorderViewController: UINavigationController {
             audioRecorderDelegate?.audioRecorderViewControllerDismissed(withFileURL: outputURL)
         }
         
-        @IBAction func toggleRecord(sender: AnyObject) {
-            
+        @IBAction func toggleRecord(_ sender: AnyObject) {
+
             timeTimer?.invalidate()
             
             if recorder.isRecording {
@@ -136,18 +139,17 @@ class AudioRecorderViewController: UINavigationController {
             } else {
                 milliseconds = 0
                 timeLabel.text = "00:00.00"
-                timeTimer = Timer.scheduledTimer(timeInterval: 0.0167, target: self, selector: Selector("updateTimeLabel:"), userInfo: nil, repeats: true)
+                timeTimer = Timer.scheduledTimer(timeInterval: 0.0167, target: self, selector: #selector(AudioRecorderChildViewController.updateTimeLabel(timer:)), userInfo: nil, repeats: true)
                 recorder.deleteRecording()
                 recorder.record()
             }
             
             updateControls()
-            
         }
         
         func stopRecording(sender: AnyObject) {
             if recorder.isRecording {
-                toggleRecord(sender: sender)
+                toggleRecord(sender)
             }
         }
         
