@@ -83,10 +83,10 @@ class AudioRecorderViewController: UINavigationController {
         
         override func viewDidLoad() {
             title = "Audio Recorder"
-            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: Selector("dismiss:"))
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(AudioRecorderChildViewController.dismiss(sender:)))
             edgesForExtendedLayout = .top
             
-            saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: Selector(("saveAudio:")))
+            saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(AudioRecorderChildViewController.saveAudio(sender:)))
             navigationItem.rightBarButtonItem = saveButton
             saveButton.isEnabled = false
             
