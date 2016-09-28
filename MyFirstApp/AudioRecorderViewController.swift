@@ -112,7 +112,7 @@ class AudioRecorderViewController: UINavigationController {
                 NSLog("Error: \(error)")
             }
             
-            NotificationCenter.default.addObserver(self, selector: "stopRecording:", name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(AudioRecorderChildViewController.stopRecording(sender:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         }
         
         override func viewWillDisappear(_ animated: Bool) {
