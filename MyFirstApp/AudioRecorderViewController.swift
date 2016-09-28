@@ -2,8 +2,8 @@
 //  AudioRecorderViewController.swift
 //  AudioRecorderViewControllerExample
 //
-//  Created by Ben Dodson on 19/10/2015.
-//  Copyright © 2015 Dodo Apps. All rights reserved.
+//  Created by Antonino, Victor O. on 13/09/16.
+//  Copyright © 2016 Accenture. All rights reserved.
 //
 
 import UIKit

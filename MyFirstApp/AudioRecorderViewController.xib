@@ -80,7 +80,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="eJT-iS-J70" firstAttribute="top" secondItem="WzD-2S-s64" secondAttribute="bottom" id="7e2-1x-Uia"/>
                 <constraint firstAttribute="trailing" secondItem="Hk0-X6-Hzl" secondAttribute="trailing" id="Hwn-ab-Ikg"/>
