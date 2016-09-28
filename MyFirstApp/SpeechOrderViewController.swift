@@ -8,28 +8,29 @@
 
 import UIKit
 
-class SpeechOrderViewController: UIViewController {
+class SpeechOrderViewController: UIViewController, AudioRecorderViewControllerDelegate {
 
+    @IBOutlet weak var urlLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func runAudioRecorder(_ sender: AnyObject) {
+        let controller = AudioRecorderViewController()
+        controller.audioRecorderDelegate = self
+        present(controller, animated: true, completion: nil)
     }
-    */
+
+    func audioRecorderViewControllerDismissed(withFileURL fileURL: NSURL?) {
+        // do something with fileURL
+        dismiss(animated: true, completion: nil)
+    }
+
 
 }

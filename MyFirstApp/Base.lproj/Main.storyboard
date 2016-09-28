@@ -392,7 +392,7 @@
                                 <frame key="frameInset" minX="31" minY="209" width="259" height="30"/>
                                 <state key="normal" title="Present AudioRecorderViewController"/>
                                 <connections>
-                                    <action selector="presentAudioRecorder:" destination="z2p-6n-rxr" eventType="touchUpInside" id="cPc-7r-4Se"/>
+                                    <action selector="runAudioRecorder:" destination="z2p-6n-rxr" eventType="touchUpInside" id="GbJ-Ix-3Wt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQd-T0-4zb">
