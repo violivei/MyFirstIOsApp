@@ -82,14 +82,14 @@ class AudioRecorderViewController: UINavigationController {
         }
         
         override func viewDidLoad() {
-            title = "Gravador de Áudio"
-            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(AudioRecorderChildViewController.dismiss(sender:)))
+            title = "Gravador"
+            //navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(AudioRecorderChildViewController.dismiss(sender:)))
             edgesForExtendedLayout = .top
             
-            saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(AudioRecorderChildViewController.saveAudio(sender:)))
+            saveButton = UIBarButtonItem(title: "Fazer Pedido", style: .plain, target: self, action: #selector(AudioRecorderChildViewController.saveAudio(sender:)))
             navigationItem.rightBarButtonItem = saveButton
             saveButton.isEnabled = false
-            
+
             let settings = [AVFormatIDKey: NSNumber(value: kAudioFormatMPEG4AAC), AVSampleRateKey: NSNumber(value: 44100), AVNumberOfChannelsKey: NSNumber(value: 2)]
             try! recorder = AVAudioRecorder(url: outputURL as URL, settings: settings)
             recorder.delegate = self
