@@ -23,12 +23,14 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func sendPicture(_ sender: AnyObject) {
-        //let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
-        //let url = "your-image-url"
+        let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
+        let success = { classifiedImages in
+            print(classifiedImages) }
+        //visualRecognition.classify(image: photoURL, success: success)
+    
+        let url = "http://blog.fashionsealhealthcare.com/sites/default/files/styles/blog_image_display/public/field/image/blogs/ibm_watson.png"
         //let failure = { (error: NSError) in print(error) }
-        //visualRecognition.classify(url: photoURL, failure: failure) { classifiedImages in
-            //print(classifiedImages)
-        //}
+        visualRecognition.classify(url: url, success: success)
     }
 
     @IBAction func useCamera(_ sender: AnyObject) {
@@ -44,9 +46,10 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
         imagePicker.dismiss(animated: true, completion: nil)
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         if let data = UIImagePNGRepresentation(imageView.image!) {
-            let filename = getDocumentsDirectory().appendingPathComponent("temp.png")
+            let filename = getDocumentsDirectory().appendingPathComponent("temp.jpg")
             try? data.write(to: filename)
             NSLog("%@", "Loading page with URL: \(filename)")
+            photoURL = filename
         }
     }
     

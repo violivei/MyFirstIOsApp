@@ -20,6 +20,8 @@
 		DC38CFDA1D886EBC00425E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD91D886EBC00425E31 /* Assets.xcassets */; };
 		DC38CFDD1D886EBC00425E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFDB1D886EBC00425E31 /* LaunchScreen.storyboard */; };
 		DC38CFE51D88806400425E31 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38CFE41D88806400425E31 /* ProductViewController.swift */; };
+		DC4A087F1D9C444400F9A8AA /* AudioRecorderViewController in Resources */ = {isa = PBXBuildFile; fileRef = DC4A087E1D9C444400F9A8AA /* AudioRecorderViewController */; };
+		DC4A08831D9C474A00F9A8AA /* SpeechOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A08821D9C474A00F9A8AA /* SpeechOrderViewController.swift */; };
 		DC5371021D9ADDFF003C217E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371011D9ADDFF003C217E /* Alamofire.framework */; };
 		DC5371031D9ADDFF003C217E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371011D9ADDFF003C217E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC5371061D9ADFBD003C217E /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371051D9ADFBD003C217E /* Freddy.framework */; };
@@ -66,6 +68,8 @@
 		DC38CFDC1D886EBC00425E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC38CFDE1D886EBC00425E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC38CFE41D88806400425E31 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		DC4A087E1D9C444400F9A8AA /* AudioRecorderViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AudioRecorderViewController; sourceTree = "<group>"; };
+		DC4A08821D9C474A00F9A8AA /* SpeechOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechOrderViewController.swift; sourceTree = "<group>"; };
 		DC5370FD1D9AD730003C217E /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualRecognitionV3.framework; path = "ios-sdk/build/Debug-iphoneos/VisualRecognitionV3.framework"; sourceTree = "<group>"; };
 		DC5370FF1D9ADD62003C217E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DC5371011D9ADDFF003C217E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 		DC38CFD11D886EBC00425E31 /* MyFirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC4A087E1D9C444400F9A8AA /* AudioRecorderViewController */,
 				DCD7C0A11D94767B005C9B15 /* video.mp4 */,
 				DCD7C09D1D9448EA005C9B15 /* GoogleService-Info.plist */,
 				DC38CFD21D886EBC00425E31 /* AppDelegate.swift */,
@@ -145,6 +150,7 @@
 				DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */,
 				DCD7C09F1D947109005C9B15 /* PlaceOrderViewController.swift */,
 				DCD7C0A31D94882D005C9B15 /* OrderWithPhotoViewController.swift */,
+				DC4A08821D9C474A00F9A8AA /* SpeechOrderViewController.swift */,
 			);
 			path = MyFirstApp;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4A087F1D9C444400F9A8AA /* AudioRecorderViewController in Resources */,
 				DC38CFDD1D886EBC00425E31 /* LaunchScreen.storyboard in Resources */,
 				DCD7C0A21D94767B005C9B15 /* video.mp4 in Resources */,
 				DC38CFDA1D886EBC00425E31 /* Assets.xcassets in Resources */,
@@ -292,6 +299,7 @@
 				DC045E741D88A76E00E2EBF6 /* ProductsTableViewController.swift in Sources */,
 				DC045E761D89C1EC00E2EBF6 /* Product.swift in Sources */,
 				DCA35DB61D907EE8009F10C5 /* NoClickPurchaseViewController.swift in Sources */,
+				DC4A08831D9C474A00F9A8AA /* SpeechOrderViewController.swift in Sources */,
 				DC7C47411D8C7F1C00CDCC5F /* SplashViewController.swift in Sources */,
 				DC38CFD31D886EBC00425E31 /* AppDelegate.swift in Sources */,
 				DCD7C0A41D94882D005C9B15 /* OrderWithPhotoViewController.swift in Sources */,

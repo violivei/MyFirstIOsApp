@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "397AD6B38B5560C3C745C5BC7471B990538630A0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "709C1E9D87E36564343935DBB27DC3F076453642" : 9223372036854775807,
+    "397AD6B38B5560C3C745C5BC7471B990538630A0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1EEF83E2-CBC9-4930-B371-70F31904CF37",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "709C1E9D87E36564343935DBB27DC3F076453642" : "MyFirstApp\/ios-sdk\/",
+    "397AD6B38B5560C3C745C5BC7471B990538630A0" : "MyFirstApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MyFirstApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MyFirstApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/violivei\/MyFirstIOsApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "397AD6B38B5560C3C745C5BC7471B990538630A0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/watson-developer-cloud\/ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "709C1E9D87E36564343935DBB27DC3F076453642"
+    }
+  ]
+}

@@ -227,25 +227,6 @@
             </objects>
             <point key="canvasLocation" x="126.5" y="1637.5"/>
         </scene>
-        <!--BuyWithVoice-->
-        <scene sceneID="5IU-0C-oOW">
-            <objects>
-                <viewController id="goc-bw-N9l" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ve5-qA-H1g"/>
-                        <viewControllerLayoutGuide type="bottom" id="mi8-sU-4gs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Nol-Ts-C8I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="BuyWithVoice" image="voice-icon" selectedImage="voice-icon-selected" id="Vcv-Rb-vEc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tUN-KA-Vjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="737" y="1638"/>
-        </scene>
         <!--BuyWithNoClick-->
         <scene sceneID="sXR-k2-TgQ">
             <objects>
@@ -363,9 +344,9 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="aoZ-Nl-oXB" kind="relationship" relationship="viewControllers" id="Hdo-KZ-MTS"/>
-                        <segue destination="goc-bw-N9l" kind="relationship" relationship="viewControllers" id="3bV-9O-czj"/>
                         <segue destination="P0c-hL-PDx" kind="relationship" relationship="viewControllers" id="aez-fK-wzQ"/>
                         <segue destination="gbN-4K-5e1" kind="relationship" relationship="viewControllers" id="d4z-o3-LqE"/>
+                        <segue destination="z2p-6n-rxr" kind="relationship" relationship="viewControllers" id="9ht-yz-Tat"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zb-na-COL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -395,6 +376,56 @@
             </objects>
             <point key="canvasLocation" x="560" y="156"/>
         </scene>
+        <!--BuyWithAudio-->
+        <scene sceneID="C3y-eW-QgQ">
+            <objects>
+                <viewController id="z2p-6n-rxr" customClass="SpeechOrderViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FWQ-ZV-jxa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jd1-pu-JeI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eOC-xr-hN3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-Hm-d5I">
+                                <frame key="frameInset" minX="31" minY="209" width="259" height="30"/>
+                                <state key="normal" title="Present AudioRecorderViewController"/>
+                                <connections>
+                                    <action selector="presentAudioRecorder:" destination="z2p-6n-rxr" eventType="touchUpInside" id="cPc-7r-4Se"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQd-T0-4zb">
+                                <frame key="frameInset" minX="20" minY="269" width="280"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fJ3-Hm-d5I" firstAttribute="centerY" secondItem="eOC-xr-hN3" secondAttribute="centerY" constant="-60" id="5Fi-GQ-Hle"/>
+                            <constraint firstItem="fJ3-Hm-d5I" firstAttribute="centerX" secondItem="eOC-xr-hN3" secondAttribute="centerX" id="Onj-Su-dEr"/>
+                            <constraint firstItem="gQd-T0-4zb" firstAttribute="leading" secondItem="eOC-xr-hN3" secondAttribute="leading" constant="20" id="TDf-9j-hIg"/>
+                            <constraint firstItem="gQd-T0-4zb" firstAttribute="top" secondItem="fJ3-Hm-d5I" secondAttribute="bottom" constant="30" id="gTQ-uu-XEo"/>
+                            <constraint firstAttribute="trailing" secondItem="gQd-T0-4zb" secondAttribute="trailing" constant="20" id="hT2-Uh-lFe"/>
+                            <constraint firstItem="gQd-T0-4zb" firstAttribute="centerX" secondItem="eOC-xr-hN3" secondAttribute="centerX" id="ssm-Vw-a2j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ssm-Vw-a2j"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="BuyWithAudio" id="Mvm-WI-wLg"/>
+                    <connections>
+                        <outlet property="urlLabel" destination="gQd-T0-4zb" id="DTK-bg-HMO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bL6-xY-OMC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="1638"/>
+        </scene>
     </scenes>
     <resources>
         <image name="catalog-icon" width="50" height="50"/>
@@ -409,8 +440,6 @@
         <image name="photo-icon-selected" width="50" height="50"/>
         <image name="shop-icon" width="50" height="50"/>
         <image name="shop-icon-selected" width="50" height="50"/>
-        <image name="voice-icon" width="50" height="50"/>
-        <image name="voice-icon-selected" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
