@@ -165,7 +165,7 @@ class AudioRecorderViewController: UINavigationController {
             }
         }
         
-        @IBAction func play(sender: AnyObject) {
+        @IBAction func play(_ sender: AnyObject) {
             
             if let player = player {
                 player.stop()
