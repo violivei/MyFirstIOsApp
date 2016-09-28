@@ -14,17 +14,14 @@ class SpeechOrderViewController: UIViewController, AudioRecorderViewControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let controller = AudioRecorderViewController()
+        controller.audioRecorderDelegate = self
+        present(controller, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func runAudioRecorder(_ sender: AnyObject) {
-        let controller = AudioRecorderViewController()
-        controller.audioRecorderDelegate = self
-        present(controller, animated: true, completion: nil)
     }
 
     func audioRecorderViewControllerDismissed(withFileURL fileURL: NSURL?) {

@@ -359,7 +359,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbN-4K-5e1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CatalogNavigation" id="YOT-6M-zpm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYB-Gk-Z3i">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WYB-Gk-Z3i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -388,26 +388,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-Hm-d5I">
-                                <frame key="frameInset" minX="31" minY="209" width="259" height="30"/>
-                                <state key="normal" title="Present AudioRecorderViewController"/>
-                                <connections>
-                                    <action selector="runAudioRecorder:" destination="z2p-6n-rxr" eventType="touchUpInside" id="GbJ-Ix-3Wt"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQd-T0-4zb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQd-T0-4zb">
                                 <frame key="frameInset" minX="20" minY="269" width="280"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fJ3-Hm-d5I" firstAttribute="centerY" secondItem="eOC-xr-hN3" secondAttribute="centerY" constant="-60" id="5Fi-GQ-Hle"/>
-                            <constraint firstItem="fJ3-Hm-d5I" firstAttribute="centerX" secondItem="eOC-xr-hN3" secondAttribute="centerX" id="Onj-Su-dEr"/>
                             <constraint firstItem="gQd-T0-4zb" firstAttribute="leading" secondItem="eOC-xr-hN3" secondAttribute="leading" constant="20" id="TDf-9j-hIg"/>
-                            <constraint firstItem="gQd-T0-4zb" firstAttribute="top" secondItem="fJ3-Hm-d5I" secondAttribute="bottom" constant="30" id="gTQ-uu-XEo"/>
                             <constraint firstAttribute="trailing" secondItem="gQd-T0-4zb" secondAttribute="trailing" constant="20" id="hT2-Uh-lFe"/>
                             <constraint firstItem="gQd-T0-4zb" firstAttribute="centerX" secondItem="eOC-xr-hN3" secondAttribute="centerX" id="ssm-Vw-a2j"/>
                         </constraints>
