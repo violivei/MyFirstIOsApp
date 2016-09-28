@@ -359,7 +359,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbN-4K-5e1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CatalogNavigation" id="YOT-6M-zpm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYB-Gk-Z3i">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WYB-Gk-Z3i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -407,7 +407,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="BuyWithAudio" id="Mvm-WI-wLg"/>
+                    <tabBarItem key="tabBarItem" title="BuyWithAudio" image="voice-icon" selectedImage="voice-icon-selected" id="Mvm-WI-wLg"/>
                     <connections>
                         <outlet property="urlLabel" destination="gQd-T0-4zb" id="DTK-bg-HMO"/>
                     </connections>
@@ -430,6 +430,8 @@
         <image name="photo-icon-selected" width="50" height="50"/>
         <image name="shop-icon" width="50" height="50"/>
         <image name="shop-icon-selected" width="50" height="50"/>
+        <image name="voice-icon" width="50" height="50"/>
+        <image name="voice-icon-selected" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

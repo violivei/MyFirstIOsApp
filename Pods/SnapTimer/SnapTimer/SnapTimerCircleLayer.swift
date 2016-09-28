@@ -68,7 +68,7 @@ class SnapTimerCircleLayer: CALayer {
 		ctx.setLineWidth(0)
 
 		ctx.move(to: CGPoint(x: center.x, y: center.y))
-		ctx.addArc(center: center, radius: self.radius, startAngle: self.startAngle, endAngle: SnapTimerView.endAngle, clockwise: true)
+		ctx.addArc(center: center, radius: self.radius, startAngle: self.startAngle, endAngle: SnapTimerView.endAngle, clockwise: false)
 
 		ctx.setFillColor(self.circleColor)
 		ctx.drawPath(using: .fillStroke)
