@@ -239,7 +239,7 @@ class AudioRecorderViewController: UINavigationController {
             //resultTextLabel.text = ""
             
             // set up the base64-encoded credentials
-            let loginString = NSString(format: "%@:%@", "9cace614-b956-4432-984c-d4301df752c2", "LzVpNBzUQ28Z")
+            let loginString = NSString(format: "%@:%@", "4f6fb20f-e858-434d-b006-5cd400e099c6", "OY3Eh2YKewh4")
             let loginData: NSData = loginString.data(using: String.Encoding.utf8.rawValue)! as NSData
             let base64LoginString = loginData.base64EncodedString(options: NSData.Base64EncodingOptions.init(rawValue: 0))
             
