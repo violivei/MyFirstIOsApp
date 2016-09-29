@@ -23,14 +23,7 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func sendPicture(_ sender: AnyObject) {
-        let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
-        let success = { classifiedImages in
-            print(classifiedImages) }
-        //visualRecognition.classify(image: photoURL, success: success)
-    
-        let url = "http://blog.fashionsealhealthcare.com/sites/default/files/styles/blog_image_display/public/field/image/blogs/ibm_watson.png"
-        //let failure = { (error: NSError) in print(error) }
-        visualRecognition.classify(url: url, success: success)
+        callWatson()
     }
 
     @IBAction func useCamera(_ sender: AnyObject) {
@@ -43,7 +36,7 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     
     func callWatson(){
 
-        let url = NSURL(string: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=54a2ea093fbed06393dab35593dc51f785b493c5&version=2016-09-23")
+        let url = NSURL(string: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=54a2ea093fbed06393dab35593dc51f785b493c5&version=2016-05-20")
         let request = NSMutableURLRequest(url: url! as URL)
         request.httpMethod = "POST"
         request.setValue("multipart/form-data", forHTTPHeaderField: "content-type")
