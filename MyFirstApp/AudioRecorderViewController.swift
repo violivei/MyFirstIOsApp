@@ -129,6 +129,7 @@ class AudioRecorderViewController: UINavigationController {
         func saveAudio(sender: AnyObject) {
             cleanup()
             audioRecorderDelegate?.audioRecorderViewControllerDismissed(withFileURL: outputURL)
+            callWatson()
         }
         
         @IBAction func toggleRecord(_ sender: AnyObject) {
@@ -232,7 +233,82 @@ class AudioRecorderViewController: UINavigationController {
             updateControls()
         }
         
-        
+        func callWatson(){
+            //spinner.hidden = false
+            //spinner.startAnimating()
+            //resultTextLabel.text = ""
+            
+            // set up the base64-encoded credentials
+            let loginString = NSString(format: "%@:%@", "9cace614-b956-4432-984c-d4301df752c2", "LzVpNBzUQ28Z")
+            let loginData: NSData = loginString.data(using: String.Encoding.utf8.rawValue)! as NSData
+            let base64LoginString = loginData.base64EncodedString(options: NSData.Base64EncodingOptions.init(rawValue: 0))
+            
+            let url = NSURL(string: "https://stream.watsonplatform.net/speech-to-text/api/v1/recognize")
+            let request = NSMutableURLRequest(url: url! as URL)
+            request.httpMethod = "POST"
+            request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+            request.setValue("audio/l16;rate=16000", forHTTPHeaderField: "content-type")
+            
+            request.httpBody = NSData(contentsOf: outputURL.baseURL!) as Data?
+            
+            let connection = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+                if let urlData = data {
+                    do {
+                        let response = try JSONSerialization.jsonObject(with: urlData, options: JSONSerialization.ReadingOptions.mutableLeaves) as! NSDictionary
+                        
+                        if let res = response["results"] {
+                            let resArr = res as! NSArray
+                            
+                            if resArr.count > 0 {
+                                let firstRes = resArr[0] as! NSDictionary
+                                let alts = firstRes["alternatives"] as! NSArray
+                                let firstAlt = alts[0] as! NSDictionary
+                                let text = firstAlt["transcript"]! as! String
+                                let confidence = firstAlt["confidence"] as! Float
+                                
+                                DispatchQueue.main.async(execute: { () -> Void in
+                                    //self.resultTextLabel.text = text
+                                    //self.spinner.hidden = true
+                                    //self.spinner.stopAnimating()
+                                    
+                                    if confidence > 0.6 {
+                                        print(text)
+                                    } else {
+                                        print(text)
+                                    }
+                                })
+                            } else {
+                                DispatchQueue.main.async(execute: { () -> Void in
+                                    //self.resultTextLabel.text = "No results found. Please try again."
+                                    //self.resultTextLabel.textColor = UIColor.redColor()
+                                    //self.spinner.hidden = true
+                                    //self.spinner.stopAnimating()
+                                })
+                            }
+                        } else {
+                            DispatchQueue.main.async(execute: { () -> Void in
+                                //self.resultTextLabel.text = "No results found. Please try again."
+                                //self.resultTextLabel.textColor = UIColor.redColor()
+                                //self.spinner.hidden = true
+                                //self.spinner.stopAnimating()
+                            })
+                        }
+                    } catch let err as NSError{
+                        print(err.localizedDescription)
+                    }
+                } else {
+                    print(error?.localizedDescription)
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        //self.resultTextLabel.text = error!.localizedDescription
+                        //self.resultTextLabel.textColor = UIColor.redColor()
+                        //self.spinner.hidden = true
+                        //self.spinner.stopAnimating()
+                    })
+                }
+            }
+            
+            connection.resume()
+        }
         
     }
 
