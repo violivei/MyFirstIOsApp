@@ -33,7 +33,7 @@ class AudioRecorderViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor(red: 0.0/255.0, green: 46.0/255.0, blue: 16.0/255.0, alpha: 1)
         childViewController.audioRecorderDelegate = audioRecorderDelegate
         viewControllers = [childViewController]
         
@@ -85,6 +85,7 @@ class AudioRecorderViewController: UINavigationController {
             title = "Gravador"
             //navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(AudioRecorderChildViewController.dismiss(sender:)))
             edgesForExtendedLayout = .top
+            view.backgroundColor = UIColor(red: 0.0/255.0, green: 46.0/255.0, blue: 16.0/255.0, alpha: 1)
             
             saveButton = UIBarButtonItem(title: "Fazer Pedido", style: .plain, target: self, action: #selector(AudioRecorderChildViewController.saveAudio(sender:)))
             navigationItem.rightBarButtonItem = saveButton
