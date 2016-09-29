@@ -379,7 +379,7 @@
         <!--BuyWithAudio-->
         <scene sceneID="C3y-eW-QgQ">
             <objects>
-                <viewController id="z2p-6n-rxr" customClass="SpeechOrderViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z2p-6n-rxr" customClass="AudioRecorderViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FWQ-ZV-jxa"/>
                         <viewControllerLayoutGuide type="bottom" id="Jd1-pu-JeI"/>
