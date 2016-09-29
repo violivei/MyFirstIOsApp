@@ -72,7 +72,7 @@ class AudioRecorderViewController: UINavigationController {
         
         init() {
             let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-            let outputPath = documentsPath.appendingPathComponent("\(NSUUID().uuidString).m4a")
+            let outputPath = documentsPath.appendingPathComponent("\(NSUUID().uuidString).L16")
             outputURL = NSURL(fileURLWithPath: outputPath)
             super.init(nibName: "AudioRecorderViewController", bundle: nil)
         }
@@ -247,7 +247,7 @@ class AudioRecorderViewController: UINavigationController {
             let request = NSMutableURLRequest(url: url! as URL)
             request.httpMethod = "POST"
             request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-            request.setValue("audio/l16;rate=16000", forHTTPHeaderField: "content-type")
+            request.setValue("audio/l16;rate=44100; channels=2", forHTTPHeaderField: "content-type")
             
             let inputData : URL? = outputURL.absoluteURL
             let absoluteURL = inputData?.absoluteURL
