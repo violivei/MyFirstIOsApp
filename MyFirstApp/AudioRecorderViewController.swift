@@ -249,7 +249,12 @@ class AudioRecorderViewController: UINavigationController {
             request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
             request.setValue("audio/l16;rate=16000", forHTTPHeaderField: "content-type")
             
-            request.httpBody = NSData(contentsOf: outputURL.baseURL!) as Data?
+            let inputData : URL? = outputURL.absoluteURL
+            let absoluteURL = inputData?.absoluteURL
+            
+            NSLog((absoluteURL?.absoluteString)!)
+            
+            request.httpBody = NSData(contentsOf: absoluteURL!) as Data?
             
             let connection = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
                 if let urlData = data {
@@ -272,9 +277,9 @@ class AudioRecorderViewController: UINavigationController {
                                     //self.spinner.stopAnimating()
                                     
                                     if confidence > 0.6 {
-                                        print(text)
+                                        NSLog(text)
                                     } else {
-                                        print(text)
+                                        NSLog(text)
                                     }
                                 })
                             } else {
@@ -283,10 +288,12 @@ class AudioRecorderViewController: UINavigationController {
                                     //self.resultTextLabel.textColor = UIColor.redColor()
                                     //self.spinner.hidden = true
                                     //self.spinner.stopAnimating()
+                                    NSLog("No results found. Please try again.")
                                 })
                             }
                         } else {
                             DispatchQueue.main.async(execute: { () -> Void in
+                                NSLog("No results found. Please try again2.")
                                 //self.resultTextLabel.text = "No results found. Please try again."
                                 //self.resultTextLabel.textColor = UIColor.redColor()
                                 //self.spinner.hidden = true
@@ -303,6 +310,7 @@ class AudioRecorderViewController: UINavigationController {
                         //self.resultTextLabel.textColor = UIColor.redColor()
                         //self.spinner.hidden = true
                         //self.spinner.stopAnimating()
+                        NSLog(error!.localizedDescription)
                     })
                 }
             }
