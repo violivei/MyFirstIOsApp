@@ -17,7 +17,7 @@ class NoClickPurchaseViewController: UIViewController{
     var timer = NSTimer()
     var total: CGFloat = 0
     var timerPaused: Bool = false
-    var db: FIRDatabaseReference!
+    //var db: FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class NoClickPurchaseViewController: UIViewController{
         snapTimer.addSubview(pauseButton)
     }
     
-    @IBAction func pauseOrder(sender: AnyObject) {
+    @IBAction func pauseOrder(_: AnyObject) {
         
         timerPaused = !timerPaused
         print(timerPaused)
@@ -40,7 +40,7 @@ class NoClickPurchaseViewController: UIViewController{
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NoClickPurchaseViewController.updateCounting), userInfo: nil, repeats: true)
-        db = FIRDatabase.database().reference()
+        //db = FIRDatabase.database().reference()
     }
     
     func updateCounting(){
@@ -50,8 +50,8 @@ class NoClickPurchaseViewController: UIViewController{
             snapTimer.animateOuterValue(total)
             if(total > 90){
                 total = 0
-                let post = db.childByAutoId()
-                post.setValue(["orderId": "orderId", "name": "name", "product": "product"])
+                //let post = db.childByAutoId()
+                //post.setValue(["orderId": "orderId", "name": "name", "product": "product"])
                 timer.invalidate()
                 
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderPlaced") as UIViewController

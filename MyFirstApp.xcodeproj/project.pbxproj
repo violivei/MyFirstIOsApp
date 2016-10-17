@@ -10,6 +10,12 @@
 		DC045E721D8899A000E2EBF6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E711D8899A000E2EBF6 /* ContactViewController.swift */; };
 		DC045E741D88A76E00E2EBF6 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */; };
 		DC045E761D89C1EC00E2EBF6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E751D89C1EC00E2EBF6 /* Product.swift */; };
+		DC30DF101DB5847800545EA7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC30DF0F1DB5847800545EA7 /* Alamofire.framework */; };
+		DC30DF111DB5847800545EA7 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC30DF0F1DB5847800545EA7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC30DF131DB584BD00545EA7 /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC30DF121DB584BD00545EA7 /* Freddy.framework */; };
+		DC30DF141DB584BD00545EA7 /* Freddy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC30DF121DB584BD00545EA7 /* Freddy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC30DF161DB584F200545EA7 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC30DF151DB584F200545EA7 /* RestKit.framework */; };
+		DC30DF171DB584F200545EA7 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC30DF151DB584F200545EA7 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC38CFD31D886EBC00425E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38CFD21D886EBC00425E31 /* AppDelegate.swift */; };
 		DC38CFD81D886EBC00425E31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD61D886EBC00425E31 /* Main.storyboard */; };
 		DC38CFDA1D886EBC00425E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD91D886EBC00425E31 /* Assets.xcassets */; };
@@ -41,6 +47,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DCE101321DB572920091C537 /* VisualRecognitionV3.framework in Embed Frameworks */,
+				DC30DF141DB584BD00545EA7 /* Freddy.framework in Embed Frameworks */,
+				DC30DF111DB5847800545EA7 /* Alamofire.framework in Embed Frameworks */,
+				DC30DF171DB584F200545EA7 /* RestKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +63,9 @@
 		DC045E711D8899A000E2EBF6 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		DC045E751D89C1EC00E2EBF6 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DC30DF0F1DB5847800545EA7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		DC30DF121DB584BD00545EA7 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
+		DC30DF151DB584F200545EA7 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		DC38CFCF1D886EBC00425E31 /* MyFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC38CFD21D886EBC00425E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC38CFD71D886EBC00425E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,9 +94,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC30DF131DB584BD00545EA7 /* Freddy.framework in Frameworks */,
 				DCE101361DB572E90091C537 /* Pods_MyFirstApp.framework in Frameworks */,
 				DCE101311DB572920091C537 /* VisualRecognitionV3.framework in Frameworks */,
 				EA7E76A53A1D82A59E8C8920 /* Pods_MyFirstApp.framework in Frameworks */,
+				DC30DF101DB5847800545EA7 /* Alamofire.framework in Frameworks */,
+				DC30DF161DB584F200545EA7 /* RestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +118,9 @@
 		DC38CFC61D886EBC00425E31 = {
 			isa = PBXGroup;
 			children = (
+				DC30DF151DB584F200545EA7 /* RestKit.framework */,
+				DC30DF121DB584BD00545EA7 /* Freddy.framework */,
+				DC30DF0F1DB5847800545EA7 /* Alamofire.framework */,
 				DCE101301DB572920091C537 /* VisualRecognitionV3.framework */,
 				DC38CFD11D886EBC00425E31 /* MyFirstApp */,
 				DC38CFD01D886EBC00425E31 /* Products */,
