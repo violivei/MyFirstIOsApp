@@ -14,19 +14,20 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
 
     @IBOutlet var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
-    let apiKey = "54a2ea093fbed06393dab35593dc51f785b493c5"
-    let version = "2016-09-23"
-    var photoURL : NSURL?
-        
+    var apiKey: String = "54a2ea093fbed06393dab35593dc51f785b493c5"
+    var version: String = "2016-09-23"
+    var photoURL: NSURL?
+    let visualRecognition = VisualRecognition(apiKey: "54a2ea093fbed06393dab35593dc51f785b493c5", version: "2016-09-23")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func sendPicture(_ sender: AnyObject) {
+    @IBAction func sendPicture(_: AnyObject) {
         callWatson()
     }
 
-    @IBAction func useCamera(_ sender: AnyObject) {
+    @IBAction func useCamera(_: AnyObject) {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .Camera
@@ -40,7 +41,13 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     }
     
     func callWatson(){
-
+        
+        let failure = { (error: NSError) in print(error) }
+        visualRecognition.classify(photoURL!, failure: failure) { classifiedImages in
+            print(classifiedImages)
+            NSLog("%@", "Result: \(classifiedImages)")
+        }
+        
         /*let url = NSURL(string: "http://192.168.254.21:3030/classify?api_key=54a2ea093fbed06393dab35593dc51f785b493c5&version=2016-05-20")
         let request = NSMutableURLRequest(url: url! as URL)
         request.httpMethod = "POST"
@@ -93,9 +100,8 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
         task.resume()*/
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         if let data = UIImagePNGRepresentation(imageView.image!) {
             let filename = getDocumentsDirectory().URLByAppendingPathComponent("temp.jpg")
@@ -103,6 +109,8 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
             NSLog("%@", "Loading page with URL: \(filename)")
             photoURL = filename
         }
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
     func getDocumentsDirectory() -> NSURL {
