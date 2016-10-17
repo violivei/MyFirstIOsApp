@@ -106,8 +106,13 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     }
     
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     func getDocumentsDirectory() -> URL {
         let paths = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+=======
+    func getDocumentsDirectory() -> NSURL {
+       let paths = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+>>>>>>> Stashed changes
 =======
     func getDocumentsDirectory() -> NSURL {
        let paths = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)

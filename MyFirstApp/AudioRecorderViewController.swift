@@ -18,17 +18,21 @@ class AudioRecorderViewController: UINavigationController {
     
     internal let childViewController = AudioRecorderChildViewController()
     weak var audioRecorderDelegate: AudioRecorderViewControllerDelegate?
+<<<<<<< Updated upstream
     var statusBarStyle: UIStatusBarStyle = .Default
+=======
+    var statusBarStyle: UIStatusBarStyle = UIStatusBarStyle.Default
+>>>>>>> Stashed changes
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        statusBarStyle = UIApplication.shared.statusBarStyle
-        UIApplication.shared.setStatusBarStyle(.lightContent, animated: animated)
+        statusBarStyle = UIApplication.sharedApplication().statusBarStyle
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        UIApplication.shared.setStatusBarStyle(statusBarStyle, animated: animated)
+        UIApplication.sharedApplication().setStatusBarStyle(statusBarStyle, animated: animated)
     }
     
     override func viewDidLoad() {
@@ -37,10 +41,17 @@ class AudioRecorderViewController: UINavigationController {
         childViewController.audioRecorderDelegate = audioRecorderDelegate
         viewControllers = [childViewController]
         
+<<<<<<< Updated upstream
         navigationBar.barTintColor = UIColor.black
         navigationBar.tintColor = UIColor.white
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         navigationBar.setBackgroundImage(UIImage(), for: .Default)
+=======
+        navigationBar.barTintColor = UIColor.blackColor()
+        navigationBar.tintColor = UIColor.whiteColor()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+>>>>>>> Stashed changes
     }
 
    /// override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -63,7 +74,7 @@ class AudioRecorderViewController: UINavigationController {
         @IBOutlet weak var playButton: UIButton!
         weak var audioRecorderDelegate: AudioRecorderViewControllerDelegate?
 
-        var timeTimer: Timer?
+        var timeTimer: NSTimer?
         var milliseconds: Int = 0
         
         var recorder: AVAudioRecorder!
@@ -71,8 +82,8 @@ class AudioRecorderViewController: UINavigationController {
         var outputURL: NSURL
         
         init() {
-            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-            let outputPath = documentsPath.appendingPathComponent("\(NSUUID().uuidString).L16")
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+            let outputPath = documentsPath.stringByAppendingPathComponent("\(NSUUID().UUIDString).L16")
             outputURL = NSURL(fileURLWithPath: outputPath)
             super.init(nibName: "AudioRecorderViewController", bundle: nil)
         }
@@ -84,21 +95,22 @@ class AudioRecorderViewController: UINavigationController {
         override func viewDidLoad() {
             title = "Gravador"
             //navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(AudioRecorderChildViewController.dismiss(sender:)))
-            edgesForExtendedLayout = .top
+            edgesForExtendedLayout = .Top
             view.backgroundColor = UIColor(red: 0.0/255.0, green: 46.0/255.0, blue: 16.0/255.0, alpha: 1)
             
-            saveButton = UIBarButtonItem(title: "Fazer Pedido", style: .plain, target: self, action: #selector(AudioRecorderChildViewController.saveAudio(sender:)))
+            saveButton = UIBarButtonItem(title: "Fazer Pedido", style: .Plain, target: self, action: #selector(AudioRecorderChildViewController.saveAudio(_:)))
             navigationItem.rightBarButtonItem = saveButton
-            saveButton.isEnabled = false
-
-            let settings = [AVFormatIDKey: NSNumber(value: kAudioFormatMPEG4AAC), AVSampleRateKey: NSNumber(value: 44100), AVNumberOfChannelsKey: NSNumber(value: 2)]
-            try! recorder = AVAudioRecorder(url: outputURL as URL, settings: settings)
+            saveButton.enabled = false
+            
+            let settings = [AVFormatIDKey: NSNumber(unsignedInt: kAudioFormatMPEG4AAC), AVSampleRateKey: NSNumber(unsignedInt: 44100), AVNumberOfChannelsKey: NSNumber(unsignedInt: 2)]
+            try! recorder = AVAudioRecorder(URL: outputURL, settings: settings)
+          
             recorder.delegate = self
             recorder.prepareToRecord()
             
             recordButton.layer.cornerRadius = 4
             recordButtonContainer.layer.cornerRadius = 25
-            recordButtonContainer.layer.borderColor = UIColor.white.cgColor
+            recordButtonContainer.layer.borderColor = UIColor.whiteColor().CGColor
             recordButtonContainer.layer.borderWidth = 3
         }
         
@@ -113,7 +125,11 @@ class AudioRecorderViewController: UINavigationController {
                 NSLog("Error: \(error)")
             }
             
+<<<<<<< Updated upstream
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioRecorderChildViewController.stopRecording(_:)), name: UIApplicationDidEnterBackgroundNotification, object: nil)
+=======
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioRecorderChildViewController.stopRecording(_:)), name:UIApplicationDidEnterBackgroundNotification, object: nil)
+>>>>>>> Stashed changes
         }
         
         override func viewWillDisappear(_ animated: Bool) {
@@ -136,12 +152,12 @@ class AudioRecorderViewController: UINavigationController {
 
             timeTimer?.invalidate()
             
-            if recorder.isRecording {
+            if recorder.recording {
                 recorder.stop()
             } else {
                 milliseconds = 0
                 timeLabel.text = "00:00.00"
-                timeTimer = Timer.scheduledTimer(timeInterval: 0.0167, target: self, selector: #selector(AudioRecorderChildViewController.updateTimeLabel(timer:)), userInfo: nil, repeats: true)
+                timeTimer = NSTimer.scheduledTimerWithTimeInterval(0.0167, target: self, selector: #selector(AudioRecorderChildViewController.updateTimeLabel(_:)), userInfo: nil, repeats: true)
                 recorder.deleteRecording()
                 recorder.record()
             }
@@ -150,14 +166,14 @@ class AudioRecorderViewController: UINavigationController {
         }
         
         func stopRecording(sender: AnyObject) {
-            if recorder.isRecording {
+            if recorder.recording {
                 toggleRecord(sender)
             }
         }
         
         func cleanup() {
             timeTimer?.invalidate()
-            if recorder.isRecording {
+            if recorder.recording {
                 recorder.stop()
                 recorder.deleteRecording()
             }
@@ -177,7 +193,7 @@ class AudioRecorderViewController: UINavigationController {
             }
             
             do {
-                try player = AVAudioPlayer(contentsOf: outputURL as URL)
+                try player = AVAudioPlayer(contentsOfURL: outputURL)
             }
             catch let error as NSError {
                 NSLog("error: \(error)")
@@ -192,23 +208,23 @@ class AudioRecorderViewController: UINavigationController {
         
         func updateControls() {
             
-            UIView.animate(withDuration: 0.2) { () -> Void in
-                self.recordButton.transform = self.recorder.isRecording ? CGAffineTransform(scaleX: 0.5, y: 0.5) : CGAffineTransform(scaleX: 1, y: 1)
+            UIView.animateWithDuration(0.2) { () -> Void in
+                //self.recordButton.transform = self.recorder.recording ? CGAffineTransform(scaleX: 0.5, y: 0.5) : CGAffineTransform(scaleX: 1, y: 1)
             }
             
             if let _ = player {
-                playButton.setImage(UIImage(named: "StopButton"), for: .normal)
-                recordButton.isEnabled = false
+                playButton.setImage(UIImage(named: "StopButton"), forState: .Normal)
+                recordButton.enabled = false
                 recordButtonContainer.alpha = 0.25
             } else {
-                playButton.setImage(UIImage(named: "PlayButton"), for: .normal)
-                recordButton.isEnabled = true
+                playButton.setImage(UIImage(named: "PlayButton"), forState: .Normal)
+                recordButton.enabled = true
                 recordButtonContainer.alpha = 1
             }
             
-            playButton.isEnabled = !recorder.isRecording
-            playButton.alpha = recorder.isRecording ? 0.25 : 1
-            saveButton.isEnabled = !recorder.isRecording
+            playButton.enabled = !recorder.recording
+            playButton.alpha = recorder.recording ? 0.25 : 1
+            saveButton.enabled = !recorder.recording
             
         }
         
@@ -217,7 +233,7 @@ class AudioRecorderViewController: UINavigationController {
         
         // MARK: Time Label
         
-        func updateTimeLabel(timer: Timer) {
+        func updateTimeLabel(timer: NSTimer) {
             milliseconds += 1
             let milli = (milliseconds % 60) + 39
             let sec = (milliseconds / 60) % 60
@@ -240,26 +256,26 @@ class AudioRecorderViewController: UINavigationController {
             
             // set up the base64-encoded credentials
             let loginString = NSString(format: "%@:%@", "4f6fb20f-e858-434d-b006-5cd400e099c6", "OY3Eh2YKewh4")
-            let loginData: NSData = loginString.data(using: String.Encoding.utf8.rawValue)! as NSData
-            let base64LoginString = loginData.base64EncodedString(options: NSData.Base64EncodingOptions.init(rawValue: 0))
+            let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
+            let base64LoginString = loginData.base64EncodedDataWithOptions(NSDataBase64EncodingOptions())
             
             let url = NSURL(string: "https://stream.watsonplatform.net/speech-to-text/api/v1/recognize")
-            let request = NSMutableURLRequest(url: url! as URL)
-            request.httpMethod = "POST"
+            let request = NSMutableURLRequest(URL: url!)
+            request.HTTPMethod = "POST"
             request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
             request.setValue("audio/l16;rate=44100; channels=2", forHTTPHeaderField: "content-type")
             
-            let inputData : URL? = outputURL.absoluteURL
+            let inputData : NSURL? = outputURL.absoluteURL
             let absoluteURL = inputData?.absoluteURL
             
             NSLog((absoluteURL?.absoluteString)!)
             
-            request.httpBody = NSData(contentsOf: absoluteURL!) as Data?
+            request.HTTPBody = NSData(contentsOfURL: absoluteURL!)
             
-            let connection = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+            let connection = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
                 if let urlData = data {
                     do {
-                        let response = try JSONSerialization.jsonObject(with: urlData, options: JSONSerialization.ReadingOptions.mutableLeaves) as! NSDictionary
+                        let response = try NSJSONSerialization.JSONObjectWithData(urlData, options: .MutableLeaves) as! NSDictionary
                         
                         if let res = response["results"] {
                             let resArr = res as! NSArray
@@ -271,7 +287,7 @@ class AudioRecorderViewController: UINavigationController {
                                 let text = firstAlt["transcript"]! as! String
                                 let confidence = firstAlt["confidence"] as! Float
                                 
-                                DispatchQueue.main.async(execute: { () -> Void in
+                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                     //self.resultTextLabel.text = text
                                     //self.spinner.hidden = true
                                     //self.spinner.stopAnimating()
@@ -283,7 +299,7 @@ class AudioRecorderViewController: UINavigationController {
                                     }
                                 })
                             } else {
-                                DispatchQueue.main.async(execute: { () -> Void in
+                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                     //self.resultTextLabel.text = "No results found. Please try again."
                                     //self.resultTextLabel.textColor = UIColor.redColor()
                                     //self.spinner.hidden = true
@@ -292,7 +308,7 @@ class AudioRecorderViewController: UINavigationController {
                                 })
                             }
                         } else {
-                            DispatchQueue.main.async(execute: { () -> Void in
+                           dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 NSLog("No results found. Please try again2.")
                                 //self.resultTextLabel.text = "No results found. Please try again."
                                 //self.resultTextLabel.textColor = UIColor.redColor()
@@ -305,7 +321,7 @@ class AudioRecorderViewController: UINavigationController {
                     }
                 } else {
                     print(error?.localizedDescription)
-                    DispatchQueue.main.async(execute: { () -> Void in
+                    dispatch_async(dispatch_get_main_queue(),{ () -> Void in
                         //self.resultTextLabel.text = error!.localizedDescription
                         //self.resultTextLabel.textColor = UIColor.redColor()
                         //self.spinner.hidden = true
