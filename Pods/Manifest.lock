@@ -26,15 +26,20 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Database
-  - KYWheelTabController
+  - KYWheelTabController (from `https://github.com/ykyouhei/KYWheelTabController.git`)
   - SnapTimer (from `https://github.com/andresinaka/SnapTimer.git`, branch `Swift2.3`)
 
 EXTERNAL SOURCES:
+  KYWheelTabController:
+    :git: https://github.com/ykyouhei/KYWheelTabController.git
   SnapTimer:
     :branch: Swift2.3
     :git: https://github.com/andresinaka/SnapTimer.git
 
 CHECKOUT OPTIONS:
+  KYWheelTabController:
+    :commit: 601bb8e5c19db53fc38e2cb6d06cea4bbd8ea3eb
+    :git: https://github.com/ykyouhei/KYWheelTabController.git
   SnapTimer:
     :commit: d0fae9dfc026399a317387e4a0eae5fe65ca23b4
     :git: https://github.com/andresinaka/SnapTimer.git
@@ -51,6 +56,6 @@ SPEC CHECKSUMS:
   KYWheelTabController: 1aab3d3b1e0db6f8dc97c458f694678cb696eacd
   SnapTimer: e860473dc4b8b86831b23804fec520dc48644df4
 
-PODFILE CHECKSUM: a23585d48189150b4e80a8b951d7bf4a51ab7872
+PODFILE CHECKSUM: a9ef1f276a7238e60b3a42c1f2ad1ae2950fbe8f
 
 COCOAPODS: 1.0.1
