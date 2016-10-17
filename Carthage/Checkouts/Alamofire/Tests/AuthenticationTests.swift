@@ -29,26 +29,26 @@ import XCTest
 class AuthenticationTestCase: BaseTestCase {
     let user = "user"
     let password = "password"
-    var urlString = ""
+    var URLString = ""
 
-    var manager: SessionManager!
+    var manager: Manager!
 
     override func setUp() {
         super.setUp()
 
-        manager = SessionManager(configuration: .default)
+        manager = Manager(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
 
         // Clear out credentials
-        let credentialStorage = URLCredentialStorage.shared
+        let credentialStorage = NSURLCredentialStorage.sharedCredentialStorage()
 
         for (protectionSpace, credentials) in credentialStorage.allCredentials {
             for (_, credential) in credentials {
-                credentialStorage.remove(credential, for: protectionSpace)
+                credentialStorage.removeCredential(credential, forProtectionSpace: protectionSpace)
             }
         }
 
         // Clear out cookies
-        let cookieStorage = HTTPCookieStorage.shared
+        let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
         cookieStorage.cookies?.forEach { cookieStorage.deleteCookie($0) }
     }
 }
@@ -58,85 +58,100 @@ class AuthenticationTestCase: BaseTestCase {
 class BasicAuthenticationTestCase: AuthenticationTestCase {
     override func setUp() {
         super.setUp()
-        urlString = "https://httpbin.org/basic-auth/\(user)/\(password)"
+        URLString = "https://httpbin.org/basic-auth/\(user)/\(password)"
     }
 
     func testHTTPBasicAuthenticationWithInvalidCredentials() {
         // Given
-        let expectation = self.expectation(description: "\(urlString) 401")
+        let expectation = expectationWithDescription("\(URLString) 401")
 
-        var response: DefaultDataResponse?
+        var request: NSURLRequest?
+        var response: NSHTTPURLResponse?
+        var data: NSData?
+        var error: NSError?
 
         // When
-        manager.request(urlString)
+        manager.request(.GET, URLString)
             .authenticate(user: "invalid", password: "credentials")
-            .response { resp in
-                response = resp
+            .response { responseRequest, responseResponse, responseData, responseError in
+                request = responseRequest
+                response = responseResponse
+                data = responseData
+                error = responseError
+
                 expectation.fulfill()
             }
 
-        waitForExpectations(timeout: timeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
-        XCTAssertNotNil(response?.request)
-        XCTAssertNotNil(response?.response)
-        XCTAssertEqual(response?.response?.statusCode, 401)
-        XCTAssertNotNil(response?.data)
-        XCTAssertNil(response?.error)
+        XCTAssertNotNil(request, "request should not be nil")
+        XCTAssertNotNil(response, "response should not be nil")
+        XCTAssertEqual(response?.statusCode ?? 0, 401, "response status code should be 401")
+        XCTAssertNotNil(data, "data should not be nil")
+        XCTAssertNil(error, "error should be nil")
     }
 
     func testHTTPBasicAuthenticationWithValidCredentials() {
         // Given
-        let expectation = self.expectation(description: "\(urlString) 200")
+        let expectation = expectationWithDescription("\(URLString) 200")
 
-        var response: DefaultDataResponse?
+        var request: NSURLRequest?
+        var response: NSHTTPURLResponse?
+        var data: NSData?
+        var error: NSError?
 
         // When
-        manager.request(urlString)
+        manager.request(.GET, URLString)
             .authenticate(user: user, password: password)
-            .response { resp in
-                response = resp
+            .response { responseRequest, responseResponse, responseData, responseError in
+                request = responseRequest
+                response = responseResponse
+                data = responseData
+                error = responseError
+
                 expectation.fulfill()
             }
 
-        waitForExpectations(timeout: timeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
-        XCTAssertNotNil(response?.request)
-        XCTAssertNotNil(response?.response)
-        XCTAssertEqual(response?.response?.statusCode, 200)
-        XCTAssertNotNil(response?.data)
-        XCTAssertNil(response?.error)
+        XCTAssertNotNil(request, "request should not be nil")
+        XCTAssertNotNil(response, "response should not be nil")
+        XCTAssertEqual(response?.statusCode ?? 0, 200, "response status code should be 200")
+        XCTAssertNotNil(data, "data should not be nil")
+        XCTAssertNil(error, "error should be nil")
     }
 
     func testHiddenHTTPBasicAuthentication() {
         // Given
-        let urlString = "http://httpbin.org/hidden-basic-auth/\(user)/\(password)"
-        let expectation = self.expectation(description: "\(urlString) 200")
+        let authorizationHeader = Request.authorizationHeader(user: user, password: password)
+        let expectation = expectationWithDescription("\(URLString) 200")
 
-        var headers: HTTPHeaders?
-
-        if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
-            headers = [authorizationHeader.key: authorizationHeader.value]
-        }
-
-        var response: DefaultDataResponse?
+        var request: NSURLRequest?
+        var response: NSHTTPURLResponse?
+        var data: NSData?
+        var error: NSError?
 
         // When
-        manager.request(urlString, headers: headers)
-            .response { resp in
-                response = resp
+        manager.request(.GET, "http://httpbin.org/hidden-basic-auth/\(user)/\(password)", headers: authorizationHeader)
+            .response { responseRequest, responseResponse, responseData, responseError in
+                request = responseRequest
+                response = responseResponse
+                data = responseData
+                error = responseError
+
                 expectation.fulfill()
             }
 
-        waitForExpectations(timeout: timeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
-        XCTAssertNotNil(response?.request)
-        XCTAssertNotNil(response?.response)
-        XCTAssertEqual(response?.response?.statusCode, 200)
-        XCTAssertNotNil(response?.data)
-        XCTAssertNil(response?.error)
+        XCTAssertNotNil(request, "request should not be nil")
+        XCTAssertNotNil(response, "response should not be nil")
+        XCTAssertEqual(response?.statusCode ?? 0, 200, "response status code should be 200")
+        XCTAssertNotNil(data, "data should not be nil")
+        XCTAssertNil(error, "error should be nil")
     }
 }
 
@@ -147,54 +162,68 @@ class HTTPDigestAuthenticationTestCase: AuthenticationTestCase {
 
     override func setUp() {
         super.setUp()
-        urlString = "https://httpbin.org/digest-auth/\(qop)/\(user)/\(password)"
+        URLString = "https://httpbin.org/digest-auth/\(qop)/\(user)/\(password)"
     }
 
     func testHTTPDigestAuthenticationWithInvalidCredentials() {
         // Given
-        let expectation = self.expectation(description: "\(urlString) 401")
+        let expectation = expectationWithDescription("\(URLString) 401")
 
-        var response: DefaultDataResponse?
+        var request: NSURLRequest?
+        var response: NSHTTPURLResponse?
+        var data: NSData?
+        var error: NSError?
 
         // When
-        manager.request(urlString)
+        manager.request(.GET, URLString)
             .authenticate(user: "invalid", password: "credentials")
-            .response { resp in
-                response = resp
+            .response { responseRequest, responseResponse, responseData, responseError in
+                request = responseRequest
+                response = responseResponse
+                data = responseData
+                error = responseError
+
                 expectation.fulfill()
             }
 
-        waitForExpectations(timeout: timeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
-        XCTAssertNotNil(response?.request)
-        XCTAssertNotNil(response?.response)
-        XCTAssertEqual(response?.response?.statusCode, 401)
-        XCTAssertNotNil(response?.data)
-        XCTAssertNil(response?.error)
+        XCTAssertNotNil(request, "request should not be nil")
+        XCTAssertNotNil(response, "response should not be nil")
+        XCTAssertEqual(response?.statusCode ?? 0, 401, "response status code should be 401")
+        XCTAssertNotNil(data, "data should not be nil")
+        XCTAssertNil(error, "error should be nil")
     }
 
     func testHTTPDigestAuthenticationWithValidCredentials() {
         // Given
-        let expectation = self.expectation(description: "\(urlString) 200")
+        let expectation = expectationWithDescription("\(URLString) 200")
 
-        var response: DefaultDataResponse?
+        var request: NSURLRequest?
+        var response: NSHTTPURLResponse?
+        var data: NSData?
+        var error: NSError?
 
         // When
-        manager.request(urlString)
+        manager.request(.GET, URLString)
             .authenticate(user: user, password: password)
-            .response { resp in
-                response = resp
+            .response { responseRequest, responseResponse, responseData, responseError in
+                request = responseRequest
+                response = responseResponse
+                data = responseData
+                error = responseError
+
                 expectation.fulfill()
             }
 
-        waitForExpectations(timeout: timeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
-        XCTAssertNotNil(response?.request)
-        XCTAssertNotNil(response?.response)
-        XCTAssertEqual(response?.response?.statusCode, 200)
-        XCTAssertNotNil(response?.data)
-        XCTAssertNil(response?.error)
+        XCTAssertNotNil(request, "request should not be nil")
+        XCTAssertNotNil(response, "response should not be nil")
+        XCTAssertEqual(response?.statusCode ?? 0, 200, "response status code should be 200")
+        XCTAssertNotNil(data, "data should not be nil")
+        XCTAssertNil(error, "error should be nil")
     }
 }

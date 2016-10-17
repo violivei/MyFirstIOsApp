@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		0C4BC7927B06739ABA9714489AA29953 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		153B989DFF550BAD2C8FE843F13C11D6 /* MenuLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F139199177D4C7D09CB8769139EBD53 /* MenuLayer.swift */; };
+		153B989DFF550BAD2C8FE843F13C11D6 /* MenuLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE7442784A70DF4D317C70DEB2FDF4A /* MenuLayer.swift */; };
 		234EDC0F8E4C4CF47CFE3B8D88276E11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		33D6D66D31D5C4BBFBE043FC729C35D0 /* Pods-MyFirstApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F59815082B5247F2B069AC09C54FD73C /* Pods-MyFirstApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE3330114635526CF37F6945B8BF8EB /* WheelMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A58B3D6E0435DEC44A2FF65712074A5 /* WheelMenuView.xib */; };
-		64E85C169FA62BE5FE4A8A77CEA1D8B8 /* SnapTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 556AF9FDD6C90536A4C986E9AFDA05F9 /* SnapTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FE3330114635526CF37F6945B8BF8EB /* WheelMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3561502DFFAE4734F24C962AE23A943B /* WheelMenuView.xib */; };
+		64E85C169FA62BE5FE4A8A77CEA1D8B8 /* SnapTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87FD60A8A16F8331E61BA685B2B56315 /* SnapTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FDF3C02D00EDDD272DC638BC1672383 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		944CDBA5E6FBD34147E1C0BFC2DAEFB3 /* SnapTimerBorderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C5981B56F0246EAE3DD4CB841D87B0 /* SnapTimerBorderLayer.swift */; };
-		A09C3605AB0055C671D377BFB6DD8921 /* Menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3594C8C1209EB27BFD543C7A8E5B1554 /* Menu@3x.png */; };
-		A671B7568DFBB260DD10E604D2CF4CFB /* SnapTimerCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFA26BAB1905D17B1169A81CEBA976 /* SnapTimerCircleLayer.swift */; };
-		A83F1A781657AB2BEECB672D5579F84F /* KYWheelTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945968A3D2F78152DA4DC46E8DD9DDF1 /* KYWheelTabController.swift */; };
+		944CDBA5E6FBD34147E1C0BFC2DAEFB3 /* SnapTimerBorderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E23C4189259B5CF5C5DE917A61E823 /* SnapTimerBorderLayer.swift */; };
+		A09C3605AB0055C671D377BFB6DD8921 /* Menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8247A8C6C63CB638B80D88C6B3AE393 /* Menu@3x.png */; };
+		A671B7568DFBB260DD10E604D2CF4CFB /* SnapTimerCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF55E12BE7717A16D85D7411794696 /* SnapTimerCircleLayer.swift */; };
+		A83F1A781657AB2BEECB672D5579F84F /* KYWheelTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC431BDD8A04B1DC024873830DF6691 /* KYWheelTabController.swift */; };
 		AF30C1DE1334557BC6D006A2FBCAD8FF /* Pods-MyFirstApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2166DBF25A76A36711A8FDB67C3E5FC6 /* Pods-MyFirstApp-dummy.m */; };
-		BEBADA709DFB1A0842AE02FDB9185F29 /* WheelMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF53F3C36175E2871B740C0A220E255 /* WheelMenuView.swift */; };
-		C40EB1310A7B7CD10D1B0E6DA34607C6 /* SnapTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8F5F1907D58021035176BEB8A3322 /* SnapTimerView.swift */; };
-		CB42EB8E497239180A1D6934C6758EE9 /* KYWheelTabController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C21AEF08CFE2FE6A1FC6C290A0E0DE84 /* KYWheelTabController-dummy.m */; };
-		D201BF661A58C7CCA148160B7F2218FD /* SnapTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D231CE2FDC1AC042412252CE0921352A /* SnapTimer-dummy.m */; };
-		F1AF338DD761ADD83DFFDCF1A3280546 /* KYWheelTabController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C1FA9904CCE3429ECDD1247D03FCA3 /* KYWheelTabController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F88C0A1032DD9999B50D2F21EE349EEF /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932A0956570296081AEB535331243AA5 /* Menu@2x.png */; };
+		BEBADA709DFB1A0842AE02FDB9185F29 /* WheelMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74070FC4BE5D41C717D0832E7A6CEC1 /* WheelMenuView.swift */; };
+		C40EB1310A7B7CD10D1B0E6DA34607C6 /* SnapTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A1058D1F99C8C356CDA572632BD42 /* SnapTimerView.swift */; };
+		CB42EB8E497239180A1D6934C6758EE9 /* KYWheelTabController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADD5A28AD5BAB9885716D507C3E9AB /* KYWheelTabController-dummy.m */; };
+		D201BF661A58C7CCA148160B7F2218FD /* SnapTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AD157B75E2D3FA71DECBACE2A7305F /* SnapTimer-dummy.m */; };
+		F1AF338DD761ADD83DFFDCF1A3280546 /* KYWheelTabController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 460C07113B2B22F2576D85E3D36D334A /* KYWheelTabController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88C0A1032DD9999B50D2F21EE349EEF /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FFF2144652C451174BA049A93D5AD4 /* Menu@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,50 +45,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04905D861C484292715611EE2C255E79 /* SnapTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapTimer-prefix.pch"; sourceTree = "<group>"; };
+		030A1058D1F99C8C356CDA572632BD42 /* SnapTimerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTimerView.swift; path = SnapTimer/SnapTimerView.swift; sourceTree = "<group>"; };
 		0541AFE221CE497E6431537B42B58532 /* Pods_MyFirstApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFirstApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DF5E30FCBE730822A26160779997F3C /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		19AF0F03351E176421FA4D9EB9E1124C /* KYWheelTabController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KYWheelTabController.xcconfig; sourceTree = "<group>"; };
+		0EDE8D8D64D9197627FEDDA0D80FFF58 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		132E011DE90440F0E525CA790220D363 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
 		2166DBF25A76A36711A8FDB67C3E5FC6 /* Pods-MyFirstApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyFirstApp-dummy.m"; sourceTree = "<group>"; };
-		26CA5E639F26547EA5C31FABEC4DE20C /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
-		31C05FF583419EA5CDE2A0F6CADED7DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DEBBBB63694CD192F89F97D5D0695B8 /* KYWheelTabController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYWheelTabController-prefix.pch"; sourceTree = "<group>"; };
 		349510386B320B3E0390A5B89B438376 /* Pods-MyFirstApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyFirstApp-resources.sh"; sourceTree = "<group>"; };
-		3594C8C1209EB27BFD543C7A8E5B1554 /* Menu@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Menu@3x.png"; path = "KYWheelTabController/Resources/Menu@3x.png"; sourceTree = "<group>"; };
-		37FEE0671801C9C281F3351C989BA475 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		46E4253F50A00761B5E830D62D451E9F /* SnapTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapTimer.xcconfig; sourceTree = "<group>"; };
-		48C5981B56F0246EAE3DD4CB841D87B0 /* SnapTimerBorderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTimerBorderLayer.swift; path = SnapTimer/SnapTimerBorderLayer.swift; sourceTree = "<group>"; };
+		3561502DFFAE4734F24C962AE23A943B /* WheelMenuView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = WheelMenuView.xib; path = KYWheelTabController/Resources/WheelMenuView.xib; sourceTree = "<group>"; };
+		36ADD5A28AD5BAB9885716D507C3E9AB /* KYWheelTabController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYWheelTabController-dummy.m"; sourceTree = "<group>"; };
+		38E23C4189259B5CF5C5DE917A61E823 /* SnapTimerBorderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTimerBorderLayer.swift; path = SnapTimer/SnapTimerBorderLayer.swift; sourceTree = "<group>"; };
+		4565B95B1DDACB64C3620723A67A89DA /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		460C07113B2B22F2576D85E3D36D334A /* KYWheelTabController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYWheelTabController-umbrella.h"; sourceTree = "<group>"; };
+		48A4E0C9462D1DAD4DC8E0371C645A67 /* KYWheelTabController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KYWheelTabController.modulemap; sourceTree = "<group>"; };
 		4B38BCB651C26A2D15840FC8A9717394 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BEF1ED8F5C639CEAADA15B703ED8AE1 /* KYWheelTabController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KYWheelTabController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE86AC39A2806C65BA2E8E388318B31 /* Pods-MyFirstApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MyFirstApp.modulemap"; sourceTree = "<group>"; };
 		51DFA822097B5B76BB5F3D6B8AECFC70 /* Pods-MyFirstApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyFirstApp.debug.xcconfig"; sourceTree = "<group>"; };
-		556AF9FDD6C90536A4C986E9AFDA05F9 /* SnapTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapTimer-umbrella.h"; sourceTree = "<group>"; };
+		55386AE89F83A9B3F349420E90B015BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B85F30B1AFAB0870ADAD6E7D39BEAB /* Pods-MyFirstApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyFirstApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5B6D433FBBD735A9210073B86E14A95D /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		6F139199177D4C7D09CB8769139EBD53 /* MenuLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuLayer.swift; path = KYWheelTabController/Classes/Views/MenuLayer.swift; sourceTree = "<group>"; };
-		86B89ECB4F3EE544BF56287CFC4AF96A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A58B3D6E0435DEC44A2FF65712074A5 /* WheelMenuView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = WheelMenuView.xib; path = KYWheelTabController/Resources/WheelMenuView.xib; sourceTree = "<group>"; };
-		8ECFA26BAB1905D17B1169A81CEBA976 /* SnapTimerCircleLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTimerCircleLayer.swift; path = SnapTimer/SnapTimerCircleLayer.swift; sourceTree = "<group>"; };
-		932A0956570296081AEB535331243AA5 /* Menu@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Menu@2x.png"; path = "KYWheelTabController/Resources/Menu@2x.png"; sourceTree = "<group>"; };
+		761C052A2E9581BEAFAB2A53CF3CF6D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E74414545896BB2194A0A574D0D6F92 /* SnapTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapTimer.modulemap; sourceTree = "<group>"; };
+		7EE7442784A70DF4D317C70DEB2FDF4A /* MenuLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuLayer.swift; path = KYWheelTabController/Classes/Views/MenuLayer.swift; sourceTree = "<group>"; };
+		81FFF2144652C451174BA049A93D5AD4 /* Menu@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Menu@2x.png"; path = "KYWheelTabController/Resources/Menu@2x.png"; sourceTree = "<group>"; };
+		86334647E2F7B1ABB6E57B3F4E6F3B00 /* SnapTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapTimer-prefix.pch"; sourceTree = "<group>"; };
+		87FD60A8A16F8331E61BA685B2B56315 /* SnapTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapTimer-umbrella.h"; sourceTree = "<group>"; };
+		89AD157B75E2D3FA71DECBACE2A7305F /* SnapTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapTimer-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		945968A3D2F78152DA4DC46E8DD9DDF1 /* KYWheelTabController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KYWheelTabController.swift; path = KYWheelTabController/Classes/ViewControllers/KYWheelTabController.swift; sourceTree = "<group>"; };
-		94F85F030FA8CE1BB0A3EBCBE8B913B3 /* KYWheelTabController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYWheelTabController-prefix.pch"; sourceTree = "<group>"; };
-		9DEC2D037493CC53F99350CD05E09F7F /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		AFF53F3C36175E2871B740C0A220E255 /* WheelMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WheelMenuView.swift; path = KYWheelTabController/Classes/Views/WheelMenuView.swift; sourceTree = "<group>"; };
-		BF450D85B9C3C78AB5F669984D4285D0 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
-		C21AEF08CFE2FE6A1FC6C290A0E0DE84 /* KYWheelTabController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYWheelTabController-dummy.m"; sourceTree = "<group>"; };
-		C52325F4318018371B57846CF4204671 /* KYWheelTabController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KYWheelTabController.modulemap; sourceTree = "<group>"; };
-		C55B7128BE00BAF408F682D96C929093 /* SnapTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapTimer.modulemap; sourceTree = "<group>"; };
-		C8C1FA9904CCE3429ECDD1247D03FCA3 /* KYWheelTabController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYWheelTabController-umbrella.h"; sourceTree = "<group>"; };
+		99D6E258E73B2F75EB40B7E491246A44 /* SnapTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapTimer.xcconfig; sourceTree = "<group>"; };
+		9F9307041BB255F4B1AA9497557EC2EC /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		B6E27115BF8968EB5A807FAEAA27BA31 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		B74070FC4BE5D41C717D0832E7A6CEC1 /* WheelMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WheelMenuView.swift; path = KYWheelTabController/Classes/Views/WheelMenuView.swift; sourceTree = "<group>"; };
+		BDC199CBCE0727137566AB7E05F15BCB /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		BFBF55E12BE7717A16D85D7411794696 /* SnapTimerCircleLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTimerCircleLayer.swift; path = SnapTimer/SnapTimerCircleLayer.swift; sourceTree = "<group>"; };
+		C949AFE247BDA1007949201AF2CC6EA5 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
 		CC4D24DD5232F226F2298BD7E26BFFCD /* Pods-MyFirstApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyFirstApp-frameworks.sh"; sourceTree = "<group>"; };
 		CE7C1C8F9CA96254FB49645A7FDE41CE /* Pods-MyFirstApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyFirstApp.release.xcconfig"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CFF63F1633F1446B038BC4D333A8FA4B /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
-		D231CE2FDC1AC042412252CE0921352A /* SnapTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapTimer-dummy.m"; sourceTree = "<group>"; };
-		DBC8F5F1907D58021035176BEB8A3322 /* SnapTimerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapTimerView.swift; path = SnapTimer/SnapTimerView.swift; sourceTree = "<group>"; };
-		E3EBA8F73704619511EBBB16EE136DAE /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		D8247A8C6C63CB638B80D88C6B3AE393 /* Menu@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Menu@3x.png"; path = "KYWheelTabController/Resources/Menu@3x.png"; sourceTree = "<group>"; };
+		D96F32D08E1F59304656C114685F0CE3 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		E75923E3E0C34221D75017FED0016C86 /* KYWheelTabController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KYWheelTabController.xcconfig; sourceTree = "<group>"; };
+		ED404CAF9D01075789BEFBEE714BD45E /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		EF8603D120D115574ED89E10C574F58C /* Pods-MyFirstApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyFirstApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		F15EEE95AD25B076C03F1984ED1BC65D /* SnapTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59815082B5247F2B069AC09C54FD73C /* Pods-MyFirstApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyFirstApp-umbrella.h"; sourceTree = "<group>"; };
+		FAC431BDD8A04B1DC024873830DF6691 /* KYWheelTabController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KYWheelTabController.swift; path = KYWheelTabController/Classes/ViewControllers/KYWheelTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,63 +120,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03BD454E9461B321FC55E61F24429002 /* Resources */ = {
+		0EF7F90D76E004CC481BD7CC8EC9DA35 /* GoogleInterchangeUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				932A0956570296081AEB535331243AA5 /* Menu@2x.png */,
-				3594C8C1209EB27BFD543C7A8E5B1554 /* Menu@3x.png */,
-				8A58B3D6E0435DEC44A2FF65712074A5 /* WheelMenuView.xib */,
+				0F02E593FA044A73F2911F78942F8EA9 /* Frameworks */,
 			);
-			name = Resources;
+			path = GoogleInterchangeUtilities;
 			sourceTree = "<group>";
 		};
-		1079FF8407109DE90F01E4F3CFC9A637 /* Support Files */ = {
+		0F02E593FA044A73F2911F78942F8EA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				86B89ECB4F3EE544BF56287CFC4AF96A /* Info.plist */,
-				C52325F4318018371B57846CF4204671 /* KYWheelTabController.modulemap */,
-				19AF0F03351E176421FA4D9EB9E1124C /* KYWheelTabController.xcconfig */,
-				C21AEF08CFE2FE6A1FC6C290A0E0DE84 /* KYWheelTabController-dummy.m */,
-				94F85F030FA8CE1BB0A3EBCBE8B913B3 /* KYWheelTabController-prefix.pch */,
-				C8C1FA9904CCE3429ECDD1247D03FCA3 /* KYWheelTabController-umbrella.h */,
+				ED404CAF9D01075789BEFBEE714BD45E /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		368E9E10670E61FCDDAB9DF0AF6CB96B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				55386AE89F83A9B3F349420E90B015BB /* Info.plist */,
+				48A4E0C9462D1DAD4DC8E0371C645A67 /* KYWheelTabController.modulemap */,
+				E75923E3E0C34221D75017FED0016C86 /* KYWheelTabController.xcconfig */,
+				36ADD5A28AD5BAB9885716D507C3E9AB /* KYWheelTabController-dummy.m */,
+				2DEBBBB63694CD192F89F97D5D0695B8 /* KYWheelTabController-prefix.pch */,
+				460C07113B2B22F2576D85E3D36D334A /* KYWheelTabController-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KYWheelTabController";
 			sourceTree = "<group>";
 		};
-		1334D7595DF993AEAD7212F809464A13 /* FirebaseAnalytics */ = {
+		383285E88DD36FF45A75E2DCB0F503DF /* GoogleUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				7172B82404D727BCB8FB589DA84D75A8 /* Frameworks */,
+				DEC6462135538280F54471148AE31EF5 /* Frameworks */,
 			);
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		14C980A09D8128BBFA692C2D319F1AC5 /* SnapTimer */ = {
-			isa = PBXGroup;
-			children = (
-				48C5981B56F0246EAE3DD4CB841D87B0 /* SnapTimerBorderLayer.swift */,
-				8ECFA26BAB1905D17B1169A81CEBA976 /* SnapTimerCircleLayer.swift */,
-				DBC8F5F1907D58021035176BEB8A3322 /* SnapTimerView.swift */,
-				B73A1E1E99AAB8AAE0700DE1DD9559F5 /* Support Files */,
-			);
-			path = SnapTimer;
-			sourceTree = "<group>";
-		};
-		17C94B0F9D02287D132A09709535BE98 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5B6D433FBBD735A9210073B86E14A95D /* GoogleInterchangeUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		32DD83CEB40D6CC9A8D0C666BB4E7AE1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0DF5E30FCBE730822A26160779997F3C /* FirebaseInstanceID.framework */,
-			);
-			name = Frameworks;
+			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -186,40 +166,72 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4F73382E7C9E29FFA2F551E8456B4FD8 /* Frameworks */ = {
+		3DD93617AA490635A2E7BC0ED0FA67A5 /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				37FEE0671801C9C281F3351C989BA475 /* GoogleUtilities.framework */,
+				A31138468474801F2DB6AB5BF7AF7905 /* Frameworks */,
 			);
-			name = Frameworks;
+			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
-		5DE2AB93DB2D1B3B85A6111B62881806 /* GoogleInterchangeUtilities */ = {
+		4DAAE96784018C5D473C9F6581FD91FB /* KYWheelTabController */ = {
 			isa = PBXGroup;
 			children = (
-				17C94B0F9D02287D132A09709535BE98 /* Frameworks */,
-			);
-			path = GoogleInterchangeUtilities;
-			sourceTree = "<group>";
-		};
-		5E6EA158F5ECE4F1C10C2D2628A76ED3 /* KYWheelTabController */ = {
-			isa = PBXGroup;
-			children = (
-				945968A3D2F78152DA4DC46E8DD9DDF1 /* KYWheelTabController.swift */,
-				6F139199177D4C7D09CB8769139EBD53 /* MenuLayer.swift */,
-				AFF53F3C36175E2871B740C0A220E255 /* WheelMenuView.swift */,
-				03BD454E9461B321FC55E61F24429002 /* Resources */,
-				1079FF8407109DE90F01E4F3CFC9A637 /* Support Files */,
+				FAC431BDD8A04B1DC024873830DF6691 /* KYWheelTabController.swift */,
+				7EE7442784A70DF4D317C70DEB2FDF4A /* MenuLayer.swift */,
+				B74070FC4BE5D41C717D0832E7A6CEC1 /* WheelMenuView.swift */,
+				546DF4652407DC54CEBC72DE88ADDA7F /* Resources */,
+				368E9E10670E61FCDDAB9DF0AF6CB96B /* Support Files */,
 			);
 			path = KYWheelTabController;
 			sourceTree = "<group>";
 		};
-		7172B82404D727BCB8FB589DA84D75A8 /* Frameworks */ = {
+		514BCB3ED1505F9F9244C6FEBAEA6062 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3EBA8F73704619511EBBB16EE136DAE /* FirebaseAnalytics.framework */,
+				0EDE8D8D64D9197627FEDDA0D80FFF58 /* FirebaseCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		546DF4652407DC54CEBC72DE88ADDA7F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81FFF2144652C451174BA049A93D5AD4 /* Menu@2x.png */,
+				D8247A8C6C63CB638B80D88C6B3AE393 /* Menu@3x.png */,
+				3561502DFFAE4734F24C962AE23A943B /* WheelMenuView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		59B9823CD1F2B9591063BC1D7C615020 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				761C052A2E9581BEAFAB2A53CF3CF6D9 /* Info.plist */,
+				7E74414545896BB2194A0A574D0D6F92 /* SnapTimer.modulemap */,
+				99D6E258E73B2F75EB40B7E491246A44 /* SnapTimer.xcconfig */,
+				89AD157B75E2D3FA71DECBACE2A7305F /* SnapTimer-dummy.m */,
+				86334647E2F7B1ABB6E57B3F4E6F3B00 /* SnapTimer-prefix.pch */,
+				87FD60A8A16F8331E61BA685B2B56315 /* SnapTimer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SnapTimer";
+			sourceTree = "<group>";
+		};
+		5B0E7BE98A7BB9D38ADFF97C0B622CF0 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				E6862A493794B3DF05B5604DE30E52FA /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		5E3FDE63513B5B9475D9EC3E4A751B8A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4565B95B1DDACB64C3620723A67A89DA /* Firebase.h */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		73E1DFF17CEEBFC169EFEAE1DFF9D171 /* Targets Support Files */ = {
@@ -253,64 +265,38 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				AF21B2E0EB1BDAF203509D04333DE3B5 /* Pods */,
+				EFF156DB4962EF6A21F03431553D53AD /* Pods */,
 				BE5852DBBD813AB9CBEAB5B5F40E80DF /* Products */,
 				73E1DFF17CEEBFC169EFEAE1DFF9D171 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		812C36C260068224BE263791B8305F15 /* GoogleUtilities */ = {
+		8B0D62F00B565CD2255FEDF651541F18 /* SnapTimer */ = {
 			isa = PBXGroup;
 			children = (
-				4F73382E7C9E29FFA2F551E8456B4FD8 /* Frameworks */,
+				38E23C4189259B5CF5C5DE917A61E823 /* SnapTimerBorderLayer.swift */,
+				BFBF55E12BE7717A16D85D7411794696 /* SnapTimerCircleLayer.swift */,
+				030A1058D1F99C8C356CDA572632BD42 /* SnapTimerView.swift */,
+				59B9823CD1F2B9591063BC1D7C615020 /* Support Files */,
 			);
-			path = GoogleUtilities;
+			path = SnapTimer;
 			sourceTree = "<group>";
 		};
-		830C1040324CD17C51B063D788B7226D /* Analytics */ = {
+		A31138468474801F2DB6AB5BF7AF7905 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CFF63F1633F1446B038BC4D333A8FA4B /* Firebase.h */,
-			);
-			name = Analytics;
-			sourceTree = "<group>";
-		};
-		AB601EB2F355AC2A60A382147EF8E3CD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9DEC2D037493CC53F99350CD05E09F7F /* GoogleSymbolUtilities.framework */,
+				BDC199CBCE0727137566AB7E05F15BCB /* FirebaseDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AF21B2E0EB1BDAF203509D04333DE3B5 /* Pods */ = {
+		BB86AC06D1450D908C8E35C327FE9321 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				FA35FD5003C2623288A4194BB1244726 /* Firebase */,
-				1334D7595DF993AEAD7212F809464A13 /* FirebaseAnalytics */,
-				FF160B2A1505CC5DCACD2C1FD3700E0C /* FirebaseDatabase */,
-				FB621DD82B62F89ADE232A40D16CA93E /* FirebaseInstanceID */,
-				5DE2AB93DB2D1B3B85A6111B62881806 /* GoogleInterchangeUtilities */,
-				C577FF3019B8253E511371C16723DB50 /* GoogleSymbolUtilities */,
-				812C36C260068224BE263791B8305F15 /* GoogleUtilities */,
-				5E6EA158F5ECE4F1C10C2D2628A76ED3 /* KYWheelTabController */,
-				14C980A09D8128BBFA692C2D319F1AC5 /* SnapTimer */,
+				C949AFE247BDA1007949201AF2CC6EA5 /* FIRInstanceID.h */,
+				D725759781D96480020F0C7AAB8D77F7 /* Frameworks */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B73A1E1E99AAB8AAE0700DE1DD9559F5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				31C05FF583419EA5CDE2A0F6CADED7DC /* Info.plist */,
-				C55B7128BE00BAF408F682D96C929093 /* SnapTimer.modulemap */,
-				46E4253F50A00761B5E830D62D451E9F /* SnapTimer.xcconfig */,
-				D231CE2FDC1AC042412252CE0921352A /* SnapTimer-dummy.m */,
-				04905D861C484292715611EE2C255E79 /* SnapTimer-prefix.pch */,
-				556AF9FDD6C90536A4C986E9AFDA05F9 /* SnapTimer-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SnapTimer";
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -331,45 +317,77 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE75960BD27A7B520F8737ADEEBAE810 /* Frameworks */ = {
+		C80B83CA66886846DF0C0D9AA7A39081 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				BF450D85B9C3C78AB5F669984D4285D0 /* FirebaseDatabase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C577FF3019B8253E511371C16723DB50 /* GoogleSymbolUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				AB601EB2F355AC2A60A382147EF8E3CD /* Frameworks */,
-			);
-			path = GoogleSymbolUtilities;
-			sourceTree = "<group>";
-		};
-		FA35FD5003C2623288A4194BB1244726 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				830C1040324CD17C51B063D788B7226D /* Analytics */,
+				5E3FDE63513B5B9475D9EC3E4A751B8A /* Core */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		FB621DD82B62F89ADE232A40D16CA93E /* FirebaseInstanceID */ = {
+		D725759781D96480020F0C7AAB8D77F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				26CA5E639F26547EA5C31FABEC4DE20C /* FIRInstanceID.h */,
-				32DD83CEB40D6CC9A8D0C666BB4E7AE1 /* Frameworks */,
+				9F9307041BB255F4B1AA9497557EC2EC /* FirebaseInstanceID.framework */,
 			);
-			path = FirebaseInstanceID;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FF160B2A1505CC5DCACD2C1FD3700E0C /* FirebaseDatabase */ = {
+		DEC6462135538280F54471148AE31EF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE75960BD27A7B520F8737ADEEBAE810 /* Frameworks */,
+				132E011DE90440F0E525CA790220D363 /* GoogleUtilities.framework */,
 			);
-			path = FirebaseDatabase;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6862A493794B3DF05B5604DE30E52FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6E27115BF8968EB5A807FAEAA27BA31 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEABA3C5D2CCB014B677612BC80FEE07 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				FACC83DF65BF427A1B9EE9E9494180D8 /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		EFF156DB4962EF6A21F03431553D53AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C80B83CA66886846DF0C0D9AA7A39081 /* Firebase */,
+				EEABA3C5D2CCB014B677612BC80FEE07 /* FirebaseAnalytics */,
+				F10F62844416AB82CD1D5990857C6C31 /* FirebaseCore */,
+				3DD93617AA490635A2E7BC0ED0FA67A5 /* FirebaseDatabase */,
+				BB86AC06D1450D908C8E35C327FE9321 /* FirebaseInstanceID */,
+				0EF7F90D76E004CC481BD7CC8EC9DA35 /* GoogleInterchangeUtilities */,
+				5B0E7BE98A7BB9D38ADFF97C0B622CF0 /* GoogleSymbolUtilities */,
+				383285E88DD36FF45A75E2DCB0F503DF /* GoogleUtilities */,
+				4DAAE96784018C5D473C9F6581FD91FB /* KYWheelTabController */,
+				8B0D62F00B565CD2255FEDF651541F18 /* SnapTimer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F10F62844416AB82CD1D5990857C6C31 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				514BCB3ED1505F9F9244C6FEBAEA6062 /* Frameworks */,
+			);
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		FACC83DF65BF427A1B9EE9E9494180D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D96F32D08E1F59304656C114685F0CE3 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,17 +482,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					0A7E8005AEE9E26ECD8D6AF2DED75680 = {
-						LastSwiftMigration = 0800;
-					};
-					1106C1E2E0343530E210BFADCF07278C = {
-						LastSwiftMigration = 0800;
-					};
-					BD573A3A08B5D510769B63FF82507D66 = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -559,7 +566,7 @@
 /* Begin XCBuildConfiguration section */
 		08F7E912A4F2309BC376995ADC971F4E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46E4253F50A00761B5E830D62D451E9F /* SnapTimer.xcconfig */;
+			baseConfigurationReference = 99D6E258E73B2F75EB40B7E491246A44 /* SnapTimer.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -580,7 +587,7 @@
 				PRODUCT_NAME = SnapTimer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -631,7 +638,7 @@
 		};
 		5994486B5B4A0488FCCF8C36D2895DEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19AF0F03351E176421FA4D9EB9E1124C /* KYWheelTabController.xcconfig */;
+			baseConfigurationReference = E75923E3E0C34221D75017FED0016C86 /* KYWheelTabController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -662,7 +669,7 @@
 		};
 		5CF9E642B75F856E572A838531F4EADB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19AF0F03351E176421FA4D9EB9E1124C /* KYWheelTabController.xcconfig */;
+			baseConfigurationReference = E75923E3E0C34221D75017FED0016C86 /* KYWheelTabController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -717,7 +724,6 @@
 				PRODUCT_NAME = Pods_MyFirstApp;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -752,7 +758,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -799,7 +804,7 @@
 		};
 		EE0DCEAA77EF45395F86B0BF13775463 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46E4253F50A00761B5E830D62D451E9F /* SnapTimer.xcconfig */;
+			baseConfigurationReference = 99D6E258E73B2F75EB40B7E491246A44 /* SnapTimer.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -821,7 +826,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

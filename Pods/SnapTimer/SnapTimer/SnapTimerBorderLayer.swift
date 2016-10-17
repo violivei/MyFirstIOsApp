@@ -14,14 +14,14 @@ class SnapTimerBorderLayer: CALayer {
 	@NSManaged var radius: CGFloat
 	@NSManaged var width: CGFloat
 
-	override init(layer: Any) {
+	override init(layer: AnyObject) {
 		super.init(layer: layer)
 		if let layer = layer as? SnapTimerBorderLayer {
 			startAngle = layer.startAngle
 			circleColor = layer.circleColor
 		} else {
 			startAngle = 0
-			circleColor = UIColor.white.cgColor
+			circleColor = UIColor.whiteColor().CGColor
 		}
 	}
 
@@ -33,11 +33,10 @@ class SnapTimerBorderLayer: CALayer {
 		super.init()
 	}
 
-	func animation(_ key: String) -> CAAnimation {
+	func animation(key: String) -> CAAnimation {
 		let animation = CABasicAnimation(keyPath: key)
 
-        if let pLayer : SnapTimerBorderLayer? = self.presentation(),
-			let value = pLayer?.value(forKey: key) {
+		if let pLayer = self.presentationLayer(), value = pLayer.valueForKey(key) {
 			animation.fromValue = value
 		}
 
@@ -48,28 +47,28 @@ class SnapTimerBorderLayer: CALayer {
 		return animation
 	}
 
-	override func action(forKey key: String) -> CAAction? {
+	override func actionForKey(key: String) -> CAAction? {
 		if key == "startAngle" {
 			return self.animation(key)
 		}
-		return super.action(forKey: key)
+		return super.actionForKey(key)
 	}
 
-	override class func needsDisplay(forKey key: String) -> Bool {
+	override class func needsDisplayForKey(key: String) -> Bool {
 		if key == "startAngle" || key == "circleColor" || key == "radius" ||
 			key == "borderWidth" {
 			return true
 		}
-		return super.needsDisplay(forKey: key)
+		return super.needsDisplayForKey(key)
 	}
 
-	override func draw(in ctx: CGContext) {
+	override func drawInContext(ctx: CGContext) {
 		let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
 
-		ctx.beginPath()
-		ctx.setStrokeColor(self.circleColor)
-		ctx.setLineWidth(self.width)
-        ctx.addArc(center: center, radius: self.radius, startAngle: self.startAngle, endAngle: SnapTimerView.endAngle, clockwise: true)
-		ctx.drawPath(using: .stroke)
+		CGContextBeginPath(ctx)
+		CGContextSetStrokeColorWithColor(ctx, self.circleColor)
+		CGContextSetLineWidth(ctx, self.width)
+		CGContextAddArc(ctx, center.x, center.y, self.radius, self.startAngle, SnapTimerView.endAngle, 0)
+		CGContextDrawPath(ctx, .Stroke)
 	}
 }

@@ -18,7 +18,7 @@ class AudioRecorderViewController: UINavigationController {
     
     internal let childViewController = AudioRecorderChildViewController()
     weak var audioRecorderDelegate: AudioRecorderViewControllerDelegate?
-    var statusBarStyle: UIStatusBarStyle = .default
+    var statusBarStyle: UIStatusBarStyle = .Default
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,7 +40,7 @@ class AudioRecorderViewController: UINavigationController {
         navigationBar.barTintColor = UIColor.black
         navigationBar.tintColor = UIColor.white
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.setBackgroundImage(UIImage(), for: .Default)
     }
 
    /// override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -113,12 +113,12 @@ class AudioRecorderViewController: UINavigationController {
                 NSLog("Error: \(error)")
             }
             
-            NotificationCenter.default.addObserver(self, selector: #selector(AudioRecorderChildViewController.stopRecording(sender:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioRecorderChildViewController.stopRecording(_:)), name: UIApplicationDidEnterBackgroundNotification, object: nil)
         }
         
         override func viewWillDisappear(_ animated: Bool) {
             super.viewWillDisappear(animated)
-            NotificationCenter.default.removeObserver(self)
+            NSNotificationCenter.defaultCenter().removeObserver(self)
         }
         
         func dismiss(sender: AnyObject) {

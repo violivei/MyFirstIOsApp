@@ -9,19 +9,19 @@
 /// An enum to describe the structure of JSON.
 public enum JSON {
     /// A case for denoting an array with an associated value of `[JSON]`
-    case array([JSON])
+    case Array([JSON])
     /// A case for denoting a dictionary with an associated value of `[Swift.String: JSON]`
-    case dictionary([String: JSON])
+    case Dictionary([Swift.String: JSON])
     /// A case for denoting a double with an associated value of `Swift.Double`.
-    case double(Double)
+    case Double(Swift.Double)
     /// A case for denoting an integer with an associated value of `Swift.Int`.
-    case int(Int)
+    case Int(Swift.Int)
     /// A case for denoting a string with an associated value of `Swift.String`.
-    case string(String)
+    case String(Swift.String)
     /// A case for denoting a boolean with an associated value of `Swift.Bool`.
-    case bool(Bool)
+    case Bool(Swift.Bool)
     /// A case for denoting null.
-    case null
+    case Null
 }
 
 // MARK: - Errors
@@ -29,21 +29,18 @@ public enum JSON {
 extension JSON {
 
     /// An enum to encapsulate errors that may arise in working with `JSON`.
-    public enum Error: Swift.Error {
+    public enum Error: ErrorType {
         /// The `index` is out of bounds for a JSON array
-        case indexOutOfBounds(index: Int)
+        case IndexOutOfBounds(index: Swift.Int)
         
         /// The `key` was not found in the JSON dictionary
-        case keyNotFound(key: String)
+        case KeyNotFound(key: Swift.String)
         
         /// The JSON is not subscriptable with `type`
-        case unexpectedSubscript(type: JSONPathType.Type)
+        case UnexpectedSubscript(type: JSONPathType.Type)
         
         /// Unexpected JSON `value` was found that is not convertible `to` type 
-        case valueNotConvertible(value: JSON, to: Any.Type)
-        
-        /// The JSON is not serializable to a `String`.
-        case stringSerializationError
+        case ValueNotConvertible(value: JSON, to: Any.Type)
     }
 
 }
@@ -53,23 +50,23 @@ extension JSON {
 /// Return `true` if `lhs` is equal to `rhs`.
 public func ==(lhs: JSON, rhs: JSON) -> Bool {
     switch (lhs, rhs) {
-    case (.array(let arrL), .array(let arrR)):
+    case (.Array(let arrL), .Array(let arrR)):
         return arrL == arrR
-    case (.dictionary(let dictL), .dictionary(let dictR)):
+    case (.Dictionary(let dictL), .Dictionary(let dictR)):
         return dictL == dictR
-    case (.string(let strL), .string(let strR)):
+    case (.String(let strL), .String(let strR)):
         return strL == strR
-    case (.double(let dubL), .double(let dubR)):
+    case (.Double(let dubL), .Double(let dubR)):
         return dubL == dubR
-    case (.double(let dubL), .int(let intR)):
+    case (.Double(let dubL), .Int(let intR)):
         return dubL == Double(intR)
-    case (.int(let intL), .int(let intR)):
+    case (.Int(let intL), .Int(let intR)):
         return intL == intR
-    case (.int(let intL), .double(let dubR)):
+    case (.Int(let intL), .Double(let dubR)):
         return Double(intL) == dubR
-    case (.bool(let bL), .bool(let bR)):
+    case (.Bool(let bL), .Bool(let bR)):
         return bL == bR
-    case (.null, .null):
+    case (.Null, .Null):
         return true
     default:
         return false
@@ -85,13 +82,13 @@ extension JSON: CustomStringConvertible {
     /// A textual representation of `self`.
     public var description: Swift.String {
         switch self {
-        case .array(let arr):       return String(describing: arr)
-        case .dictionary(let dict): return String(describing: dict)
-        case .string(let string):   return string
-        case .double(let double):   return String(describing: double)
-        case .int(let int):         return String(describing: int)
-        case .bool(let bool):       return String(describing: bool)
-        case .null:                 return "null"
+        case .Array(let arr):       return Swift.String(arr)
+        case .Dictionary(let dict): return Swift.String(dict)
+        case .String(let string):   return string
+        case .Double(let double):   return Swift.String(double)
+        case .Int(let int):         return Swift.String(int)
+        case .Bool(let bool):       return Swift.String(bool)
+        case .Null:                 return "null"
         }
     }
 

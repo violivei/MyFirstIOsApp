@@ -8,12 +8,12 @@
 
 // MARK: - ArrayLiteralConvertible
 
-extension JSON: ExpressibleByArrayLiteral {
+extension JSON: ArrayLiteralConvertible {
     
     /// Create an instance by copying each element of the `collection` into a
     /// new `Array`.
-    public init<Collection: Swift.Collection>(_ collection: Collection) where Collection.Iterator.Element == JSON {
-        self = .array(Swift.Array(collection))
+    public init<Collection: CollectionType where Collection.Generator.Element == JSON>(_ collection: Collection) {
+        self = .Array(Swift.Array(collection))
     }
 
     /// Create an instance initialized with `elements`.
@@ -25,36 +25,32 @@ extension JSON: ExpressibleByArrayLiteral {
 
 // MARK: - DictionaryLiteralConvertible
 
-extension JSON: ExpressibleByDictionaryLiteral {
-
+extension JSON: DictionaryLiteralConvertible {
+    
     /// Create an instance by copying each key/value pair of the `pairs` into
     /// a new `Dictionary`.
-    public init<Dictionary: Sequence>(_ pairs: Dictionary) where Dictionary.Iterator.Element == (Swift.String, JSON) {
-        var dictionary = Swift.Dictionary<Swift.String, JSON>(minimumCapacity: pairs.underestimatedCount)
+    public init<Dictionary: SequenceType where Dictionary.Generator.Element == (Swift.String, JSON)>(_ pairs: Dictionary) {
+        var dictionary = Swift.Dictionary<Swift.String, JSON>(minimumCapacity: pairs.underestimateCount())
         for (key, value) in pairs {
             dictionary[key] = value
         }
-        self.init(dictionary)
+        self = .Dictionary(dictionary)
     }
-
+    
     /// Create an instance initialized with `pairs`.
     public init(dictionaryLiteral pairs: (Swift.String, JSON)...) {
         self.init(pairs)
     }
 
-    /// Create an instance initialized to `dictionary`.
-    public init(_ dictionary: Swift.Dictionary<Swift.String, JSON>) {
-        self = .dictionary(dictionary)
-    }
 }
 
 // MARK: - FloatLiteralConvertible
 
-extension JSON: ExpressibleByFloatLiteral {
+extension JSON: FloatLiteralConvertible {
     
     /// Create an instance initialized to `Double` `value`.
     public init(_ value: Swift.Double) {
-        self = .double(value)
+        self = .Double(value)
     }
     
     /// Create a literal instance initialized to `value`.
@@ -66,11 +62,11 @@ extension JSON: ExpressibleByFloatLiteral {
 
 // MARK: - IntegerLiteralConvertible
 
-extension JSON: ExpressibleByIntegerLiteral {
+extension JSON: IntegerLiteralConvertible {
     
     /// Create an instance initialized to `Int` by `value`.
     public init(_ value: Swift.Int) {
-        self = .int(value)
+        self = .Int(value)
     }
     
     /// Create a literal instance initialized to `value`.
@@ -82,11 +78,11 @@ extension JSON: ExpressibleByIntegerLiteral {
 
 // MARK: - StringLiteralConvertible
 
-extension JSON: ExpressibleByStringLiteral {
+extension JSON: StringLiteralConvertible {
     
     /// Create an instance initialized to `String` by `text`.
     public init(_ text: Swift.String) {
-        self = .string(text)
+        self = .String(text)
     }
 
     /// Create a literal instance initialized to `value`.
@@ -108,11 +104,11 @@ extension JSON: ExpressibleByStringLiteral {
 
 // MARK: - BooleanLiteralConvertible
 
-extension JSON: ExpressibleByBooleanLiteral {
+extension JSON: BooleanLiteralConvertible {
 
     /// Create an instance initialized to `Bool` by `value`.
     public init(_ value: Swift.Bool) {
-        self = .bool(value)
+        self = .Bool(value)
     }
 
     /// Create a literal instance initialized to `value`.
@@ -124,11 +120,11 @@ extension JSON: ExpressibleByBooleanLiteral {
 
 // MARK: - NilLiteralConvertible
 
-extension JSON: ExpressibleByNilLiteral {
+extension JSON: NilLiteralConvertible {
 
     /// Create an instance initialized with `nil`.
     public init(nilLiteral: ()) {
-        self = .null
+        self = .Null
     }
 
 }

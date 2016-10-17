@@ -13,7 +13,7 @@ class SnapTimerCircleLayer: CALayer {
 	@NSManaged var startAngle: CGFloat
 	@NSManaged var radius: CGFloat
 
-	override init(layer: Any) {
+	override init(layer: AnyObject) {
 		super.init(layer: layer)
 		if let layer = layer as? SnapTimerCircleLayer {
 			startAngle = layer.startAngle
@@ -32,11 +32,10 @@ class SnapTimerCircleLayer: CALayer {
 		super.init()
 	}
 
-	func animation(_ key: String) -> CAAnimation {
+	func animation(key: String) -> CAAnimation {
 		let animation = CABasicAnimation(keyPath: key)
 
-        if let pLayer : SnapTimerCircleLayer? = self.presentation(),
-			let value = pLayer?.value(forKey: key) {
+		if let pLayer = self.presentationLayer(), value = pLayer.valueForKey(key) {
 			animation.fromValue = value
 		}
 
@@ -47,30 +46,30 @@ class SnapTimerCircleLayer: CALayer {
 		return animation
 	}
 
-	override func action(forKey key: String) -> CAAction? {
+	override func actionForKey(key: String) -> CAAction? {
 		if key == "startAngle" {
 			return self.animation(key)
 		}
-		return super.action(forKey: key)
+		return super.actionForKey(key)
 	}
 
-	override class func needsDisplay(forKey key: String) -> Bool {
+	override class func needsDisplayForKey(key: String) -> Bool {
 		if key == "startAngle" || key == "circleColor" || key == "radius" {
 			return true
 		}
-		return super.needsDisplay(forKey: key)
+		return super.needsDisplayForKey(key)
 	}
 
-	override func draw(in ctx: CGContext) {
+	override func drawInContext(ctx: CGContext) {
 		let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
 
-		ctx.beginPath()
-		ctx.setLineWidth(0)
+		CGContextBeginPath(ctx)
+		CGContextSetLineWidth(ctx, 0)
 
-		ctx.move(to: CGPoint(x: center.x, y: center.y))
-		ctx.addArc(center: center, radius: self.radius, startAngle: self.startAngle, endAngle: SnapTimerView.endAngle, clockwise: false)
+		CGContextMoveToPoint(ctx, center.x, center.y)
+		CGContextAddArc(ctx, center.x, center.y, self.radius, self.startAngle, SnapTimerView.endAngle, 0)
 
-		ctx.setFillColor(self.circleColor)
-		ctx.drawPath(using: .fillStroke)
+		CGContextSetFillColorWithColor(ctx, self.circleColor)
+		CGContextDrawPath(ctx, .FillStroke)
 	}
 }

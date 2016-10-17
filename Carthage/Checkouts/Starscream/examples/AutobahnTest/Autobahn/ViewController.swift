@@ -12,6 +12,7 @@ import Starscream
 class ViewController: UIViewController {
     
     let host = "localhost:9001"
+    let scheme = "ws"
     var socketArray = [WebSocket]()
     var caseCount = 300 //starting cases
     override func viewDidLoad() {
@@ -20,13 +21,12 @@ class ViewController: UIViewController {
         //getTestInfo(1)
     }
     
-    func removeSocket(_ s: WebSocket) {
-        socketArray = socketArray.filter{$0 != s}
+    func removeSocket(s: WebSocket) {
+        self.socketArray = self.socketArray.filter{$0 != s}
     }
     
     func getCaseCount() {
-        
-        let s = WebSocket(url: URL(string: "ws://\(host)/getCaseCount")!, protocols: [])
+        let s = WebSocket(url: NSURL(scheme: scheme, host: host, path: "/getCaseCount")!, protocols: [])
         socketArray.append(s)
         s.onText = {[unowned self] (text: String) in
             if let c = Int(text) {
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         s.connect()
     }
     
-    func getTestInfo(_ caseNum: Int) {
+    func getTestInfo(caseNum: Int) {
         let s = createSocket("getCaseInfo",caseNum)
         socketArray.append(s)
         s.onText = {(text: String) in
@@ -72,14 +72,14 @@ class ViewController: UIViewController {
         s.connect()
     }
     
-    func runTest(_ caseNum: Int) {
+    func runTest(caseNum: Int) {
         let s = createSocket("runCase",caseNum)
         self.socketArray.append(s)
         s.onText = {(text: String) in
-            s.write(string: text)
+            s.writeString(text)
         }
-        s.onData = {(data: Data) in
-            s.write(data: data)
+        s.onData = {(data: NSData) in
+            s.writeData(data)
         }
         var once = false
         s.onDisconnect = {[unowned self] (error: NSError?) in
@@ -93,14 +93,14 @@ class ViewController: UIViewController {
         s.connect()
     }
     
-    func verifyTest(_ caseNum: Int) {
+    func verifyTest(caseNum: Int) {
         let s = createSocket("getCaseStatus",caseNum)
         self.socketArray.append(s)
         s.onText = {(text: String) in
-            let data = text.data(using: String.Encoding.utf8)
+            let data = text.dataUsingEncoding(NSUTF8StringEncoding)
             do {
-                let resp: Any? = try JSONSerialization.jsonObject(with: data!,
-                    options: JSONSerialization.ReadingOptions())
+                let resp: AnyObject? = try NSJSONSerialization.JSONObjectWithData(data!,
+                    options: NSJSONReadingOptions())
                 if let dict = resp as? Dictionary<String,String> {
                     if let status = dict["behavior"] {
                         if status == "OK" {
@@ -140,11 +140,12 @@ class ViewController: UIViewController {
         s.connect()
     }
     
-    func createSocket(_ cmd: String, _ caseNum: Int) -> WebSocket {
-        return WebSocket(url: URL(string: "ws://\(host)\(buildPath(cmd,caseNum))")!, protocols: [])
+    func createSocket(cmd: String, _ caseNum: Int) -> WebSocket {
+        return WebSocket(url: NSURL(scheme: scheme,
+            host: host, path: buildPath(cmd,caseNum))!, protocols: [])
     }
     
-    func buildPath(_ cmd: String, _ caseNum: Int) -> String {
+    func buildPath(cmd: String, _ caseNum: Int) -> String {
         return "/\(cmd)?case=\(caseNum)&agent=Starscream"
     }
 

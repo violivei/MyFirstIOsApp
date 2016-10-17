@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3473A59DE733E60E432704B /* Pods_MyFirstApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E717B57732DED001A927CF9 /* Pods_MyFirstApp.framework */; };
 		DC045E721D8899A000E2EBF6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E711D8899A000E2EBF6 /* ContactViewController.swift */; };
 		DC045E741D88A76E00E2EBF6 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */; };
 		DC045E761D89C1EC00E2EBF6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E751D89C1EC00E2EBF6 /* Product.swift */; };
-		DC0B0C4E1D9AF19B0042B490 /* VisualRecognitionV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B0C4D1D9AF19B0042B490 /* VisualRecognitionV3.framework */; };
-		DC0B0C4F1D9AF19B0042B490 /* VisualRecognitionV3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B0C4D1D9AF19B0042B490 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DC0B0C511D9AF4190042B490 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B0C501D9AF4190042B490 /* RestKit.framework */; };
-		DC0B0C521D9AF4190042B490 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B0C501D9AF4190042B490 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC38CFD31D886EBC00425E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38CFD21D886EBC00425E31 /* AppDelegate.swift */; };
 		DC38CFD81D886EBC00425E31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD61D886EBC00425E31 /* Main.storyboard */; };
 		DC38CFDA1D886EBC00425E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC38CFD91D886EBC00425E31 /* Assets.xcassets */; };
@@ -25,10 +20,6 @@
 		DC4A08891D9C510900F9A8AA /* AudioRecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC4A08871D9C510900F9A8AA /* AudioRecorderViewController.xib */; };
 		DC4A088C1D9C5D3A00F9A8AA /* PlayButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4A088A1D9C5D3A00F9A8AA /* PlayButton@2x.png */; };
 		DC4A088D1D9C5D3A00F9A8AA /* StopButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4A088B1D9C5D3A00F9A8AA /* StopButton@2x.png */; };
-		DC5371021D9ADDFF003C217E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371011D9ADDFF003C217E /* Alamofire.framework */; };
-		DC5371031D9ADDFF003C217E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371011D9ADDFF003C217E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DC5371061D9ADFBD003C217E /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371051D9ADFBD003C217E /* Freddy.framework */; };
-		DC5371071D9ADFBD003C217E /* Freddy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC5371051D9ADFBD003C217E /* Freddy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC7C473F1D8B387A00CDCC5F /* HEINEKEN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */; };
 		DC7C47411D8C7F1C00CDCC5F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */; };
 		DCA35DB61D907EE8009F10C5 /* NoClickPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */; };
@@ -36,19 +27,20 @@
 		DCD7C0A01D947109005C9B15 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7C09F1D947109005C9B15 /* PlaceOrderViewController.swift */; };
 		DCD7C0A21D94767B005C9B15 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DCD7C0A11D94767B005C9B15 /* video.mp4 */; };
 		DCD7C0A41D94882D005C9B15 /* OrderWithPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7C0A31D94882D005C9B15 /* OrderWithPhotoViewController.swift */; };
+		DCE101311DB572920091C537 /* VisualRecognitionV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE101301DB572920091C537 /* VisualRecognitionV3.framework */; };
+		DCE101321DB572920091C537 /* VisualRecognitionV3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCE101301DB572920091C537 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCE101361DB572E90091C537 /* Pods_MyFirstApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE101351DB572E90091C537 /* Pods_MyFirstApp.framework */; };
+		EA7E76A53A1D82A59E8C8920 /* Pods_MyFirstApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5186B0F2DBD7651B07826FB6 /* Pods_MyFirstApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DC5371041D9ADDFF003C217E /* Embed Frameworks */ = {
+		DCE101331DB572920091C537 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DC5371071D9ADFBD003C217E /* Freddy.framework in Embed Frameworks */,
-				DC0B0C4F1D9AF19B0042B490 /* VisualRecognitionV3.framework in Embed Frameworks */,
-				DC5371031D9ADDFF003C217E /* Alamofire.framework in Embed Frameworks */,
-				DC0B0C521D9AF4190042B490 /* RestKit.framework in Embed Frameworks */,
+				DCE101321DB572920091C537 /* VisualRecognitionV3.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,14 +48,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0E717B57732DED001A927CF9 /* Pods_MyFirstApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFirstApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41598FC88F7F5D25E890CE78 /* Pods-MyFirstApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirstApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFirstApp/Pods-MyFirstApp.release.xcconfig"; sourceTree = "<group>"; };
+		5186B0F2DBD7651B07826FB6 /* Pods_MyFirstApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFirstApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2307F197D5053BAF03DE5A /* Pods-MyFirstApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirstApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFirstApp/Pods-MyFirstApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DC045E711D8899A000E2EBF6 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		DC045E731D88A76E00E2EBF6 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		DC045E751D89C1EC00E2EBF6 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		DC0B0C4D1D9AF19B0042B490 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VisualRecognitionV3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC0B0C501D9AF4190042B490 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC38CFCF1D886EBC00425E31 /* MyFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC38CFD21D886EBC00425E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC38CFD71D886EBC00425E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,10 +66,6 @@
 		DC4A08871D9C510900F9A8AA /* AudioRecorderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioRecorderViewController.xib; sourceTree = "<group>"; };
 		DC4A088A1D9C5D3A00F9A8AA /* PlayButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlayButton@2x.png"; path = "AudioRecorderViewController/PlayButton@2x.png"; sourceTree = "<group>"; };
 		DC4A088B1D9C5D3A00F9A8AA /* StopButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StopButton@2x.png"; path = "AudioRecorderViewController/StopButton@2x.png"; sourceTree = "<group>"; };
-		DC5370FD1D9AD730003C217E /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualRecognitionV3.framework; path = "ios-sdk/build/Debug-iphoneos/VisualRecognitionV3.framework"; sourceTree = "<group>"; };
-		DC5370FF1D9ADD62003C217E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		DC5371011D9ADDFF003C217E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		DC5371051D9ADFBD003C217E /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
 		DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = HEINEKEN.TTF; path = ../../../Downloads/Heineken/HEINEKEN.TTF; sourceTree = "<group>"; };
 		DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoClickPurchaseViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +73,8 @@
 		DCD7C09F1D947109005C9B15 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
 		DCD7C0A11D94767B005C9B15 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video.mp4; path = ../../../Documents/video.mp4; sourceTree = "<group>"; };
 		DCD7C0A31D94882D005C9B15 /* OrderWithPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderWithPhotoViewController.swift; sourceTree = "<group>"; };
+		DCE101301DB572920091C537 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualRecognitionV3.framework; path = Carthage/Build/iOS/VisualRecognitionV3.framework; sourceTree = "<group>"; };
+		DCE101351DB572E90091C537 /* Pods_MyFirstApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_MyFirstApp.framework; path = "Pods/../build/Debug-iphoneos/Pods_MyFirstApp.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC5371021D9ADDFF003C217E /* Alamofire.framework in Frameworks */,
-				DC0B0C511D9AF4190042B490 /* RestKit.framework in Frameworks */,
-				DC5371061D9ADFBD003C217E /* Freddy.framework in Frameworks */,
-				A3473A59DE733E60E432704B /* Pods_MyFirstApp.framework in Frameworks */,
-				DC0B0C4E1D9AF19B0042B490 /* VisualRecognitionV3.framework in Frameworks */,
+				DCE101361DB572E90091C537 /* Pods_MyFirstApp.framework in Frameworks */,
+				DCE101311DB572920091C537 /* VisualRecognitionV3.framework in Frameworks */,
+				EA7E76A53A1D82A59E8C8920 /* Pods_MyFirstApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,14 +103,11 @@
 		DC38CFC61D886EBC00425E31 = {
 			isa = PBXGroup;
 			children = (
-				DC0B0C501D9AF4190042B490 /* RestKit.framework */,
-				DC0B0C4D1D9AF19B0042B490 /* VisualRecognitionV3.framework */,
-				DC5371051D9ADFBD003C217E /* Freddy.framework */,
-				DC5371011D9ADDFF003C217E /* Alamofire.framework */,
+				DCE101301DB572920091C537 /* VisualRecognitionV3.framework */,
 				DC38CFD11D886EBC00425E31 /* MyFirstApp */,
 				DC38CFD01D886EBC00425E31 /* Products */,
 				3B73AADDA0B55BB4BFB783A2 /* Pods */,
-				E4B7068EC38911F6E47F763C /* Frameworks */,
+				DCE101341DB572E90091C537 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,12 +147,11 @@
 			path = MyFirstApp;
 			sourceTree = "<group>";
 		};
-		E4B7068EC38911F6E47F763C /* Frameworks */ = {
+		DCE101341DB572E90091C537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DC5370FF1D9ADD62003C217E /* Alamofire.framework */,
-				DC5370FD1D9AD730003C217E /* VisualRecognitionV3.framework */,
-				0E717B57732DED001A927CF9 /* Pods_MyFirstApp.framework */,
+				DCE101351DB572E90091C537 /* Pods_MyFirstApp.framework */,
+				5186B0F2DBD7651B07826FB6 /* Pods_MyFirstApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,7 +169,7 @@
 				DC38CFCD1D886EBC00425E31 /* Resources */,
 				F06D5D091A69179B09D8AA01 /* [CP] Embed Pods Frameworks */,
 				459CBB1A14DBAEFFF2F1646F /* [CP] Copy Pods Resources */,
-				DC5371041D9ADDFF003C217E /* Embed Frameworks */,
+				DCE101331DB572920091C537 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -383,6 +365,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -420,6 +403,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -435,6 +419,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ios-sdk/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -442,7 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.MyFirstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -457,6 +442,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ios-sdk/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -464,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.MyFirstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

@@ -12,19 +12,19 @@ public struct JSONEncodingDetector {
     //// The Unicode encodings looked for during detection
     public enum Encoding {
         //// UTF-8
-        case utf8
+        case UTF8
         //// UTF-16 Little Endian
-        case utf16LE
+        case UTF16LE
         //// UTF-16 Big Endian
-        case utf16BE
+        case UTF16BE
         //// UTF-32 Little Endian
-        case utf32LE
+        case UTF32LE
         //// UTF-32 Big Endian
-        case utf32BE
+        case UTF32BE
     }
 
     //// The Unicode encodings supported by JSONParser.swift
-    public static let supportedEncodings: [Encoding] = [.utf8]
+    public static let supportedEncodings: [Encoding] = [.UTF8]
 
     typealias ByteStreamPrefixInformation = (encoding: Encoding, byteOrderMarkLength: Int)
 
@@ -56,10 +56,10 @@ public struct JSONEncodingDetector {
     ////
     //// - parameter header: The front Slice of data being read and evaluated.
     //// - returns: A tuple containing the detected Unicode encoding and the lenght of the byte order mark.
-    static func detectEncoding(_ header: RandomAccessSlice<UnsafeBufferPointer<UInt8>>) -> ByteStreamPrefixInformation {
+    static func detectEncoding(header: Slice<UnsafeBufferPointer<UInt8>>) -> ByteStreamPrefixInformation {
 
         guard let prefix = prefixFromHeader(header) else {
-            return (.utf8, 0)
+            return (.UTF8, 0)
         }
 
         if let prefixInfo = JSONEncodingDetector.encodingFromBOM(prefix) {
@@ -67,22 +67,22 @@ public struct JSONEncodingDetector {
         } else {
             switch prefix {
             case(0, 0, 0?, _):
-                return (.utf32BE, 0)
+                return (.UTF32BE, 0)
             case(_, 0, 0?, 0?):
-                return (.utf32LE, 0)
+                return (.UTF32LE, 0)
             case (0, _, 0?, _), (0, _, _, _):
-                return (.utf16BE, 0)
+                return (.UTF16BE, 0)
             case (_, 0, _, 0?), (_, 0, _, _):
-                return (.utf16LE, 0)
+                return (.UTF16LE, 0)
             default:
-                return (.utf8, 0)
+                return (.UTF8, 0)
             }
         }
     }
 
     private typealias EncodingBytePrefix = (UInt8, UInt8, UInt8?, UInt8?)
 
-    private static func prefixFromHeader(_ header: RandomAccessSlice<UnsafeBufferPointer<UInt8>>) -> EncodingBytePrefix? {
+    private static func prefixFromHeader(header: Slice<UnsafeBufferPointer<UInt8>>) -> EncodingBytePrefix? {
         if header.count >= 4 {
             return(header[0], header[1], header[2], header[3])
         } else if header.count >= 2 {
@@ -91,18 +91,18 @@ public struct JSONEncodingDetector {
         return nil
     }
 
-    private static func encodingFromBOM(_ prefix: EncodingBytePrefix) -> ByteStreamPrefixInformation? {
+    private static func encodingFromBOM(prefix: EncodingBytePrefix) -> ByteStreamPrefixInformation? {
         switch prefix {
         case(0xFE, 0xFF, _, _):
-            return (.utf16BE, 2)
+            return (.UTF16BE, 2)
         case(0x00, 0x00, 0xFE?, 0xFF?):
-            return (.utf32BE, 4)
+            return (.UTF32BE, 4)
         case(0xEF, 0xBB, 0xBF?, _):
-            return (.utf8, 3)
+            return (.UTF8, 3)
         case(0xFF, 0xFE, 0?, 0?):
-            return (.utf32LE, 4)
+            return (.UTF32LE, 4)
         case(0xFF, 0xFE, _, _):
-            return (.utf16LE, 2)
+            return (.UTF16LE, 2)
         default:
             return nil
         }

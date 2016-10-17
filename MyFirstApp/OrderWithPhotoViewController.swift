@@ -98,7 +98,7 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     }
     
     func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let paths = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
     }

@@ -28,12 +28,12 @@ extension Double: JSONDecodable {
     ///           passed to this initializer.
     public init(json: JSON) throws {
         switch json {
-        case let .double(double):
+        case let .Double(double):
             self = double
-        case let .int(int):
-            self = Double(int)
+        case let .Int(int):
+            self = Swift.Double(int)
         default:
-            throw JSON.Error.valueNotConvertible(value: json, to: Double.self)
+            throw JSON.Error.ValueNotConvertible(value: json, to: Swift.Double)
         }
     }
     
@@ -48,12 +48,12 @@ extension Int: JSONDecodable {
     ///           passed to this initializer.
     public init(json: JSON) throws {
         switch json {
-        case let .double(double) where double <= Double(Int.max):
-            self = Int(double)
-        case let .int(int):
+        case let .Double(double) where double <= Double(Swift.Int.max):
+            self = Swift.Int(double)
+        case let .Int(int):
             self = int
         default:
-            throw JSON.Error.valueNotConvertible(value: json, to: Int.self)
+            throw JSON.Error.ValueNotConvertible(value: json, to: Swift.Int)
         }
     }
     
@@ -67,17 +67,18 @@ extension String: JSONDecodable {
     ///           an instance of `String` cannot be created from the `JSON` value that was
     ///           passed to this initializer.
     public init(json: JSON) throws {
+        
         switch json {
-        case let .string(string):
+        case let .String(string):
             self = string
-        case let .int(int):
+        case let .Int(int):
             self = String(int)
-        case let .bool(bool):
+        case let .Bool(bool):
             self = String(bool)
-        case let .double(double):
+        case let .Double(double):
             self = String(double)
         default:
-            throw JSON.Error.valueNotConvertible(value: json, to: String.self)
+            throw JSON.Error.ValueNotConvertible(value: json, to: Swift.String)
         }
     }
     
@@ -91,8 +92,8 @@ extension Bool: JSONDecodable {
     ///           an instance of `Bool` cannot be created from the `JSON` value that was
     ///           passed to this initializer.
     public init(json: JSON) throws {
-        guard case let .bool(bool) = json else {
-            throw JSON.Error.valueNotConvertible(value: json, to: Bool.self)
+        guard case let .Bool(bool) = json else {
+            throw JSON.Error.ValueNotConvertible(value: json, to: Swift.Bool)
         }
         self = bool
     }
@@ -109,7 +110,7 @@ extension RawRepresentable where RawValue: JSONDecodable {
     public init(json: JSON) throws {
         let raw = try json.decode(type: RawValue.self)
         guard let value = Self(rawValue: raw) else {
-            throw JSON.Error.valueNotConvertible(value: json, to: Self.self)
+            throw JSON.Error.ValueNotConvertible(value: json, to: Self.self)
         }
         self = value
     }
@@ -122,10 +123,10 @@ internal extension JSON {
     /// - returns: An `Array` of `JSON` elements
     /// - throws: Any of the `JSON.Error` cases thrown by `decode(type:)`.
     /// - seealso: `JSON.decode(_:type:)`
-    static func getArray(from json: JSON) throws -> [JSON] {
+    static func getArray(json: JSON) throws -> [JSON] {
         // Ideally should be expressed as a conditional protocol implementation on Swift.Array.
-        guard case let .array(array) = json else {
-            throw Error.valueNotConvertible(value: json, to: Swift.Array<JSON>)
+        guard case let .Array(array) = json else {
+            throw Error.ValueNotConvertible(value: json, to: Swift.Array<JSON>)
         }
         return array
     }
@@ -135,39 +136,38 @@ internal extension JSON {
     /// - returns: An `Dictionary` of `String` mapping to `JSON` elements
     /// - throws: Any of the `JSON.Error` cases thrown by `decode(type:)`.
     /// - seealso: `JSON.decode(_:type:)`
-    static func getDictionary(from json: JSON) throws -> [String: JSON] {
+    static func getDictionary(json: JSON) throws -> [Swift.String: JSON] {
         // Ideally should be expressed as a conditional protocol implementation on Swift.Dictionary.
-        guard case let .dictionary(dictionary) = json else {
-            throw Error.valueNotConvertible(value: json, to: Swift.Dictionary<String, JSON>)
+        guard case let .Dictionary(dictionary) = json else {
+            throw Error.ValueNotConvertible(value: json, to: Swift.Dictionary<Swift.String, JSON>)
         }
         return dictionary
     }
     
     /// Attempts to decode many values from a descendant JSON array at a path
     /// into JSON.
-    /// - parameter json: A `JSON` to be used to create the returned `Array` of some type conforming to `JSONDecodable`.
+    /// - parameter: A `JSON` to be used to create the returned `Array` of some type conforming to `JSONDecodable`.
     /// - returns: An `Array` of `Decoded` elements.
     /// - throws: Any of the `JSON.Error` cases thrown by `decode(type:)`, as
     ///   well as any error that arises from decoding the contained values.
     /// - seealso: `JSON.decode(_:type:)`
-    static func decodedArray<Decoded: JSONDecodable>(from json: JSON) throws -> [Decoded] {
+    static func getArrayOf<Decoded: JSONDecodable>(json: JSON) throws -> [Decoded] {
         // Ideally should be expressed as a conditional protocol implementation on Swift.Dictionary.
         // This implementation also doesn't do the `type = Type.self` trick.
-        return try getArray(from: json).map(Decoded.init)
+        return try getArray(json).map(Decoded.init)
     }
     
     /// Attempts to decode many values from a descendant JSON object at a path
     /// into JSON.
-    /// - parameter json: A `JSON` to be used to create the returned `Dictionary` of some type conforming to `JSONDecodable`.
     /// - returns: A `Dictionary` of string keys and `Decoded` values.
     /// - throws: One of the `JSON.Error` cases thrown by `decode(_:type:)` or
     ///           any error that arises from decoding the contained values.
     /// - seealso: `JSON.decode(_:type:)`
-    static func decodedDictionary<Decoded: JSONDecodable>(from json: JSON) throws -> [Swift.String: Decoded] {
-        guard case let .dictionary(dictionary) = json else {
-            throw Error.valueNotConvertible(value: json, to: Swift.Dictionary<String, Decoded>)
+    static func getDictionaryOf<Decoded: JSONDecodable>(json: JSON) throws -> [Swift.String: Decoded] {
+        guard case let .Dictionary(dictionary) = json else {
+            throw Error.ValueNotConvertible(value: json, to: Swift.Dictionary<Swift.String, Decoded>)
         }
-        var decodedDictionary = Swift.Dictionary<String, Decoded>(minimumCapacity: dictionary.count)
+        var decodedDictionary = Swift.Dictionary<Swift.String, Decoded>(minimumCapacity: dictionary.count)
         for (key, value) in dictionary {
             decodedDictionary[key] = try Decoded(json: value)
         }

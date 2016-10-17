@@ -32,13 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     // MARK: - UIApplicationDelegate
 
     func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?)
+        application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?)
         -> Bool
     {
         let splitViewController = window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers.last as! UINavigationController
-        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
         splitViewController.delegate = self
 
         return true
@@ -47,16 +47,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     // MARK: - UISplitViewControllerDelegate
 
     func splitViewController(
-        _ splitViewController: UISplitViewController,
-        collapseSecondary secondaryViewController: UIViewController,
-        onto primaryViewController: UIViewController)
+        splitViewController: UISplitViewController,
+        collapseSecondaryViewController secondaryViewController: UIViewController,
+        ontoPrimaryViewController primaryViewController: UIViewController)
         -> Bool
     {
-        if
-            let secondaryAsNavController = secondaryViewController as? UINavigationController,
-            let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController
-        {
-            return topAsDetailController.request == nil
+        if let secondaryAsNavController = secondaryViewController as? UINavigationController {
+            if let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController {
+                return topAsDetailController.request == nil
+            }
         }
 
         return false

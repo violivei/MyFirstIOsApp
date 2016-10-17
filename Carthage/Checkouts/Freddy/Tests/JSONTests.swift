@@ -11,17 +11,17 @@ import Freddy
 
 class JSONTests: XCTestCase {
 
-    var sampleData:Data!
+    var sampleData:NSData!
     
     override func setUp() {
         super.setUp()
         
-        let testBundle = Bundle(for: JSONSubscriptingTests.self)
-        guard let data = testBundle.url(forResource: "sample", withExtension: "JSON").flatMap(NSData.init(contentsOf:)) else {
+        let testBundle = NSBundle(forClass: JSONSubscriptingTests.self)
+        guard let data = testBundle.URLForResource("sample", withExtension: "JSON").flatMap(NSData.init) else {
             XCTFail("Could not read sample data from test bundle")
             return
         }
-        sampleData = data as Data
+        sampleData = data
     }
     
     func testInitializingFromData() {
@@ -38,7 +38,7 @@ class JSONTests: XCTestCase {
     func DoNotRuntestInitializingFromEmptyData() {
         
         do {
-            _ = try JSON(data: Data())
+            _ = try JSON(data: NSData())
         } catch {
             XCTFail("Could not parse empty data: \(error)")
             return

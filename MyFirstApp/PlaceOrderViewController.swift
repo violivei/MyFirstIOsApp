@@ -31,7 +31,7 @@ class PlaceOrderViewController: UIViewController {
         self.moviePlayer.play()
         
         // Loop video.
-        NotificationCenter.default.addObserver(self, selector: #selector(PlaceOrderViewController.loopVideo), name: NSNotification.Name.MPMoviePlayerPlaybackDidFinish, object: self.moviePlayer)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PlaceOrderViewController.loopVideo), name: MPMoviePlayerPlaybackDidFinishNotification, object: self.moviePlayer)
     }
     
     func loopVideo() {
