@@ -17,7 +17,7 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     var apiKey: String = "54a2ea093fbed06393dab35593dc51f785b493c5"
     var version: String = "2016-09-23"
     var photoURL: NSURL?
-    let visualRecognition = VisualRecognition(apiKey: "54a2ea093fbed06393dab35593dc51f785b493c5", version: "2016-09-23")
+    let visualRecognition = VisualRecognition(apiKey: "54a2ea093fbed06393dab35593dc51f785b493c5", version: "2016-05-19")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,7 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     func callWatson(){
         
         let failure = { (error: NSError) in print(error) }
+        NSLog("%@", "SENDING: \(photoURL!)")
         visualRecognition.classify(photoURL!, failure: failure) { classifiedImages in
             print(classifiedImages)
             NSLog("%@", "Result: \(classifiedImages)")
@@ -103,7 +104,7 @@ class OrderWithPhotoViewController: UIViewController, UIImagePickerControllerDel
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        if let data = UIImagePNGRepresentation(imageView.image!) {
+        if let data = UIImageJPEGRepresentation(imageView.image!, 1.0) {
             let filename = getDocumentsDirectory().URLByAppendingPathComponent("temp.jpg")
             data.writeToFile((filename?.absoluteString)!, atomically: true)
             NSLog("%@", "Loading page with URL: \(filename)")
