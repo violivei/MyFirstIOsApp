@@ -15,7 +15,7 @@ class ProductsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColorFromRGB(0x002E10)
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBarHidden = false
         
         let product1 = Product()
         let product2 = Product()
@@ -56,18 +56,18 @@ class ProductsTableViewController: UITableViewController {
         products = [product1, product2, product3, product4, product5, product6, product7]
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if(segue.identifier == "ShowProduct"){
-            let productVC:ProductViewController = segue.destination as! ProductViewController
-            guard let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) else {
+            let productVC:ProductViewController = segue.destinationViewController as! ProductViewController
+            guard let cell = sender as? UITableViewCell, let indexPath = tableView.indexPathForCell(cell) else {
                 return
             }
             productVC.product = products?[(indexPath as NSIndexPath).row]
         }
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let p = products{
             return p.count
@@ -75,7 +75,7 @@ class ProductsTableViewController: UITableViewController {
         return 0
     }
     
-    func UIColorFromRGB(_ rgbValue: UInt) -> UIColor {
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
@@ -84,8 +84,10 @@ class ProductsTableViewController: UITableViewController {
         )
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as UITableViewCell
+    override func tableView(tableView: UITableView,
+                                 cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ProductCell", forIndexPath: indexPath) as UITableViewCell
         
         let product = products?[(indexPath as NSIndexPath).row]
         let backgroundView = UIView()
@@ -93,14 +95,14 @@ class ProductsTableViewController: UITableViewController {
         
         if let p = product{
             cell.textLabel?.text = p.name
-            cell.textLabel?.textColor = UIColor.white
+            cell.textLabel?.textColor = UIColor.whiteColor()
             cell.textLabel?.font = UIFont(name: "Heineken", size: 20)
             if let i = p.cellImage{
                 cell.imageView?.image = UIImage(named: i)
                 cell.selectedBackgroundView = backgroundView
                 cell.imageView?.layer.masksToBounds = true;
                 cell.imageView?.layer.cornerRadius = 25;
-                cell.imageView?.layer.borderColor = UIColor.white.cgColor  // set cell border color here
+                cell.imageView?.layer.borderColor = UIColor.whiteColor().CGColor  // set cell border color here
                 cell.imageView?.layer.borderWidth = 4 // set border width here
             }
         }
@@ -108,8 +110,4 @@ class ProductsTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-
 }

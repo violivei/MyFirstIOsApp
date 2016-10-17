@@ -17,16 +17,17 @@ class PlaceOrderViewController: UIViewController {
         super.viewDidLoad()
         
         // Load the video from the app bundle.
-        let videoURL: URL = Bundle.main.url(forResource: "video", withExtension: "mp4")!
+        let urlpath = NSBundle.mainBundle().pathForResource("video", ofType: "mp4")!
+        let videoURL:NSURL = NSURL(string: urlpath)!
         
         // Create and configure the movie player.
         self.moviePlayer = MPMoviePlayerController(contentURL: videoURL)
         
-        self.moviePlayer.controlStyle = MPMovieControlStyle.none
-        self.moviePlayer.scalingMode = MPMovieScalingMode.aspectFill
+        self.moviePlayer.controlStyle = MPMovieControlStyle.None
+        self.moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
         
         self.moviePlayer.view.frame = self.view.frame
-        self.view .insertSubview(self.moviePlayer.view, at: 0)
+        self.view .insertSubview(self.moviePlayer.view, atIndex: 0)
         
         self.moviePlayer.play()
         

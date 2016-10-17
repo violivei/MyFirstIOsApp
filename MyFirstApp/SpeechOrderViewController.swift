@@ -16,7 +16,7 @@ class SpeechOrderViewController: UIViewController, AudioRecorderViewControllerDe
         super.viewDidLoad()
         let controller = AudioRecorderViewController()
         controller.audioRecorderDelegate = self
-        present(controller, animated: true, completion: nil)
+        self.presentViewController(controller, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,7 +26,7 @@ class SpeechOrderViewController: UIViewController, AudioRecorderViewControllerDe
 
     func audioRecorderViewControllerDismissed(withFileURL fileURL: NSURL?) {
         // do something with fileURL
-        dismiss(animated: true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 

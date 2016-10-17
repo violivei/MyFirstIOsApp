@@ -17,14 +17,14 @@ class SplashViewController: UIViewController {
         //addLogo()
         
         // Show the home screen after a bit. Calls the show() function.
-        _ = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(SplashViewController.showHome), userInfo: nil, repeats: false)
+        _ = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: #selector(SplashViewController.showHome), userInfo: nil, repeats: false)
     }
     
     /*
      * Gets rid of the status bar
      */
-    override var prefersStatusBarHidden : Bool {
-    return true
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     /*
@@ -32,14 +32,14 @@ class SplashViewController: UIViewController {
      * Gets called by the timer in viewDidLoad()
      */
     func showHome() {
-        self.performSegue(withIdentifier: "showApp", sender: self)
+        self.performSegueWithIdentifier("showApp", sender: self)
     }
     
     /*
      * Adds background image to the splash screen
      */
     func addBackgroundImage() {
-        let screenSize: CGRect = UIScreen.main.bounds
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
         
         let bg = UIImage(named: "splash.jpg")
         let bgView = UIImageView(image: bg)
@@ -52,7 +52,7 @@ class SplashViewController: UIViewController {
      * Adds logo to splash screen
      */
     func addLogo() {
-        let screenSize: CGRect = UIScreen.main.bounds
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
         
         let logo     = UIImage(named: "logo.png")
         let logoView = UIImageView(image: logo)
