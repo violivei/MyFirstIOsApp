@@ -18,11 +18,7 @@ class AudioRecorderViewController: UINavigationController {
     
     internal let childViewController = AudioRecorderChildViewController()
     weak var audioRecorderDelegate: AudioRecorderViewControllerDelegate?
-<<<<<<< Updated upstream
-    var statusBarStyle: UIStatusBarStyle = .Default
-=======
     var statusBarStyle: UIStatusBarStyle = UIStatusBarStyle.Default
->>>>>>> Stashed changes
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,18 +36,11 @@ class AudioRecorderViewController: UINavigationController {
         view.backgroundColor = UIColor(red: 0.0/255.0, green: 46.0/255.0, blue: 16.0/255.0, alpha: 1)
         childViewController.audioRecorderDelegate = audioRecorderDelegate
         viewControllers = [childViewController]
-        
-<<<<<<< Updated upstream
-        navigationBar.barTintColor = UIColor.black
-        navigationBar.tintColor = UIColor.white
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        navigationBar.setBackgroundImage(UIImage(), for: .Default)
-=======
+
         navigationBar.barTintColor = UIColor.blackColor()
         navigationBar.tintColor = UIColor.whiteColor()
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
->>>>>>> Stashed changes
     }
 
    /// override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -124,12 +113,8 @@ class AudioRecorderViewController: UINavigationController {
             catch let error as NSError {
                 NSLog("Error: \(error)")
             }
-            
-<<<<<<< Updated upstream
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioRecorderChildViewController.stopRecording(_:)), name: UIApplicationDidEnterBackgroundNotification, object: nil)
-=======
+
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioRecorderChildViewController.stopRecording(_:)), name:UIApplicationDidEnterBackgroundNotification, object: nil)
->>>>>>> Stashed changes
         }
         
         override func viewWillDisappear(_ animated: Bool) {
