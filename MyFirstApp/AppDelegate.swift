@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    override init() {
+        // Firebase Init
+        FIRApp.configure()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let vc0 = UIViewController()
         vc0.tabBarItem = UITabBarItem(
@@ -29,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             image: UIImage(named: "voice-icon"),
             selectedImage: UIImage(named: "voice-icon-selected"))
 
-        FIRApp.configure()
+        //FIRApp.configure()
         
         //let wheelTabController = KYWheelTabController()
        // wheelTabController.viewControllers = [vc0, vc1]

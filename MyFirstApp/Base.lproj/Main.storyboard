@@ -395,7 +395,7 @@
                             <outlet property="delegate" destination="Scw-se-n2g" id="Sbx-z9-IXd"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="nNN-qt-adJ"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="check-icon" selectedImage="check-icon-filled" id="nNN-qt-adJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pz-9O-Alf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,6 +468,8 @@
     <resources>
         <image name="catalog-icon" width="50" height="50"/>
         <image name="catalog-icon-selected" width="50" height="50"/>
+        <image name="check-icon" width="50" height="50"/>
+        <image name="check-icon-filled" width="50" height="50"/>
         <image name="fullscreen1" width="657" height="900"/>
         <image name="header-contact" width="375" height="125"/>
         <image name="icon-about-email" width="34" height="34"/>
