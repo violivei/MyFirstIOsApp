@@ -21,8 +21,10 @@ class NoClickPurchaseViewController: UIViewController{
     var timerPaused: Bool = false
     var db: FIRDatabaseReference!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        total = 0
+        snapTimer.animateOuterValue(total)
+        timerPaused = false
         scheduledTimerWithTimeInterval()
         snapTimer.addSubview(pauseButton)
         db = FIRDatabase.database().reference()
@@ -30,6 +32,11 @@ class NoClickPurchaseViewController: UIViewController{
             bgImage.image = UIImage(named:p.productImage!)
             productLabel.text = p.name
         }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        timerPaused = true
+        timer.invalidate()
     }
     
     @IBAction func pauseOrder(_: AnyObject) {
@@ -59,7 +66,9 @@ class NoClickPurchaseViewController: UIViewController{
                 total = 0
                 let post = db.childByAutoId()
                 let qty = Int(arc4random_uniform(6) + 1)
-                post.setValue(["name": "THE ICON", "qty": qty, "productImage": "fullscreen1", "cellImage": "the-icon"])
+                if let p = ApplicationProperties.sharedInstance.defaultProduct {
+                    post.setValue(["name": p.name!, "qty": qty, "productImage": p.productImage!, "cellImage": p.cellImage!])
+                }
                 timer.invalidate()
                 
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderPlaced") as UIViewController
