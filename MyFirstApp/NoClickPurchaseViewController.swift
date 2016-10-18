@@ -53,8 +53,7 @@ class NoClickPurchaseViewController: UIViewController{
                 total = 0
                 let post = db.childByAutoId()
                 let qty = Int(arc4random_uniform(6) + 1)
-                
-                post.setValue(["product": "THE ICON", "qty": qty])
+                post.setValue(["name": "THE ICON", "qty": qty, "productImage": "fullscreen1", "cellImage": "the-icon"])
                 timer.invalidate()
                 
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderPlaced") as UIViewController

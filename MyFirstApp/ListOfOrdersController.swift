@@ -7,17 +7,32 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ListOfOrdersController: UITableViewController {
 
     var products: [Product]?
+    var db: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColorFromRGB(0x002E10)
-        self.navigationController?.navigationBarHidden = false
+        //self.navigationController?.navigationBarHidden = false
         
-        let product1 = Product()
+        db = FIRDatabase.database().reference()
+        db.queryOrderedByKey().observeEventType(.Value, withBlock: { snapshot in
+            var newItems: [Product] = []
+            
+            for item in snapshot.children {
+                let productItem = Product(snapshot: item as! FIRDataSnapshot)
+                newItems.append(productItem)
+            }
+            
+            self.products = newItems
+            self.tableView.reloadData()
+        })
+        
+        /*let product1 = Product()
         let product2 = Product()
         let product3 = Product()
         let product4 = Product()
@@ -53,7 +68,7 @@ class ListOfOrdersController: UITableViewController {
         product7.productImage = "fullscreen7"
         product7.cellImage = "draughtkeg"
         
-        products = [product1, product2, product3, product4, product5, product6, product7]
+        products = [product1, product2, product3, product4, product5, product6, product7]*/
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
