@@ -29,6 +29,7 @@
 		DC7C473F1D8B387A00CDCC5F /* HEINEKEN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */; };
 		DC7C47411D8C7F1C00CDCC5F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */; };
 		DC7F1C211DB69BD000F577A0 /* ListOfOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7F1C201DB69BD000F577A0 /* ListOfOrdersController.swift */; };
+		DC7F1C231DB6C95C00F577A0 /* ApplicationProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7F1C221DB6C95C00F577A0 /* ApplicationProperties.swift */; };
 		DCA35DB61D907EE8009F10C5 /* NoClickPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */; };
 		DCD7C09E1D9448EA005C9B15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCD7C09D1D9448EA005C9B15 /* GoogleService-Info.plist */; };
 		DCD7C0A01D947109005C9B15 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7C09F1D947109005C9B15 /* PlaceOrderViewController.swift */; };
@@ -82,6 +83,7 @@
 		DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = HEINEKEN.TTF; path = ../../../Downloads/Heineken/HEINEKEN.TTF; sourceTree = "<group>"; };
 		DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DC7F1C201DB69BD000F577A0 /* ListOfOrdersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOrdersController.swift; sourceTree = "<group>"; };
+		DC7F1C221DB6C95C00F577A0 /* ApplicationProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationProperties.swift; sourceTree = "<group>"; };
 		DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoClickPurchaseViewController.swift; sourceTree = "<group>"; };
 		DCD7C09D1D9448EA005C9B15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCD7C09F1D947109005C9B15 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				DCD7C0A31D94882D005C9B15 /* OrderWithPhotoViewController.swift */,
 				DC4A08821D9C474A00F9A8AA /* SpeechOrderViewController.swift */,
 				DC7F1C201DB69BD000F577A0 /* ListOfOrdersController.swift */,
+				DC7F1C221DB6C95C00F577A0 /* ApplicationProperties.swift */,
 			);
 			path = MyFirstApp;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				DC38CFE51D88806400425E31 /* ProductViewController.swift in Sources */,
 				DCD7C0A01D947109005C9B15 /* PlaceOrderViewController.swift in Sources */,
 				DC045E741D88A76E00E2EBF6 /* ProductsTableViewController.swift in Sources */,
+				DC7F1C231DB6C95C00F577A0 /* ApplicationProperties.swift in Sources */,
 				DC045E761D89C1EC00E2EBF6 /* Product.swift in Sources */,
 				DCA35DB61D907EE8009F10C5 /* NoClickPurchaseViewController.swift in Sources */,
 				DC4A08831D9C474A00F9A8AA /* SpeechOrderViewController.swift in Sources */,

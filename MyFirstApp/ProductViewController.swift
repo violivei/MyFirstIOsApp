@@ -24,8 +24,11 @@ class ProductViewController: UIViewController {
         }
     }
  
-    @IBAction func addToCartPressed(_ sender: AnyObject) {
-        print("Button Pressed")
+    @IBAction func addDefaultProduct(_: AnyObject) {
+        if let p = product {
+        ApplicationProperties.sharedInstance.defaultProduct = p
+            print(p.name)
+        }
     }
 
 }

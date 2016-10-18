@@ -14,6 +14,8 @@ class NoClickPurchaseViewController: UIViewController{
  
     @IBOutlet weak var snapTimer: SnapTimerView!
     @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var productLabel: UILabel!
     var timer = NSTimer()
     var total: CGFloat = 0
     var timerPaused: Bool = false
@@ -24,6 +26,10 @@ class NoClickPurchaseViewController: UIViewController{
         scheduledTimerWithTimeInterval()
         snapTimer.addSubview(pauseButton)
         db = FIRDatabase.database().reference()
+        if let p = ApplicationProperties.sharedInstance.defaultProduct {
+            bgImage.image = UIImage(named:p.productImage!)
+            productLabel.text = p.name
+        }
     }
     
     @IBAction func pauseOrder(_: AnyObject) {

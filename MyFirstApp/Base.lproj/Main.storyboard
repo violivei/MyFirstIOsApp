@@ -33,6 +33,14 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aow-pc-Tcx">
+                                <frame key="frameInset" minX="240" minY="165" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="favorite-icon-selected"/>
+                                <connections>
+                                    <action selector="addDefaultProduct:" destination="U4U-F4-ZZ2" eventType="touchUpInside" id="bZb-cX-I67"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -299,7 +307,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="BuyWithNoClick" image="shop-icon" selectedImage="shop-icon-selected" id="kgJ-W0-6J4"/>
                     <connections>
+                        <outlet property="bgImage" destination="ImY-ql-g3f" id="Cpc-KL-neg"/>
                         <outlet property="pauseButton" destination="0eI-AW-lya" id="xHg-7P-gJZ"/>
+                        <outlet property="productLabel" destination="JSk-TG-PPW" id="qKL-wM-MUB"/>
                         <outlet property="snapTimer" destination="rb1-yz-8St" id="gle-dL-dcq"/>
                         <segue destination="4El-cc-vcz" kind="push" id="EfL-BE-y0Y"/>
                     </connections>
@@ -488,6 +498,7 @@
         <image name="catalog-icon-selected" width="50" height="50"/>
         <image name="check-icon" width="50" height="50"/>
         <image name="check-icon-filled" width="50" height="50"/>
+        <image name="favorite-icon-selected" width="50" height="50"/>
         <image name="fullscreen1" width="657" height="900"/>
         <image name="header-contact" width="375" height="125"/>
         <image name="icon-about-email" width="34" height="34"/>
