@@ -109,14 +109,14 @@ class ListOfOrdersController: UITableViewController {
         backgroundView.backgroundColor = UIColorFromRGB(0x004521)
         
         if let p = product{
-            cell.textLabel?.text = p.name
+            cell.textLabel?.text = p.name! + "          Qty: " + String(p.qty!)
             cell.textLabel?.textColor = UIColor.whiteColor()
             cell.textLabel?.font = UIFont(name: "Heineken", size: 20)
             if let i = p.cellImage{
                 cell.imageView?.image = UIImage(named: i)
                 cell.selectedBackgroundView = backgroundView
                 cell.imageView?.layer.masksToBounds = true;
-                cell.imageView?.layer.cornerRadius = 25;
+                cell.imageView?.layer.cornerRadius = 5;
                 cell.imageView?.layer.borderColor = UIColor.whiteColor().CGColor  // set cell border color here
                 cell.imageView?.layer.borderWidth = 4 // set border width here
             }
