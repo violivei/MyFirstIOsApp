@@ -358,7 +358,7 @@
             <objects>
                 <navigationController id="aOo-U0-O5f" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="OrderListNavigation" id="HCl-fW-e4z"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rvp-FZ-AQZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rvp-FZ-AQZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -407,12 +407,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="100" id="ANt-5h-yBf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" textLabel="nWa-cz-Oae" detailTextLabel="jCR-QH-z5s" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="ANt-5h-yBf">
                                 <rect key="frame" x="0.0" y="92" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ANt-5h-yBf" id="uG0-DN-9bo">
                                     <frame key="frameInset" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nWa-cz-Oae">
+                                            <frame key="frameInset" minX="15" minY="32" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCR-QH-z5s">
+                                            <frame key="frameInset" minX="15" minY="53" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.18039215689999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
@@ -435,7 +451,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbN-4K-5e1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CatalogNavigation" id="YOT-6M-zpm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WYB-Gk-Z3i">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYB-Gk-Z3i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

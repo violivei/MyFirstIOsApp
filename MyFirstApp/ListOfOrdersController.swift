@@ -109,9 +109,14 @@ class ListOfOrdersController: UITableViewController {
         backgroundView.backgroundColor = UIColorFromRGB(0x004521)
         
         if let p = product{
-            cell.textLabel?.text = p.name! + "          Qty: " + String(p.qty!)
+            cell.textLabel?.text = p.name!
             cell.textLabel?.textColor = UIColor.whiteColor()
             cell.textLabel?.font = UIFont(name: "Heineken", size: 20)
+            
+            cell.detailTextLabel?.text = String(p.qty!)
+            cell.detailTextLabel?.textColor = UIColor.whiteColor()
+            cell.detailTextLabel?.font = UIFont(name: "Heineken", size: 20)
+            
             if let i = p.cellImage{
                 cell.imageView?.image = UIImage(named: i)
                 cell.selectedBackgroundView = backgroundView
