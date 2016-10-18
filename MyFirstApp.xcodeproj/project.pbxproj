@@ -28,6 +28,7 @@
 		DC4A088D1D9C5D3A00F9A8AA /* StopButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4A088B1D9C5D3A00F9A8AA /* StopButton@2x.png */; };
 		DC7C473F1D8B387A00CDCC5F /* HEINEKEN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */; };
 		DC7C47411D8C7F1C00CDCC5F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */; };
+		DC7F1C211DB69BD000F577A0 /* ListOfOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7F1C201DB69BD000F577A0 /* ListOfOrdersController.swift */; };
 		DCA35DB61D907EE8009F10C5 /* NoClickPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */; };
 		DCD7C09E1D9448EA005C9B15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCD7C09D1D9448EA005C9B15 /* GoogleService-Info.plist */; };
 		DCD7C0A01D947109005C9B15 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7C09F1D947109005C9B15 /* PlaceOrderViewController.swift */; };
@@ -80,6 +81,7 @@
 		DC4A088B1D9C5D3A00F9A8AA /* StopButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StopButton@2x.png"; path = "AudioRecorderViewController/StopButton@2x.png"; sourceTree = "<group>"; };
 		DC7C473E1D8B387A00CDCC5F /* HEINEKEN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = HEINEKEN.TTF; path = ../../../Downloads/Heineken/HEINEKEN.TTF; sourceTree = "<group>"; };
 		DC7C47401D8C7F1C00CDCC5F /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		DC7F1C201DB69BD000F577A0 /* ListOfOrdersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOrdersController.swift; sourceTree = "<group>"; };
 		DCA35DB51D907EE8009F10C5 /* NoClickPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoClickPurchaseViewController.swift; sourceTree = "<group>"; };
 		DCD7C09D1D9448EA005C9B15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCD7C09F1D947109005C9B15 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				DCD7C09F1D947109005C9B15 /* PlaceOrderViewController.swift */,
 				DCD7C0A31D94882D005C9B15 /* OrderWithPhotoViewController.swift */,
 				DC4A08821D9C474A00F9A8AA /* SpeechOrderViewController.swift */,
+				DC7F1C201DB69BD000F577A0 /* ListOfOrdersController.swift */,
 			);
 			path = MyFirstApp;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				DC38CFD31D886EBC00425E31 /* AppDelegate.swift in Sources */,
 				DCD7C0A41D94882D005C9B15 /* OrderWithPhotoViewController.swift in Sources */,
 				DC045E721D8899A000E2EBF6 /* ContactViewController.swift in Sources */,
+				DC7F1C211DB69BD000F577A0 /* ListOfOrdersController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
