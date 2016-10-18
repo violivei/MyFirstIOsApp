@@ -17,7 +17,7 @@ class ListOfOrdersController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColorFromRGB(0x002E10)
-        //self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBarHidden = false
         
         db = FIRDatabase.database().reference()
         db.queryOrderedByKey().observeEventType(.Value, withBlock: { snapshot in
