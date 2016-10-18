@@ -52,7 +52,9 @@ class NoClickPurchaseViewController: UIViewController{
             if(total > 90){
                 total = 0
                 let post = db.childByAutoId()
-                post.setValue(["orderId": "orderId", "name": "name", "product": "product"])
+                let qty = Int(arc4random_uniform(6) + 1)
+                
+                post.setValue(["product": "THE ICON", "qty": qty])
                 timer.invalidate()
                 
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderPlaced") as UIViewController
