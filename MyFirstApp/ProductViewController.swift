@@ -28,6 +28,7 @@ class ProductViewController: UIViewController {
         if let p = product {
         ApplicationProperties.sharedInstance.defaultProduct = p
             print(p.name)
+            ApplicationProperties.sharedInstance.userDefaults.setObject(NSKeyedArchiver.archivedDataWithRootObject(p), forKey: "defaultProduct")
         }
     }
 

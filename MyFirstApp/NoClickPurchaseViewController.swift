@@ -31,7 +31,16 @@ class NoClickPurchaseViewController: UIViewController{
         if let p = ApplicationProperties.sharedInstance.defaultProduct {
             bgImage.image = UIImage(named:p.productImage!)
             productLabel.text = p.name
+        } else {
+            if let data = ApplicationProperties.sharedInstance.userDefaults.objectForKey("defaultProduct") as? NSData {
+                let unarc = NSKeyedUnarchiver(forReadingWithData: data)
+                unarc.setClass(Product.self, forClassName: "Product")
+                let p = unarc.decodeObjectForKey("root")
+                bgImage.image = UIImage(named:p!.productImage!!)
+                productLabel.text = p!.name
+            }
         }
+        
     }
     
     override func viewWillDisappear(animated: Bool) {

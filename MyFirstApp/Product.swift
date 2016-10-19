@@ -9,20 +9,64 @@
 import Foundation
 import FirebaseDatabase
 
-class Product {
+@objc(Product)
+class Product : NSObject, NSCoding {
     var key: String?
     var name: String?
     var productImage: String?
     var cellImage: String?
     var qty: Int?
-    let ref: FIRDatabaseReference?
+    var ref: FIRDatabaseReference?
     
-    init() {
+    override init() {
         self.key = ""
         self.name = ""
         self.productImage = ""
         self.cellImage = ""
         self.ref = nil
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        
+        if let key = aDecoder.decodeObjectForKey("key") as? String {
+            self.key = key
+        }
+        if let name = aDecoder.decodeObjectForKey("name") as? String {
+            self.name = name
+        }
+        if let productImage = aDecoder.decodeObjectForKey("productImage") as? String {
+            self.productImage = productImage
+        }
+        if let cellImage = aDecoder.decodeObjectForKey("cellImage") as? String {
+            self.cellImage = cellImage
+        }
+        if let qty = aDecoder.decodeObjectForKey("qty") as? Int {
+            self.qty = qty
+        }
+        if let ref = aDecoder.decodeObjectForKey("ref") as? FIRDatabaseReference {
+            self.ref = ref
+        }
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        if let key = self.key {
+            aCoder.encodeObject(key, forKey: "key")
+        }
+        if let name = self.name {
+            aCoder.encodeObject(name, forKey: "name")
+        }
+        if let productImage = self.productImage {
+            aCoder.encodeObject(productImage, forKey: "productImage")
+        }
+        if let cellImage = self.cellImage {
+            aCoder.encodeObject(cellImage, forKey: "cellImage")
+        }
+        if let qty = self.qty {
+            aCoder.encodeObject(qty, forKey: "qty")
+        }
+        if let ref = self.ref {
+            aCoder.encodeObject(ref, forKey: "ref")
+        }
     }
     
     init(snapshot: FIRDataSnapshot) {

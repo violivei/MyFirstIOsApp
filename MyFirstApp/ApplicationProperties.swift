@@ -10,5 +10,6 @@ import Foundation
 
 class ApplicationProperties {
     var defaultProduct: Product?
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     static let sharedInstance = ApplicationProperties()
 }
